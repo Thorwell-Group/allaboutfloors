@@ -1,0 +1,55 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTABanner from '@components/CTABanner.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import { company } from '@data/company';
+---
+
+<BaseLayout
+  title="Flooring Financing Options in Vancouver, WA | All About Floors NW"
+  description="All About Floors NW offers special financing for qualified customers in Vancouver, WA and Clark County. 0% APR options available. Get the floors you love without the wait."
+>
+  <div class="bg-brand-navy text-white py-14">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <span class="badge-gold mb-4">Special Financing Available</span>
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-4">Flooring Financing in Vancouver, WA</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+        Get the floors you love today and pay over time. 0% APR options available for qualified customers.
+      </p>
+    </div>
+  </div>
+
+  <Breadcrumb items={[{ label: 'Financing' }]} />
+
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
+        {[
+          { title: '0% Interest', desc: 'Qualified buyers enjoy 0% APR financing for 12, 18, or 24 months, pay no interest when paid in full within the promotional period.' },
+          { title: 'Fast Approval', desc: 'Apply in minutes during your free estimate appointment. Most approvals are instant, so you can move forward on your project the same day.' },
+          { title: 'Low Monthly Payments', desc: 'Spread the cost of your flooring project over manageable monthly payments that fit your budget. Starting at just $25/month for most projects.' },
+        ].map(item => (
+          <div class="bg-brand-light rounded-2xl p-8 text-center">
+            <h3 class="font-heading font-bold text-brand-navy text-2xl mb-3">{item.title}</h3>
+            <p class="text-gray-600 leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-brand-navy rounded-2xl p-10 text-white text-center">
+        <h2 class="font-heading font-bold text-3xl mb-4">Ready to Apply?</h2>
+        <p class="text-gray-300 mb-6 max-w-xl mx-auto">
+          Financing is discussed during your free in-home estimate. Our consultant will explain all available options and help you choose the plan that works best for your budget.
+        </p>
+        <a href="/free-estimate/" class="btn-primary">Schedule Your Free Estimate</a>
+        <p class="text-gray-400 text-xs mt-4">
+          *Subject to credit approval. Promotional financing available through approved lender partners. Terms and conditions apply.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <ReviewsSection />
+  <CTABanner heading="Beautiful New Floors Are More Affordable Than You Think" subtext="Ask about our current financing offers when you schedule your free estimate. We help Vancouver homeowners transform their spaces every day." />
+</BaseLayout>

@@ -1,0 +1,105 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ProcessSteps from '@components/ProcessSteps.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CTABanner from '@components/CTABanner.astro';
+import BrandLogos from '@components/BrandLogos.astro';
+import FAQ from '@components/FAQ.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ServiceCards from '@components/ServiceCards.astro';
+import { company } from '@data/company';
+import type { Service } from '@data/services';
+
+interface Props {
+  service: Service;
+  title: string;
+  description: string;
+  schema: object;
+  breadcrumb?: string;
+}
+
+const { service, title, description, schema, breadcrumb } = Astro.props;
+---
+
+<BaseLayout title={title} description={description} schema={schema}>
+  <Hero
+    heading={`${service.name} in Vancouver, WA`}
+    subheading={service.description}
+    image={service.heroImage}
+    imageAlt={service.heroImageAlt}
+    badge="Free In-Home Estimates"
+  />
+
+  <Breadcrumb items={[
+    { label: 'Services', href: '/services/' },
+    { label: breadcrumb ?? service.name },
+  ]} />
+
+  <!-- Intro section -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+        <div>
+          <span class="badge-gold mb-3">Premium {service.shortName} Flooring</span>
+          <h2 class="section-heading mt-2 mb-5">
+            {service.tagline}
+          </h2>
+          <slot name="intro" />
+          <div class="mt-6">
+            <a href="/free-estimate/" class="btn-primary mr-4">Get Free Estimate</a>
+            <a href={company.cta.phone} class="btn-secondary">{company.phone}</a>
+          </div>
+        </div>
+
+        <div class="space-y-8">
+          <!-- Features -->
+          <div class="bg-brand-light rounded-2xl p-8">
+            <h3 class="font-heading font-semibold text-brand-navy text-xl mb-4">Features & Options</h3>
+            <ul class="space-y-2.5">
+              {service.features.map(f => (
+                <li class="flex items-start gap-2.5 text-gray-700">
+                  <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <!-- Benefits -->
+          <div class="bg-brand-navy text-white rounded-2xl p-8">
+            <h3 class="font-heading font-semibold text-xl mb-4">Why Homeowners Love {service.shortName}</h3>
+            <ul class="space-y-2.5">
+              {service.benefits.map(b => (
+                <li class="flex items-start gap-2.5 text-gray-300">
+                  <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                  {b}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Extended content slot -->
+  <slot name="body" />
+
+  <ProcessSteps />
+  <ReviewsSection max={12} />
+
+  <FAQ items={service.faq} title={`${service.name} FAQ`} />
+
+  <ServiceCards
+    title="Explore Other Flooring Options"
+    subtitle="We carry every major flooring type, find the perfect match for every room in your home."
+    excludeSlug={service.slug}
+  />
+
+  <BrandLogos />
+  <CTABanner
+    heading={`Ready for New ${service.shortName} Flooring in Vancouver, WA?`}
+    subtext={`Schedule your free in-home estimate today. Our ${service.shortName.toLowerCase()} experts will visit your home with samples and provide a transparent quote within 24 hours.`}
+  />
+</BaseLayout>

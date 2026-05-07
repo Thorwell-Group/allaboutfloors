@@ -1,0 +1,143 @@
+---
+import { company } from '@data/company';
+import { services } from '@data/services';
+---
+
+<div class="bg-white rounded-2xl shadow-xl p-8">
+  <h3 class="font-heading font-bold text-2xl text-brand-navy mb-2">
+    Request Your Free In-Home Estimate
+  </h3>
+  <p class="text-gray-500 text-sm mb-6">
+    We'll get back to you within 24 hours to schedule your free consultation.
+  </p>
+
+  <form
+    action="https://formspree.io/f/YOUR_FORM_ID"
+    method="POST"
+    class="space-y-4"
+    x-data="{ submitted: false }"
+    @submit.prevent="submitted = true; $el.submit()"
+  >
+    <!-- Name -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label for="firstName" class="block text-sm font-medium text-gray-700 mb-1">First Name *</label>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          required
+          placeholder="Jane"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy"
+        />
+      </div>
+      <div>
+        <label for="lastName" class="block text-sm font-medium text-gray-700 mb-1">Last Name *</label>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          required
+          placeholder="Smith"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy"
+        />
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="(360) 555-0123"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy"
+        />
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="jane@email.com"
+          class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy"
+        />
+      </div>
+    </div>
+
+    <!-- Address -->
+    <div>
+      <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Project Address *</label>
+      <input
+        type="text"
+        id="address"
+        name="address"
+        required
+        placeholder="123 Main St, Vancouver, WA 98682"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy"
+      />
+    </div>
+
+    <!-- Service -->
+    <div>
+      <label for="service" class="block text-sm font-medium text-gray-700 mb-1">Flooring Type Interested In</label>
+      <select
+        id="service"
+        name="service"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy"
+      >
+        <option value="">Select a flooring type...</option>
+        {services.map(s => (
+          <option value={s.slug}>{s.name}</option>
+        ))}
+        <option value="not-sure">Not sure yet, need advice</option>
+      </select>
+    </div>
+
+    <!-- Approx sq ft -->
+    <div>
+      <label for="sqft" class="block text-sm font-medium text-gray-700 mb-1">Approximate Square Footage</label>
+      <select
+        id="sqft"
+        name="sqft"
+        class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy"
+      >
+        <option value="">Unsure / I'll find out</option>
+        <option value="under-300">Under 300 sq ft</option>
+        <option value="300-600">300–600 sq ft</option>
+        <option value="600-1000">600–1,000 sq ft</option>
+        <option value="1000-2000">1,000–2,000 sq ft</option>
+        <option value="2000+">2,000+ sq ft</option>
+      </select>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Additional Details</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="3"
+        placeholder="Tell us about your project, timeline, or any questions..."
+        class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brand-navy focus:ring-1 focus:ring-brand-navy"
+      ></textarea>
+    </div>
+
+    <button
+      type="submit"
+      class="btn-primary w-full text-base py-3.5 justify-center"
+    >
+      <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
+      Request Free Estimate
+    </button>
+
+    <p class="text-xs text-gray-400 text-center">
+      By submitting, you agree to be contacted by {company.name}. We never share your information.
+    </p>
+  </form>
+</div>

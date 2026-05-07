@@ -1,0 +1,69 @@
+---
+import { services } from '@data/services';
+
+interface Props {
+  title?: string;
+  subtitle?: string;
+  location?: string;
+  locationSlug?: string;
+  excludeSlug?: string;
+}
+
+const {
+  title = 'Flooring Types We Offer',
+  subtitle = 'From plush carpet to timeless hardwood, we carry every flooring type your home deserves.',
+  location,
+  locationSlug,
+  excludeSlug,
+} = Astro.props;
+
+const visibleServices = excludeSlug ? services.filter(s => s.slug !== excludeSlug) : services;
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-animate="fade-up">
+      <h2 class="section-heading">
+        {location ? `${title} in ${location}` : title}
+      </h2>
+      <p class="section-subheading mx-auto text-center">{subtitle}</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {visibleServices.map((service, i) => {
+        const href = locationSlug
+          ? `/${service.localSlug}-in-${locationSlug}/`
+          : service.urlPath;
+
+        return (
+          <a href={href} class="card group flex flex-col hover:-translate-y-1 transition-transform duration-300" data-animate="fade-up" data-delay={String(Math.min(i + 1, 6))}>
+            <div class="relative overflow-hidden aspect-video bg-gray-100">
+              <img
+                src={service.heroImage}
+                alt={service.heroImageAlt}
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+                width="600"
+                height="338"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+                <span class="text-white font-semibold text-sm">Learn More →</span>
+              </div>
+            </div>
+            <div class="p-6 flex-1 flex flex-col">
+              <h3 class="font-heading font-semibold text-brand-navy text-xl mb-2">
+                {service.name}
+                {location ? ` in ${location}` : ''}
+              </h3>
+              <p class="text-gray-600 text-sm leading-relaxed flex-1">{service.tagline}</p>
+              <div class="mt-4 flex items-center gap-1.5 text-brand-gold font-semibold text-sm group-hover:gap-3 transition-all duration-200">
+                <span>Explore Options</span>
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </div>
+            </div>
+          </a>
+        );
+      })}
+    </div>
+  </div>
+</section>

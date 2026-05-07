@@ -1,0 +1,151 @@
+ALL ABOUT FLOORS NW — IMAGE PLAN
+Generated for Nada Banana Pro export (all WebP format, 85% quality)
+=================================================================
+
+HERO / GLOBAL IMAGES
+---------------------
+hero-flooring-vancouver-wa.webp
+  Alt: "Beautiful hardwood and luxury vinyl flooring in a modern Vancouver WA home — All About Floors NW"
+  Size: 1920x680px | Use: Homepage hero background
+
+og-default.webp
+  Alt: (OG card — no alt needed)
+  Size: 1200x630px | Use: Default OpenGraph image
+
+all-about-floors-nw-logo.webp
+  Alt: "All About Floors NW logo"
+  Size: 400x120px | Use: Schema/email logo
+
+all-about-floors-nw-storefront.webp
+  Alt: "All About Floors NW flooring showroom exterior in Vancouver, WA"
+  Size: 1200x800px | Use: Schema image, About page
+
+all-about-floors-nw-showroom-vancouver-wa.webp
+  Alt: "All About Floors NW flooring showroom in Vancouver, WA with carpet and hardwood displays"
+  Size: 800x800px | Use: Homepage Why Us section
+
+all-about-floors-nw-showroom-interior-vancouver-wa.webp
+  Alt: "Interior view of All About Floors NW showroom featuring extensive flooring displays in Vancouver, WA"
+  Size: 700x394px | Use: About page
+
+all-about-floors-nw-flooring-installation-team.webp
+  Alt: "All About Floors NW professional installation crew at work in Clark County, WA"
+  Size: 700x394px | Use: About page
+
+about-all-about-floors-nw-team-vancouver-wa.webp
+  Alt: "The All About Floors NW team in their Vancouver, WA showroom"
+  Size: 1920x500px | Use: About page hero
+
+
+SERVICE CATEGORY IMAGES (600x338px, aspect-video)
+-------------------------------------------------
+carpet-flooring-vancouver-wa.webp
+  Alt: "Beautiful carpet flooring installation in a Vancouver WA living room by All About Floors NW"
+
+hardwood-flooring-vancouver-wa.webp
+  Alt: "Premium hardwood flooring installed in a Vancouver WA home — warm oak tones with natural grain"
+
+luxury-vinyl-plank-flooring-vancouver-wa.webp
+  Alt: "Luxury vinyl plank flooring installed in a modern Vancouver WA kitchen — 100% waterproof LVP"
+
+laminate-flooring-vancouver-wa.webp
+  Alt: "Laminate flooring installed in a Vancouver WA dining room — durable and stylish"
+
+tile-flooring-vancouver-wa.webp
+  Alt: "Professional tile flooring installation in a Vancouver WA bathroom — porcelain large-format tile"
+
+vinyl-flooring-vancouver-wa.webp
+  Alt: "Vinyl sheet flooring installed in a Vancouver WA laundry room — waterproof and easy to clean"
+
+
+INSTALLATION SERVICES IMAGES (1200x680px)
+-----------------------------------------
+flooring-installation-vancouver-wa.webp
+  Alt: "Professional flooring installation in progress in a Vancouver WA home — All About Floors NW crew"
+
+hardwood-refinishing-vancouver-wa.webp
+  Alt: "Hardwood floor refinishing service restoring beautiful floors in Vancouver WA"
+
+floor-repair-vancouver-wa.webp
+  Alt: "Floor repair service fixing water-damaged hardwood planks in a Vancouver WA home"
+
+commercial-flooring-vancouver-wa.webp
+  Alt: "Commercial flooring installation in a Vancouver WA office building — luxury vinyl tile"
+
+
+COMPARISON / FEATURE IMAGES
+----------------------------
+luxury-vinyl-plank-comparison-vancouver-wa.webp
+  Alt: "Luxury vinyl plank flooring installed in a Vancouver WA kitchen — waterproof and beautiful"
+  Size: 600x600px | Use: LVP page comparison section
+
+
+AREA / LOCAL PAGES (1920x600px hero images)
+--------------------------------------------
+flooring-vancouver-wa.webp
+  Alt: "Beautiful flooring installation in a Vancouver WA home — All About Floors NW"
+
+flooring-battle-ground-wa.webp
+  Alt: "Premium flooring installed in a Battle Ground WA home by All About Floors NW"
+
+flooring-camas-wa.webp
+  Alt: "Luxury flooring installation in a Camas WA home — All About Floors NW"
+
+flooring-washougal-wa.webp
+  Alt: "Professional flooring installation in a Washougal WA home — Columbia River Gorge community"
+
+flooring-ridgefield-wa.webp
+  Alt: "New flooring installed in a Ridgefield WA home — Clark County's fastest growing community"
+
+flooring-la-center-wa.webp
+  Alt: "Quality flooring installation in a La Center WA home by All About Floors NW"
+
+flooring-brush-prairie-wa.webp
+  Alt: "Professional flooring in a Brush Prairie WA home — All About Floors NW serves all of Clark County"
+
+flooring-salmon-creek-wa.webp
+  Alt: "Flooring installation in a Salmon Creek WA home — luxury vinyl plank and hardwood available"
+
+flooring-hazel-dell-wa.webp
+  Alt: "Beautiful flooring installed in a Hazel Dell WA home by All About Floors NW Vancouver"
+
+flooring-portland-or.webp
+  Alt: "Premium flooring installation in a Portland OR home — All About Floors NW serves the Portland metro"
+
+flooring-gresham-or.webp
+  Alt: "Professional flooring installed in a Gresham OR home by All About Floors NW"
+
+
+BRAND PARTNER LOGOS (120x60px, transparent background)
+-------------------------------------------------------
+(Use text fallback in BrandLogos.astro — replace with actual brand logo files when available)
+brand-mohawk-logo.webp
+brand-shaw-logo.webp
+brand-stanton-logo.webp
+brand-dal-tile-logo.webp
+brand-marazzi-logo.webp
+brand-quick-step-logo.webp
+brand-duchateauu-logo.webp
+brand-hallmark-logo.webp
+
+
+FAVICON
+-------
+favicon.png (32x32px)
+apple-touch-icon.png (180x180px)
+
+
+NADA BANANA PRO PROMPT SUGGESTIONS
+====================================
+For hero images (interior home shots):
+  "Modern Pacific Northwest home interior, beautiful [flooring type] flooring installed, warm natural light,
+   clean contemporary design, Vancouver Washington style, professional photography, no people,
+   ultra-realistic, high resolution"
+
+For service images:
+  "Professional flooring installation crew at work, [service type], clean residential space,
+   Pacific Northwest home interior, no faces visible, photorealistic, commercial photography style"
+
+For area images:
+  "Beautiful home interior in [city name] Washington, newly installed [flooring type] flooring,
+   modern Pacific Northwest design aesthetic, natural light, realistic photography"

@@ -1,0 +1,18 @@
+---
+import { company } from '@data/company';
+---
+
+<section class="py-14 bg-white border-t border-gray-100">
+  <div class="max-w-7xl mx-auto px-4">
+    <p class="text-center text-gray-400 text-sm font-medium uppercase tracking-wider mb-8" data-animate="fade-in">
+      Authorized Dealer, Premium Flooring Brands Carried In Our Vancouver Showroom
+    </p>
+    <div class="flex flex-wrap justify-center gap-6 md:gap-10 items-center">
+      {company.brands.map((brand, i) => (
+        <div class="text-gray-400 hover:text-brand-navy transition-colors font-semibold text-sm md:text-base tracking-wide" data-animate="fade-in" data-delay={String(Math.min(i + 1, 6))}>
+          {brand}
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

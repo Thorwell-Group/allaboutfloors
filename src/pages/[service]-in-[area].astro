@@ -1,0 +1,264 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ProcessSteps from '@components/ProcessSteps.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CTABanner from '@components/CTABanner.astro';
+import FAQ from '@components/FAQ.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import GoogleMap from '@components/GoogleMap.astro';
+import BrandLogos from '@components/BrandLogos.astro';
+import { areas } from '@data/areas';
+import { localServices, services } from '@data/services';
+import { company } from '@data/company';
+
+export async function getStaticPaths() {
+  const paths = [];
+  for (const area of areas) {
+    for (const svc of localServices) {
+      paths.push({
+        params: { service: svc.slug, area: area.slug },
+        props: { area, localService: svc },
+      });
+    }
+  }
+  return paths;
+}
+
+const { area, localService } = Astro.props;
+
+// Match to full service data for features/benefits/FAQ
+const fullService = services.find(s => s.slug === localService.mainSlug);
+
+// Unique opening paragraphs per service type
+const serviceIntros: Record<string, string> = {
+  'carpet-flooring': `${area.displayName} homeowners know the value of a warm, comfortable home, and nothing creates that feeling underfoot quite like quality carpet. All About Floors NW brings hundreds of carpet options directly to ${area.name} residents through our free in-home estimate service.`,
+  'hardwood-flooring': `Hardwood flooring is one of the most beloved upgrades you can make to a ${area.displayName} home. It adds natural warmth, timeless style, and lasting resale value. All About Floors NW offers a full range of solid and engineered hardwood options for ${area.name} homeowners.`,
+  'hardwood-refinishing-flooring': `If your ${area.displayName} home has existing hardwood floors that are looking worn, scratched, or dull, don't replace them, refinish them. All About Floors NW's professional hardwood refinishing service can restore your ${area.name} floors to like-new condition at a fraction of replacement cost.`,
+  'luxury-vinyl-flooring': `Luxury Vinyl Plank has become the most popular flooring choice for ${area.displayName} homes, and it's easy to see why. 100% waterproof, scratch-resistant, and beautifully realistic, LVP is the perfect solution for ${area.name}'s active households.`,
+  'laminate-flooring': `Laminate flooring is a smart, budget-friendly choice for ${area.displayName} homeowners who want the look of hardwood without the price tag. All About Floors NW carries a wide selection of durable, stylish laminate for every room in your ${area.name} home.`,
+  'tile-flooring': `Tile flooring is the gold standard for ${area.displayName} bathrooms, kitchens, and entryways. All About Floors NW offers thousands of tile options, porcelain, ceramic, glass, and natural stone, with expert installation throughout ${area.name}.`,
+};
+
+const introText = serviceIntros[localService.slug] ?? `All About Floors NW proudly provides ${localService.name} to ${area.displayName} homeowners. With 25+ years of experience and a dedication to quality, we are ${area.county}'s trusted flooring partner.`;
+
+// Location-specific FAQ
+const faq = [
+  {
+    q: `Do you offer ${localService.name} in ${area.displayName}?`,
+    a: `Yes, All About Floors NW provides ${localService.name} throughout ${area.displayName} and all of ${area.county}. Contact us to schedule a free in-home estimate at your ${area.name} home.`,
+  },
+  {
+    q: `How long does ${localService.name} installation take in ${area.name}?`,
+    a: `Most ${localService.name} installations in ${area.displayName} are completed in 1–3 days depending on the size of the project. We'll give you a precise timeline during your free estimate.`,
+  },
+  {
+    q: `Do you offer free estimates for ${localService.name} in ${area.displayName}?`,
+    a: `Absolutely. We offer free, no-obligation in-home estimates for ${localService.name} throughout ${area.displayName}. Our consultant will visit your home, bring samples, take measurements, and provide a detailed quote.`,
+  },
+  {
+    q: `What brands of ${localService.name} do you carry for ${area.name} homeowners?`,
+    a: `We carry top brands including Mohawk, Shaw, Quick Step, DuChateau, Dal Tile, and many more, all available for viewing in our Vancouver showroom, which serves all of ${area.county} including ${area.name}.`,
+  },
+  {
+    q: `Is financing available for ${localService.name} projects in ${area.displayName}?`,
+    a: `Yes, special financing options including 0% APR promotional periods are available for qualified ${area.name} customers. Ask about financing when you schedule your free estimate.`,
+  },
+];
+
+const pageTitle = localService.slug === 'hardwood-refinishing-flooring'
+  ? `Hardwood Floor Refinishing in ${area.displayName}`
+  : `${localService.name} in ${area.displayName}`;
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: pageTitle,
+    description: `Professional ${localService.name} services in ${area.displayName}. All About Floors NW, locally owned, 25+ years experience, free in-home estimates.`,
+    provider: {
+      '@type': 'LocalBusiness',
+      name: company.name,
+      telephone: company.phoneDashes,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: company.address.street,
+        addressLocality: company.address.city,
+        addressRegion: company.address.state,
+        postalCode: company.address.zip,
+        addressCountry: 'US',
+      },
+    },
+    areaServed: {
+      '@type': 'City',
+      name: area.name,
+      containedInPlace: { '@type': 'State', name: area.stateFull },
+    },
+    url: `https://www.allaboutfloorsnw.com/${localService.slug}-in-${area.slug}/`,
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faq.map(item => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  },
+];
+---
+
+<BaseLayout
+  title={`${pageTitle} | All About Floors NW`}
+  description={`Looking for ${localService.name} in ${area.displayName}? All About Floors NW offers premium products & expert installation. Free in-home estimates. 25+ years serving ${area.county}. Call (360) 947-2876.`}
+  canonicalURL={`https://www.allaboutfloorsnw.com/${localService.slug}-in-${area.slug}/`}
+  schema={schema}
+>
+  <Hero
+    heading={pageTitle}
+    subheading={`Discover top-quality ${localService.name} products and professional installation services in ${area.displayName}. Free in-home estimates from your local ${area.county} flooring experts.`}
+    badge={`Serving ${area.name} · Free Estimates`}
+    image={fullService?.heroImage ?? '/images/hero-flooring-vancouver-wa.webp'}
+    imageAlt={`${localService.name} professionally installed in a ${area.displayName} home by All About Floors NW`}
+  />
+
+  <Breadcrumb items={[
+    { label: 'Service Areas', href: '/service-areas/' },
+    { label: area.displayName, href: `/flooring-in-${area.slug}/` },
+    { label: localService.name },
+  ]} />
+
+  <!-- Main content -->
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <!-- Main content -->
+        <div class="lg:col-span-2">
+          <span class="badge-gold mb-3">{localService.name} · {area.displayName}</span>
+          <h2 class="section-heading mt-2 mb-5">
+            Your Local {localService.name} Contractor in {area.displayName}
+          </h2>
+
+          <p class="text-gray-700 leading-relaxed mb-4">{introText}</p>
+
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Proudly serving {area.displayName} and all surrounding communities, our experienced team has completed thousands of flooring projects across {area.county}. We understand the unique character of {area.name} homes, from newly constructed subdivisions to established neighborhoods, and we bring the right flooring solutions for every style and budget.
+          </p>
+
+          <p class="text-gray-700 leading-relaxed mb-6">
+            When you choose All About Floors NW for {localService.name} in {area.displayName}, you get a locally owned company with {company.yearsExperience} years of experience, a free in-home estimate with no pressure, transparent pricing, certified installation crews, and a follow-up visit within 10 days to ensure your complete satisfaction.
+          </p>
+
+          {fullService && (
+            <div class="mb-8">
+              <h3 class="font-heading font-semibold text-brand-navy text-xl mb-4">
+                Why {area.name} Homeowners Choose {localService.name} from All About Floors NW
+              </h3>
+              <ul class="space-y-2.5">
+                {fullService.features.map(f => (
+                  <li class="flex items-start gap-2.5 text-gray-700">
+                    <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div class="flex flex-wrap gap-3">
+            <a href="/free-estimate/" class="btn-primary">Get Free Estimate in {area.name}</a>
+            <a href={company.cta.phone} class="btn-secondary">{company.phone}</a>
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="space-y-6">
+          <!-- Other services in this area -->
+          <div class="bg-brand-light rounded-2xl p-6">
+            <h3 class="font-heading font-semibold text-brand-navy mb-4">More Flooring in {area.name}</h3>
+            <div class="space-y-2">
+              {localServices
+                .filter(s => s.slug !== localService.slug)
+                .map(svc => (
+                  <a
+                    href={`/${svc.slug}-in-${area.slug}/`}
+                    class="flex items-center gap-2 text-sm text-gray-700 hover:text-brand-navy transition-colors py-1"
+                  >
+                    <svg class="w-3.5 h-3.5 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    {svc.name} in {area.displayName}
+                  </a>
+                ))}
+              <a href={`/flooring-in-${area.slug}/`} class="flex items-center gap-2 text-sm font-semibold text-brand-gold hover:text-brand-navy transition-colors py-1 mt-1">
+                <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                All Flooring in {area.displayName}
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact card -->
+          <div class="bg-brand-navy text-white rounded-2xl p-6">
+            <h3 class="font-heading font-semibold text-lg mb-3">Contact Us</h3>
+            <a href={company.cta.phone} class="text-xl font-bold text-brand-gold-light hover:text-white transition-colors block mb-2">
+              {company.phone}
+            </a>
+            <p class="text-gray-400 text-xs mb-3">{company.hoursDisplay}</p>
+            <a href="/free-estimate/" class="btn-primary w-full justify-center text-sm">
+              Request Free Estimate
+            </a>
+          </div>
+
+          <!-- Nearby area links -->
+          {area.nearbyAreas.length > 0 && (
+            <div class="bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+              <h3 class="font-heading font-semibold text-brand-navy mb-3 text-sm">Nearby Areas We Serve</h3>
+              <div class="flex flex-wrap gap-2">
+                {area.nearbyAreas.map(nearby => (
+                  <span class="bg-brand-light text-brand-navy text-xs px-2.5 py-1 rounded-full">{nearby}</span>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ProcessSteps />
+
+  <!-- Map -->
+  <section class="py-14 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="section-heading mb-4">
+            Serving All of {area.displayName}
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Our Vancouver showroom is easily accessible from {area.name} and we offer free in-home estimate visits throughout {area.displayName}. Call us or submit a request online and we'll schedule at your convenience.
+          </p>
+          <p class="text-gray-700 text-sm">
+            <strong>Showroom:</strong> {company.address.full}<br />
+            <strong>Hours:</strong> {company.hoursDisplay}
+          </p>
+        </div>
+        <GoogleMap
+          embedUrl={area.mapEmbed}
+          title={`${localService.name} service area map, ${area.displayName}`}
+          height="320px"
+        />
+      </div>
+    </div>
+  </section>
+
+  <ReviewsSection title={`What ${area.name} Homeowners Say`} max={3} />
+
+  <FAQ items={faq} title={`${localService.name} FAQ, ${area.displayName}`} />
+
+  <BrandLogos />
+
+  <CTABanner
+    heading={`Ready for ${localService.name} in ${area.displayName}?`}
+    subtext={`All About Floors NW is ${area.name}'s trusted flooring contractor. Get your free in-home estimate today, no pressure, no obligation.`}
+    ctaText={`Get Free Estimate in ${area.name}`}
+  />
+</BaseLayout>

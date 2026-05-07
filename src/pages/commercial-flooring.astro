@@ -1,0 +1,88 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import CTABanner from '@components/CTABanner.astro';
+import FAQ from '@components/FAQ.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import BrandLogos from '@components/BrandLogos.astro';
+import { installationServices } from '@data/services';
+import { company } from '@data/company';
+
+const svc = installationServices.find(s => s.slug === 'commercial-flooring')!;
+
+const faq = [
+  { q: 'Can you work around our business hours?', a: 'Absolutely. We schedule commercial installations for nights, weekends, or phased sections to minimize disruption to your operations.' },
+  { q: 'What commercial flooring types do you offer?', a: 'We offer commercial-grade carpet tile, luxury vinyl tile (LVT), hardwood, laminate, porcelain tile, and rubber flooring for a wide range of commercial applications.' },
+  { q: 'Do you handle large commercial projects?', a: 'Yes, we work with general contractors, property managers, and business owners on projects of all sizes, from single offices to multi-floor commercial buildings.' },
+  { q: 'Do you provide commercial warranties?', a: 'Yes, all commercial installations come with our installation warranty, and manufacturer warranties apply to all commercial-grade products.' },
+  { q: 'Do you work with property managers and HOAs?', a: 'Yes, we have established relationships with property managers throughout Clark County and offer preferred pricing for ongoing partnerships and multi-unit projects.' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Commercial Flooring in Vancouver, WA',
+  description: svc.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  url: 'https://www.allaboutfloorsnw.com/commercial-flooring/',
+};
+---
+
+<BaseLayout
+  title="Commercial Flooring in Vancouver, WA | All About Floors NW"
+  description="Professional commercial flooring solutions in Vancouver, WA. Offices, restaurants, retail, healthcare & more. All About Floors NW, your Clark County commercial flooring partner."
+  schema={schema}
+>
+  <Hero
+    heading="Commercial Flooring in Vancouver, WA"
+    subheading="Durable, professional-grade flooring solutions for offices, retail, restaurants, healthcare, and more. Serving Clark County businesses since 1999."
+    image={svc.heroImage}
+    imageAlt={svc.heroImageAlt}
+    badge="Licensed Commercial Contractor"
+  />
+
+  <Breadcrumb items={[{ label: 'Services', href: '/services/' }, { label: 'Commercial Flooring' }]} />
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-heading">Commercial Spaces We Serve</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {[
+          { name: 'Office Buildings', icon: '🏢' },
+          { name: 'Restaurants & Cafes', icon: '🍽️' },
+          { name: 'Retail Stores', icon: '🛍️' },
+          { name: 'Healthcare Facilities', icon: '🏥' },
+          { name: 'Hotels & Hospitality', icon: '🏨' },
+          { name: 'Schools & Daycare', icon: '🏫' },
+          { name: 'Apartment Communities', icon: '🏘️' },
+          { name: 'Warehouses & Industrial', icon: '🏭' },
+        ].map(space => (
+          <div class="bg-brand-light rounded-2xl p-6 text-center">
+            <div class="text-3xl mb-2">{space.icon}</div>
+            <div class="font-semibold text-brand-navy text-sm">{space.name}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faq} title="Commercial Flooring FAQ" />
+  <ReviewsSection max={3} />
+  <BrandLogos />
+  <CTABanner heading="Get a Commercial Flooring Quote in Vancouver, WA" subtext="We work with businesses of all sizes throughout Clark County and Portland. Contact us for a free commercial flooring assessment." ctaText="Request Commercial Quote" />
+</BaseLayout>

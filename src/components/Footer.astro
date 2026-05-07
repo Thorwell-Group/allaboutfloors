@@ -1,0 +1,119 @@
+---
+import { company } from '@data/company';
+import { services, installationServices } from '@data/services';
+import { areas } from '@data/areas';
+---
+
+<footer class="bg-brand-dark text-gray-300">
+  <!-- Main footer -->
+  <div class="max-w-7xl mx-auto px-4 py-14 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+    <!-- Brand column -->
+    <div class="lg:col-span-1">
+      <div class="mb-4">
+        <img
+          src="/images/all-about-floors-nw-logo.webp"
+          alt="All About Floors NW"
+          class="h-10 w-auto max-w-[180px] object-contain mb-1"
+          width="180"
+          height="40"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div style="display:none" class="items-center gap-3">
+          <div class="bg-brand-gold rounded-lg w-10 h-10 flex items-center justify-center font-heading font-bold text-white text-xl">A</div>
+          <div>
+            <div class="font-heading font-bold text-white leading-none">{company.name}</div>
+            <div class="text-brand-gold text-xs">Est. {company.founded}</div>
+          </div>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed mb-5">
+        Vancouver's most trusted flooring company with {company.yearsExperience} years of experience. Premium products. Expert installation. Guaranteed satisfaction.
+      </p>
+      <div class="space-y-2 text-sm">
+        <div class="flex items-start gap-2">
+          <svg class="w-4 h-4 mt-0.5 text-brand-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <a href={company.googleMapsUrl} target="_blank" rel="noopener" class="hover:text-white transition-colors">{company.address.full}</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          <a href={company.cta.phone} class="hover:text-white transition-colors">{company.phone}</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          <a href={`mailto:${company.email}`} class="hover:text-white transition-colors">{company.email}</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>{company.hoursDisplay}</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Products -->
+    <div>
+      <h3 class="text-white font-semibold mb-4">Flooring Products</h3>
+      <ul class="space-y-2 text-sm">
+        {services.map(s => (
+          <li><a href={s.urlPath} class="hover:text-white hover:translate-x-1 transition-all inline-block">{s.name}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div>
+      <h3 class="text-white font-semibold mb-4">Our Services</h3>
+      <ul class="space-y-2 text-sm mb-6">
+        {installationServices.map(s => (
+          <li><a href={s.urlPath} class="hover:text-white hover:translate-x-1 transition-all inline-block">{s.name}</a></li>
+        ))}
+        <li><a href="/faq/" class="hover:text-white hover:translate-x-1 transition-all inline-block">FAQ</a></li>
+        <li><a href="/reviews/" class="hover:text-white hover:translate-x-1 transition-all inline-block">Customer Reviews</a></li>
+        <li><a href="/financing/" class="hover:text-white hover:translate-x-1 transition-all inline-block">Financing Options</a></li>
+        <li><a href="/free-estimate/" class="hover:text-white hover:translate-x-1 transition-all inline-block">Free Estimate</a></li>
+      </ul>
+    </div>
+
+    <!-- Areas -->
+    <div>
+      <h3 class="text-white font-semibold mb-4">Areas We Serve</h3>
+      <ul class="space-y-2 text-sm mb-6">
+        {areas.map(a => (
+          <li>
+            <a href={`/flooring-in-${a.slug}/`} class="hover:text-white hover:translate-x-1 transition-all inline-block">
+              {a.displayName}
+            </a>
+          </li>
+        ))}
+        <li><a href="/service-areas/" class="text-brand-gold hover:text-brand-gold-light font-medium">View All Areas →</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CTA bar -->
+  <div class="border-t border-white/10 bg-brand-navy">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-white font-heading font-semibold text-lg">
+        Ready for new floors? Get your free estimate today.
+      </div>
+      <a href="/free-estimate/" class="btn-primary whitespace-nowrap">
+        Schedule Free Estimate
+      </a>
+    </div>
+  </div>
+
+  <!-- Bottom bar -->
+  <div class="border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
+      <span>© {new Date().getFullYear()} <a href="https://thorwellgroup.com" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Thorwell Group Inc.</a> All rights reserved.</span>
+      <div class="flex gap-4">
+        <a href="/privacy-policy/" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+        <a href="/sitemap-index.xml" class="hover:text-gray-300 transition-colors">Sitemap</a>
+      </div>
+      <div class="flex items-center gap-1">
+        <span class="text-amber-400">★★★★★</span>
+        <span>5.0 Google Rating</span>
+      </div>
+    </div>
+  </div>
+</footer>

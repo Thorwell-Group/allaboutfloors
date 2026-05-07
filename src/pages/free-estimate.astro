@@ -1,0 +1,330 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import GoogleMap from '@components/GoogleMap.astro';
+import { company } from '@data/company';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Book Your Free In-Home Flooring Estimate',
+  url: 'https://www.allaboutfloorsnw.com/free-estimate/',
+  description: 'Book a free in-home flooring estimate from All About Floors NW in Vancouver, WA. Samples brought to your home. No pressure, no obligation.',
+};
+
+const benefitStrip = [
+  '⭐ 5.0 stars · 100+ verified Google reviews',
+  'Same-week appointments across Clark County',
+  'Free in-home estimate',
+  'Samples brought to your home',
+  'Family-owned since 1999, no subcontractors',
+];
+
+const stats = [
+  { num: '5,000+', label: 'Floors Installed' },
+  { num: '100+', label: '5-Star Reviews' },
+  { num: '25+', label: 'Years in Vancouver' },
+  { num: 'Lifetime', label: 'Workmanship Warranty' },
+];
+
+const steps = [
+  {
+    n: '1',
+    title: 'We call to schedule',
+    desc: 'A real person from our Vancouver team calls you within one business hour to confirm a time that works.',
+  },
+  {
+    n: '2',
+    title: 'We come to you',
+    desc: 'Samples and laser measurements at your couch. See colors in your real lighting. Zero pressure, zero obligation.',
+  },
+  {
+    n: '3',
+    title: 'Itemized written quote',
+    desc: 'Every line item broken out, materials, labor, removal, disposal. No hidden fees. Take it home and decide on your time.',
+  },
+];
+
+const faqs = [
+  {
+    q: 'Is the estimate really free?',
+    a: 'Yes. 100% free, no obligation, no hidden fees. Whether you book or not, the visit costs you nothing.',
+  },
+  {
+    q: 'Will I get spammed with calls and emails?',
+    a: 'Never. One call to confirm your appointment, one call to follow up after the visit. That\'s it. We hate spam too.',
+  },
+  {
+    q: 'How fast can you start the install?',
+    a: 'Most installs start within 1–3 weeks of your estimate. We carry stock on popular products, so quick turnarounds are common.',
+  },
+  {
+    q: 'Do you use subcontractors?',
+    a: 'Never. Our installers are our own crew, fully insured, background-checked, and on our payroll. The same people who measure your home are connected to the people installing it.',
+  },
+  {
+    q: 'What areas do you serve?',
+    a: 'All of Clark County, WA — Vancouver, Battle Ground, Camas, Washougal, Ridgefield, La Center, Brush Prairie, Salmon Creek, Hazel Dell — plus Portland and Gresham, OR.',
+  },
+  {
+    q: 'Do you offer financing?',
+    a: 'Yes — 0% APR for qualified customers, applied for in 90 seconds with no impact to your credit. Discussed during your free estimate.',
+  },
+];
+---
+
+<BaseLayout
+  title="Book Your Free In-Home Flooring Estimate | All About Floors NW, Vancouver WA"
+  description="Free in-home flooring estimate in Vancouver, WA. Samples brought to your home. No pressure, no obligation. Same-week appointments. Call (360) 947-2876."
+  schema={schema}
+  bare={true}
+>
+  <!-- Flashy red marquee banner -->
+  <div class="bg-red-600 text-white overflow-hidden border-y border-red-800/40 shadow-md relative">
+    <div class="marquee-track flex whitespace-nowrap py-2.5 text-sm font-semibold tracking-wide">
+      {Array.from({ length: 2 }).map(() => (
+        <div class="flex shrink-0 items-center gap-8 pr-8">
+          {benefitStrip.map(b => (
+            <span class="flex items-center gap-2">
+              <span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span>
+              <span>{b}</span>
+            </span>
+          ))}
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Minimal brand bar (no nav, no phone — funnel is locked) -->
+  <div class="bg-brand-navy py-3 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-center">
+      <img
+        src="/images/all-about-floors-nw-logo.webp"
+        alt="All About Floors NW"
+        class="h-10 w-auto max-w-[200px] object-contain"
+        width="200"
+        height="40"
+        loading="eager"
+      />
+    </div>
+  </div>
+
+  <!-- 2. Main hero with form -->
+  <section class="bg-brand-navy text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 30%, #C8A55B 0%, transparent 50%), radial-gradient(circle at 80% 70%, #C8A55B 0%, transparent 50%);"></div>
+    <div class="max-w-7xl mx-auto px-4 py-14 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start relative z-10">
+      <!-- Left: copy -->
+      <div>
+        <!-- Eyebrow / kicker -->
+        <span class="inline-block bg-brand-gold/20 border border-brand-gold/40 text-brand-gold-light text-xs md:text-sm font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+          Vancouver, WA · Clark County's #1 Flooring Experts
+        </span>
+
+        <h1 class="font-heading font-bold text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6">
+          Free In-Home <span class="text-brand-gold">Flooring Estimate.</span>
+        </h1>
+
+        <p class="text-white text-2xl md:text-3xl font-heading font-semibold leading-snug mb-5 max-w-xl">
+          Beautiful new floors, transparent pricing, zero pressure.
+        </p>
+
+        <p class="text-gray-200 text-lg leading-relaxed mb-7 max-w-lg">
+          Samples brought right to your couch. Itemized written quote within 24 hours of our visit. Booked in under 90 seconds.
+        </p>
+
+        <!-- Google verified reviews trust pill -->
+        <div class="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full pl-2 pr-4 py-2 mb-7">
+          <svg class="w-7 h-7 flex-shrink-0" viewBox="0 0 48 48" aria-label="Google">
+            <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+            <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+            <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+            <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+          </svg>
+          <div class="leading-tight">
+            <div class="flex items-center gap-1.5">
+              <span class="font-heading font-bold text-white text-base">5.0</span>
+              <span class="flex gap-0.5 text-amber-400 text-sm">★★★★★</span>
+            </div>
+            <div class="text-gray-200 text-xs">100+ verified Google reviews</div>
+          </div>
+        </div>
+
+        <!-- Quick benefits list -->
+        <ul class="space-y-2.5 text-gray-100 text-base">
+          <li class="flex items-start gap-2.5">
+            <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span><strong class="text-white">Same-week appointments</strong> across Clark County</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span><strong class="text-white">No subcontractors</strong> — our own crew, fully insured</span>
+          </li>
+          <li class="flex items-start gap-2.5">
+            <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <span><strong class="text-white">Family-owned since 1999</strong> — 5,000+ Vancouver homes</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Right: LeadConnector survey form -->
+      <div id="book" class="lg:sticky lg:top-24 rounded-xl overflow-hidden shadow-lg">
+        <!-- Red headline flush with form -->
+        <div class="bg-red-600 text-white px-5 py-3 text-center">
+          <h2 class="font-heading font-bold text-xl md:text-2xl leading-tight">
+            Get Your Estimate Today
+          </h2>
+          <p class="text-red-50 text-xs md:text-sm mt-0.5 leading-snug">
+            Someone will reach out shortly to gather your information.
+          </p>
+        </div>
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/survey/28BfbXbvFgh5ZaAV6B7f"
+          style="border:none;width:100%;min-height:442px;display:block;background:white;margin:0;"
+          scrolling="no"
+          id="28BfbXbvFgh5ZaAV6B7f"
+          title="Free Flooring Estimate Survey"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Stats section -->
+  <section class="bg-white py-12 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+      {stats.map(s => (
+        <div>
+          <div class="font-heading font-bold text-3xl md:text-4xl text-brand-navy">{s.num}</div>
+          <div class="text-xs md:text-sm text-gray-500 mt-1 uppercase tracking-wider">{s.label}</div>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- 4. What happens next -->
+  <section class="py-16 bg-brand-light">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <span class="badge-gold mb-3">What Happens Next</span>
+        <h2 class="section-heading mt-2">From Booking to New Floors in 3 Simple Steps</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {steps.map(step => (
+          <div class="bg-white rounded-2xl p-7 shadow-sm relative">
+            <div class="absolute -top-5 left-7 w-10 h-10 rounded-full bg-brand-gold text-white font-heading font-bold flex items-center justify-center text-lg shadow-md">
+              {step.n}
+            </div>
+            <h3 class="font-heading font-semibold text-brand-navy text-xl mb-2 mt-3">{step.title}</h3>
+            <p class="text-gray-600 leading-relaxed text-sm">{step.desc}</p>
+          </div>
+        ))}
+      </div>
+      <div class="text-center mt-10">
+        <a href="#book" class="btn-primary btn-pulse">Book My Free Estimate</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Reviews / social proof -->
+  <ReviewsSection title="Real 5-Star Reviews from Clark County Neighbors" />
+
+  <!-- 6. Financing pitch -->
+  <section class="py-16 bg-brand-navy text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <span class="badge-gold mb-3">Special Financing</span>
+      <h2 class="font-heading font-bold text-3xl md:text-4xl mt-2 mb-4">0% APR for 12–24 Months</h2>
+      <p class="text-gray-300 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
+        Pre-qualify in 90 seconds. No impact to your credit. Beautiful new floors are more affordable than you think — discussed and applied for during your free estimate.
+      </p>
+      <a href="#book" class="btn-primary">Book My Free Estimate</a>
+      <p class="text-gray-400 text-xs mt-4">*Subject to credit approval. Promotional financing through approved lender partners. Terms apply.</p>
+    </div>
+  </section>
+
+  <!-- 7. FAQ / objection handling -->
+  <section class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <span class="badge-gold mb-3">Quick Answers</span>
+        <h2 class="section-heading mt-2">Honest Answers to the Most Common Questions</h2>
+      </div>
+      <div class="space-y-3" x-data="{ active: null }">
+        {faqs.map((item, i) => (
+          <div class="bg-brand-light rounded-xl overflow-hidden">
+            <button
+              @click={`active === ${i} ? active = null : active = ${i}`}
+              class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-white/40 transition-colors"
+            >
+              <span class="font-semibold text-brand-navy">{item.q}</span>
+              <svg
+                class="w-5 h-5 text-brand-gold flex-shrink-0 transition-transform duration-200"
+                :class={`active === ${i} ? 'rotate-180' : ''`}
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div x-show={`active === ${i}`} x-transition class="px-6 pb-5">
+              <p class="text-gray-700 leading-relaxed">{item.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Final CTA + map -->
+  <section class="py-16 bg-brand-light">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+      <div>
+        <span class="badge-gold mb-3">Book in 90 Seconds</span>
+        <h2 class="section-heading mt-2 mb-4">Two Ways to Get Started</h2>
+        <p class="text-gray-700 leading-relaxed mb-6">
+          Book your free in-home estimate online — or call us directly. Either way, you'll have an itemized written quote in hand within 24 hours of our visit.
+        </p>
+        <div class="space-y-3">
+          <a href="#book" class="btn-primary w-full sm:w-auto sm:inline-flex">
+            Book My Free Estimate Online
+          </a>
+          <div class="block">
+            <a href={company.cta.phone} class="btn-secondary w-full sm:w-auto sm:inline-flex">
+              <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              Call {company.phone}
+            </a>
+          </div>
+        </div>
+        <div class="mt-8 pt-6 border-t border-gray-200 space-y-2 text-sm text-gray-700">
+          <div class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            <span><strong class="text-brand-navy">Showroom:</strong> {company.address.full}</span>
+          </div>
+          <div class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-brand-gold flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <a href={`mailto:${company.email}`} class="hover:text-brand-navy"><strong class="text-brand-navy">Email:</strong> {company.email}</a>
+          </div>
+          <div class="flex items-start gap-2">
+            <svg class="w-4 h-4 text-brand-gold flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span><strong class="text-brand-navy">Hours:</strong> {company.hoursDisplay}</span>
+          </div>
+        </div>
+      </div>
+      <GoogleMap
+        embedUrl={company.mapEmbedUrl}
+        title="All About Floors NW showroom location in Vancouver, WA"
+        height="380px"
+      />
+    </div>
+  </section>
+
+  <!-- LeadConnector form auto-resize script -->
+  <script src="https://link.msgsndr.com/js/form_embed.js" is:inline></script>
+
+  <!-- 9. Trust strip footer -->
+  <div class="bg-brand-dark text-gray-300 py-5 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs md:text-sm">
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> WA Licensed &amp; Insured</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> No Subcontractors · Our Own Crew</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Lifetime Workmanship Warranty</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Family-Owned Since 1999</span>
+    </div>
+  </div>
+</BaseLayout>

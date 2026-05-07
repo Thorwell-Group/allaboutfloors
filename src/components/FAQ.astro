@@ -1,0 +1,54 @@
+---
+interface FAQItem {
+  q: string;
+  a: string;
+}
+
+interface Props {
+  items: FAQItem[];
+  title?: string;
+}
+
+const { items, title = 'Frequently Asked Questions' } = Astro.props;
+---
+
+<section class="py-20 bg-brand-light">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="section-heading">{title}</h2>
+    </div>
+
+    <div class="space-y-3" x-data="{ active: null }">
+      {items.map((item, i) => (
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+          <button
+            @click={`active === ${i} ? active = null : active = ${i}`}
+            class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+            :aria-expanded={`active === ${i}`}
+          >
+            <span class="font-semibold text-brand-navy pr-4">{item.q}</span>
+            <svg
+              class="w-5 h-5 text-brand-gold flex-shrink-0 transition-transform duration-200"
+              :class={`active === ${i} ? 'rotate-180' : ''`}
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+          </button>
+          <div
+            x-show={`active === ${i}`}
+            x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 transform -translate-y-2"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-collapse
+            class="px-6 pb-5"
+          >
+            <p class="text-gray-700 leading-relaxed">{item.a}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,412 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ServiceCards from '@components/ServiceCards.astro';
+import ProcessSteps from '@components/ProcessSteps.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CTABanner from '@components/CTABanner.astro';
+import BrandLogos from '@components/BrandLogos.astro';
+import AreaCards from '@components/AreaCards.astro';
+import { company } from '@data/company';
+import { installationServices } from '@data/services';
+
+const schema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    '@id': 'https://www.allaboutfloorsnw.com/#business',
+    name: company.name,
+    description: company.description,
+    url: 'https://www.allaboutfloorsnw.com',
+    telephone: company.phoneDashes,
+    email: company.email,
+    image: 'https://www.allaboutfloorsnw.com/images/all-about-floors-nw-storefront.webp',
+    logo: 'https://www.allaboutfloorsnw.com/images/all-about-floors-nw-logo.webp',
+    priceRange: company.priceRange,
+    currenciesAccepted: company.currency,
+    paymentAccepted: 'Cash, Check, Visa, Mastercard, American Express',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: company.geo.lat,
+      longitude: company.geo.lng,
+    },
+    openingHoursSpecification: [
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '17:30' },
+      { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Saturday'], opens: '10:00', closes: '16:00' },
+    ],
+    areaServed: [
+      'Vancouver, WA', 'Battle Ground, WA', 'Camas, WA', 'Washougal, WA',
+      'Ridgefield, WA', 'La Center, WA', 'Brush Prairie, WA', 'Salmon Creek, WA',
+      'Hazel Dell, WA', 'Portland, OR', 'Gresham, OR',
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Flooring Products & Services',
+      itemListElement: [
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Carpet Flooring' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hardwood Flooring' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Luxury Vinyl Plank' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Laminate Flooring' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tile Flooring' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Flooring Installation' } },
+        { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hardwood Refinishing' } },
+      ],
+    },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '200',
+      bestRating: '5',
+    },
+    sameAs: [
+      company.social.facebook,
+      company.social.google,
+    ],
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    url: 'https://www.allaboutfloorsnw.com',
+    name: company.name,
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: 'https://www.allaboutfloorsnw.com/search?q={search_term_string}',
+      'query-input': 'required name=search_term_string',
+    },
+  },
+];
+---
+
+<BaseLayout
+  title="Vancouver, WA Flooring Company | All About Floors NW"
+  description="Vancouver's locally owned flooring experts since 1999. Carpet, hardwood, LVP, tile & laminate. Free in-home estimates. Call (360) 947-2876."
+  schema={schema}
+>
+  <Hero
+    heading="Vancouver's Most Trusted Flooring Experts"
+    subheading="Your home deserves floors that wow every guest, and hold up through every muddy boot and spilled coffee. 25+ years serving Clark County families. Free in-home estimates, zero pressure."
+    badge="Est. 1999 · 5-Star Rated · Clark County's #1 Choice"
+    image="/images/hero-flooring-vancouver-wa.webp"
+    imageAlt="Beautiful hardwood and luxury vinyl flooring installed in a modern Vancouver WA home by All About Floors NW"
+  />
+
+  <!-- Stats bar with counting numbers -->
+  <div class="bg-brand-dark py-10 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center text-white">
+      <div data-animate="zoom-in" data-count-to="25" data-count-suffix="+">
+        <div class="text-4xl font-heading font-bold text-brand-gold" data-count-display>25+</div>
+        <div class="text-sm text-gray-400 mt-1 uppercase tracking-wider">Years Serving Clark County</div>
+      </div>
+      <div data-animate="zoom-in" data-delay="1" data-count-to="5000" data-count-suffix="+">
+        <div class="text-4xl font-heading font-bold text-brand-gold" data-count-display>5,000+</div>
+        <div class="text-sm text-gray-400 mt-1 uppercase tracking-wider">Homes Transformed</div>
+      </div>
+      <div data-animate="zoom-in" data-delay="2" data-count-to="200" data-count-suffix="+">
+        <div class="text-4xl font-heading font-bold text-brand-gold" data-count-display>200+</div>
+        <div class="text-sm text-gray-400 mt-1 uppercase tracking-wider">5-Star Google Reviews</div>
+      </div>
+      <div data-animate="zoom-in" data-delay="3" data-count-to="11" data-count-suffix="">
+        <div class="text-4xl font-heading font-bold text-brand-gold" data-count-display>11</div>
+        <div class="text-sm text-gray-400 mt-1 uppercase tracking-wider">Cities Served in WA &amp; OR</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Local trust credentials strip -->
+  <div class="bg-white border-b border-gray-100 py-4">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-gray-600">
+        <span class="flex items-center gap-2" data-animate="fade-in">
+          <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+          <span>Showroom at <strong class="text-brand-navy">6700 NE 152nd Ave, Vancouver, WA</strong></span>
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2" data-animate="fade-in" data-delay="1">
+          <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span><strong class="text-brand-navy">WA Licensed &amp; Insured</strong> · Background-Checked Crews</span>
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2" data-animate="fade-in" data-delay="2">
+          <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span>5.0 Stars on Google · <strong class="text-brand-navy">200+ Reviews from Your Neighbors</strong></span>
+        </span>
+        <span class="hidden md:block text-gray-200">|</span>
+        <span class="flex items-center gap-2" data-animate="fade-in" data-delay="3">
+          <svg class="w-4 h-4 text-brand-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <span>Open <strong class="text-brand-navy">Mon–Sat</strong> · Evening appointments available</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <ServiceCards
+    title="Premium Flooring Products for Every Home"
+    subtitle="From plush carpet for cozy bedrooms to 100% waterproof LVP for busy kitchens, we carry every flooring type your Clark County home deserves."
+  />
+
+  <!-- Specialty services -->
+  <section class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12" data-animate="fade-up">
+        <span class="badge-gold mb-3">Beyond Flooring</span>
+        <h2 class="section-heading mt-2">Specialty Services</h2>
+        <p class="section-subheading mx-auto text-center">
+          Installation, refinishing, repair, commercial work, and countertops — your complete renovation partner under one roof.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+        {installationServices.map((svc, i) => (
+          <a href={svc.urlPath} class="card group p-5 flex flex-col hover:-translate-y-1 transition-transform duration-300" data-animate="fade-up" data-delay={String(Math.min(i + 1, 6))}>
+            <img
+              src={svc.heroImage}
+              alt={svc.heroImageAlt}
+              class="w-full rounded-xl aspect-video object-cover mb-3 group-hover:scale-[1.02] transition-transform duration-300"
+              loading="lazy"
+              width="400"
+              height="225"
+            />
+            <h3 class="font-heading font-semibold text-brand-navy text-base mb-1">{svc.name}</h3>
+            <p class="text-gray-500 text-xs flex-1">{svc.tagline}</p>
+            <div class="mt-2 text-brand-gold font-semibold text-xs flex items-center gap-1">
+              Learn More <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Countertop hero feature -->
+  <section class="relative bg-brand-navy overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        src="/images/countertop1.webp"
+        alt="Beautiful countertop installation in a Vancouver WA kitchen by All About Floors NW"
+        class="w-full h-full object-cover opacity-50"
+        loading="lazy"
+        width="1920"
+        height="600"
+      />
+      <div class="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/85 to-transparent"></div>
+    </div>
+    <div class="relative z-10 max-w-7xl mx-auto px-4 py-20 md:py-28">
+      <div class="max-w-2xl text-white">
+        <span class="inline-block bg-brand-gold text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-5 shadow-md">
+          New: Countertop Installation
+        </span>
+        <h2 class="font-heading font-bold text-4xl md:text-5xl text-shadow leading-tight mb-5">
+          Tile, Quartz & Stone Countertops, Installed Right
+        </h2>
+        <p class="text-gray-200 text-lg leading-relaxed mb-8 text-shadow">
+          From a single bathroom vanity to a full kitchen renovation, our 25+ years of tile and stone craftsmanship now extends to countertops. Coordinated with your floors and backsplash for a seamless look.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="/countertops/" class="btn-primary btn-pulse text-base px-8 py-3.5">
+            Explore Countertops
+          </a>
+          <a href="/free-estimate/" class="btn-outline-white text-base px-8 py-3.5">
+            Get Free Estimate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value pillars -->
+  <section class="py-14 bg-brand-navy">
+    <div class="max-w-7xl mx-auto px-4">
+      <p class="text-center text-brand-gold text-sm font-semibold uppercase tracking-widest mb-10" data-animate="fade-in">Why Vancouver Families Choose Us, Every Time</p>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 text-center text-white">
+        {[
+          { icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>`, title: 'Free In-Home Estimates', sub: 'We come to you' },
+          { icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>`, title: 'Satisfaction Guarantee', sub: 'We make it right' },
+          { icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>`, title: 'Background-Checked Crews', sub: 'Safe in your home' },
+          { icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>`, title: 'Financing Available', sub: '0% APR options' },
+          { icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>`, title: 'Transparent Pricing', sub: 'No hidden fees' },
+          { icon: `<svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>`, title: 'Locally Owned Since 1999', sub: 'Not a franchise' },
+        ].map((pillar, i) => (
+          <div class="flex flex-col items-center gap-2 group" data-animate="fade-up" data-delay={String(i + 1)}>
+            <div class="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center text-brand-gold group-hover:bg-brand-gold group-hover:text-white transition-all duration-300 mb-1" set:html={pillar.icon} />
+            <div class="font-semibold text-sm leading-tight">{pillar.title}</div>
+            <div class="text-gray-400 text-xs">{pillar.sub}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+
+        <!-- Left: copy -->
+        <div data-animate="slide-left">
+          <span class="badge-gold mb-3">Why All About Floors NW?</span>
+          <h2 class="section-heading mt-2 mb-5">
+            Flooring Done Right, By People Who Actually Live Here
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            We know picking new floors can feel overwhelming, hundreds of options, contractors you're not sure about, worrying about mess and disruption. We've heard it all, and we've spent 25 years building a process that makes it simple.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            We're a <strong>locally owned company</strong>, not a franchise, not a big box store. When you call, you talk to our team. When we install, it's our own licensed crew. When the job's done, we follow up until everything is exactly right.
+          </p>
+          <ul class="space-y-3 text-gray-700 mb-8">
+            {[
+              'Free in-home estimates, we come to you with samples, zero pressure',
+              'Floors matched to your home\'s lighting, style, and real-life needs',
+              'Licensed, insured, background-checked crew, safe in your home',
+              'In-stock inventory for faster turnaround on your project',
+              'Financing available, 0% APR options so budget isn\'t a barrier',
+              'Industry-leading installation warranty on every single project',
+            ].map((item, i) => (
+              <li class="flex items-start gap-2.5" data-animate="fade-in" data-delay={String(Math.min(i + 1, 6))}>
+                <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <a href="/about/" class="btn-primary btn-pulse">Learn Our Story</a>
+        </div>
+
+        <!-- Right: animated stat cards instead of photo -->
+        <div class="grid grid-cols-2 gap-5" data-animate="slide-right">
+          <!-- Stat 1 -->
+          <div class="bg-brand-dark text-white rounded-2xl p-7 flex flex-col items-center justify-center text-center shadow-xl" data-count-to="25" data-count-suffix="+">
+            <div class="text-5xl font-heading font-bold text-brand-gold mb-2" data-count-display>25+</div>
+            <div class="text-sm text-gray-400 uppercase tracking-wider leading-snug">Years of Experience</div>
+          </div>
+          <!-- Stat 2 -->
+          <div class="bg-brand-gold text-white rounded-2xl p-7 flex flex-col items-center justify-center text-center shadow-xl" data-count-to="5000" data-count-suffix="+">
+            <div class="text-5xl font-heading font-bold mb-2" data-count-display>5,000+</div>
+            <div class="text-sm uppercase tracking-wider leading-snug opacity-90">Homes Transformed</div>
+          </div>
+          <!-- Stat 3 -->
+          <div class="bg-brand-gold text-white rounded-2xl p-7 flex flex-col items-center justify-center text-center shadow-xl" data-count-to="200" data-count-suffix="+">
+            <div class="text-5xl font-heading font-bold mb-2" data-count-display>200+</div>
+            <div class="text-sm uppercase tracking-wider leading-snug opacity-90">5-Star Reviews</div>
+          </div>
+          <!-- Stat 4 -->
+          <div class="bg-brand-dark text-white rounded-2xl p-7 flex flex-col items-center justify-center text-center shadow-xl">
+            <div class="text-amber-400 text-3xl mb-1 animate-float">★★★★★</div>
+            <div class="text-4xl font-heading font-bold text-brand-gold mb-1">5.0</div>
+            <div class="text-sm text-gray-400 uppercase tracking-wider">Google Rating</div>
+          </div>
+          <!-- Bottom spanning card -->
+          <div class="col-span-2 bg-white border-2 border-brand-gold rounded-2xl p-5 flex items-center justify-between shadow-md">
+            <div class="text-brand-dark">
+              <div class="font-heading font-bold text-lg">Locally Owned Since 1999</div>
+              <div class="text-gray-500 text-sm">Not a franchise, your real Clark County neighbors</div>
+            </div>
+            <div class="bg-brand-gold text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 animate-float" style="animation-delay:0.8s">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <ProcessSteps />
+  <ReviewsSection />
+
+  <!-- Our promise / guarantee section -->
+  <section class="py-20 bg-brand-navy">
+    <div class="max-w-5xl mx-auto px-4 text-center">
+      <div data-animate="zoom-in">
+        <!-- Shield icon -->
+        <div class="w-20 h-20 mx-auto mb-6 rounded-full bg-brand-gold flex items-center justify-center shadow-lg">
+          <svg class="w-10 h-10 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+        </div>
+        <span class="badge-gold mb-4">Our Promise to You</span>
+        <h2 class="text-3xl md:text-4xl font-heading font-bold text-white mt-3 mb-5">
+          If You're Not Happy, We're Not Done
+        </h2>
+        <p class="text-gray-300 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+          Every project we complete comes with our satisfaction guarantee. We follow up within 10 days of installation, and if anything isn't right, we fix it. No runaround, no excuses. That's what 25 years of reputation looks like.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+        {[
+          { title: 'Workmanship Warranty', desc: 'Our installation quality is guaranteed, period.', delay: '1' },
+          { title: '10-Day Follow-Up', desc: 'We check back in to make sure everything is perfect.', delay: '2' },
+          { title: 'No-Hassle Resolution', desc: 'Any issue gets resolved quickly, no bureaucracy.', delay: '3' },
+        ].map(item => (
+          <div class="bg-white/10 rounded-2xl p-6 text-white" data-animate="fade-up" data-delay={item.delay}>
+            <div class="text-brand-gold mb-2">
+              <svg class="w-6 h-6 mx-auto" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            </div>
+            <h3 class="font-heading font-semibold text-lg mb-2">{item.title}</h3>
+            <p class="text-gray-300 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <AreaCards title="Serving Vancouver, WA and All Surrounding Communities" />
+  <BrandLogos />
+
+  <!-- Local community section -->
+  <section class="py-16 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10" data-animate="fade-up">
+        <span class="badge-gold mb-3">Proud Clark County Neighbor</span>
+        <h2 class="section-heading mt-2">Part of the Community Since 1999</h2>
+        <p class="section-subheading mx-auto text-center">
+          We're not a chain. We live here, shop here, and our kids go to school here. When you support All About Floors NW, you're keeping your money in Clark County.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl p-7 shadow-md text-center" data-animate="fade-up" data-delay="1">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-brand-light flex items-center justify-center">
+            <svg class="w-7 h-7 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-brand-navy text-lg mb-2">Visit Our Showroom</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Browse hundreds of flooring samples in person at <strong>6700 NE 152nd Ave #140</strong> in Vancouver. See colors in real light, feel textures, and walk on display floors before you decide.
+          </p>
+          <a href={company.googleMapsUrl} target="_blank" rel="noopener noreferrer" class="mt-4 inline-block text-brand-gold font-semibold text-sm hover:underline">Get Directions →</a>
+        </div>
+        <div class="bg-white rounded-2xl p-7 shadow-md text-center" data-animate="fade-up" data-delay="2">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-brand-light flex items-center justify-center">
+            <svg class="w-7 h-7 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-brand-navy text-lg mb-2">Call or Text Us</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Talk to a real person, not a call center. Our team is available <strong>Mon–Fri 9am–5:30pm</strong> and <strong>Sat 10am–4pm</strong>. Evening appointments available for busy families.
+          </p>
+          <a href={company.cta.phone} class="mt-4 inline-block text-brand-gold font-semibold text-sm hover:underline">{company.phone} →</a>
+        </div>
+        <div class="bg-white rounded-2xl p-7 shadow-md text-center" data-animate="fade-up" data-delay="3">
+          <div class="w-14 h-14 mx-auto mb-4 rounded-full bg-brand-light flex items-center justify-center">
+            <svg class="w-7 h-7 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-brand-navy text-lg mb-2">Book a Free Estimate</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            We'll come to <em>your home</em> with samples and a measuring tape. You get expert advice, transparent pricing, and zero obligation. Most estimates happen within 3–5 days of your call.
+          </p>
+          <a href="/free-estimate/" class="mt-4 inline-block text-brand-gold font-semibold text-sm hover:underline">Schedule Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Ready for New Floors? Let's Make It Happen."
+    subtext="Join 5,000+ Clark County families who trusted All About Floors NW. We'll come to your home with samples, measure everything, and give you a clear quote, with zero pressure and zero surprises."
+    ctaText="Get Your Free In-Home Estimate"
+  />
+</BaseLayout>

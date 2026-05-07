@@ -1,0 +1,160 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import { company } from '@data/company';
+import { reviews } from '@data/reviews';
+
+// Pull 3 short reviews for the calendar page (keep it tight).
+const featuredReviews = reviews
+  .filter(r => r.text.length < 220)
+  .slice(0, 3);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  name: 'Book Your Free In-Home Flooring Estimate Appointment',
+  url: 'https://www.allaboutfloorsnw.com/book/',
+  description: 'Pick a time for your free in-home flooring estimate from All About Floors NW in Vancouver, WA.',
+};
+
+function formatDate(dateStr: string) {
+  return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+}
+---
+
+<BaseLayout
+  title="Pick Your Appointment Time | All About Floors NW"
+  description="Pick a time for your free in-home flooring estimate. Same-week appointments available across Clark County, WA."
+  schema={schema}
+  bare={true}
+  noIndex={true}
+>
+  <!-- Flashy red marquee with limited-time offer -->
+  <div class="bg-red-600 text-white overflow-hidden border-y border-red-800/40 shadow-md relative">
+    <div class="marquee-track flex whitespace-nowrap py-2.5 text-sm font-semibold tracking-wide">
+      {Array.from({ length: 2 }).map(() => (
+        <div class="flex shrink-0 items-center gap-8 pr-8">
+          <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> ⏳ Limited time offer</span>
+          <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> Only 10 spots available this week</span>
+          <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> Free in-home estimate</span>
+          <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> ⭐ 5.0 stars · 100+ Google reviews</span>
+          <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> Family-owned since 1999</span>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Minimal brand bar (locked) -->
+  <div class="bg-brand-navy py-3 border-b border-white/5">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-center">
+      <img
+        src="/images/all-about-floors-nw-logo.webp"
+        alt="All About Floors NW"
+        class="h-10 w-auto max-w-[200px] object-contain"
+        width="200"
+        height="40"
+        loading="eager"
+      />
+    </div>
+  </div>
+
+  <!-- Hero + calendar -->
+  <section class="bg-brand-navy text-white relative overflow-hidden">
+    <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 30%, #C8A55B 0%, transparent 50%), radial-gradient(circle at 80% 70%, #C8A55B 0%, transparent 50%);"></div>
+    <div class="max-w-5xl mx-auto px-4 py-12 md:py-16 relative z-10 text-center">
+      <!-- Spots remaining pill -->
+      <span class="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/40 text-red-100 text-xs md:text-sm font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
+        </span>
+        Only 10 Spots Available This Week
+      </span>
+
+      <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
+        Pick a Time That Works for You
+      </h1>
+      <p class="text-gray-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-2">
+        Choose a slot below and a member of our Vancouver team will arrive with samples, measure your space, and email you a transparent itemized quote within 24 hours.
+      </p>
+      <p class="text-brand-gold-light text-sm md:text-base">
+        Same-week appointments · Evening &amp; Saturday slots available · 100% free, no obligation
+      </p>
+    </div>
+
+    <!-- Calendar embed -->
+    <div class="max-w-4xl mx-auto px-4 pb-16 relative z-10">
+      <div id="book-calendar" class="rounded-xl overflow-hidden shadow-2xl">
+        <!-- Red headline flush with calendar -->
+        <div class="bg-red-600 text-white px-5 py-3 text-center">
+          <h2 class="font-heading font-bold text-xl md:text-2xl leading-tight">
+            Book Your Appointment
+          </h2>
+          <p class="text-red-50 text-xs md:text-sm mt-0.5 leading-snug">
+            Pick a date and time — confirmation sent instantly to your inbox.
+          </p>
+        </div>
+
+        <!-- LeadConnector calendar widget -->
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/booking/PASTE_CALENDAR_ID_HERE"
+          style="border:none;width:100%;min-height:780px;display:block;background:white;margin:0;"
+          scrolling="no"
+          id="aafnw-booking-calendar"
+          title="Free Flooring Estimate Appointment Calendar"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mini review strip below calendar -->
+  <section class="bg-brand-light py-14">
+    <div class="max-w-5xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <div class="inline-flex items-center gap-2 mb-2">
+          <div class="flex gap-0.5 text-amber-400 text-lg">★★★★★</div>
+          <span class="font-heading font-bold text-brand-navy">5.0</span>
+        </div>
+        <h2 class="font-heading font-bold text-2xl md:text-3xl text-brand-navy">
+          You're in good hands.
+        </h2>
+        <p class="text-gray-600 text-sm mt-1">From your Clark County neighbors.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        {featuredReviews.map(review => (
+          <div class="bg-white rounded-xl p-5 shadow-sm flex flex-col">
+            <div class="flex items-start gap-3 mb-3">
+              <div class="w-9 h-9 rounded-full bg-brand-navy text-white font-bold flex items-center justify-center flex-shrink-0 text-sm">
+                {review.name[0]}
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="font-semibold text-brand-navy text-sm">{review.name}</div>
+                <div class="text-xs text-gray-500">{review.location} · {formatDate(review.date)}</div>
+              </div>
+              <svg class="w-4 h-4 flex-shrink-0 mt-1" viewBox="0 0 48 48" aria-label="Google">
+                <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>
+                <path fill="#FF3D00" d="M6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 16.318 4 9.656 8.337 6.306 14.691z"/>
+                <path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0124 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/>
+                <path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 01-4.087 5.571l.003-.002 6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/>
+              </svg>
+            </div>
+            <div class="flex gap-0.5 text-amber-400 text-xs mb-2">{'★'.repeat(review.rating)}</div>
+            <p class="text-gray-700 text-sm leading-relaxed italic flex-1">"{review.text}"</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust strip -->
+  <div class="bg-brand-dark text-gray-300 py-5 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs md:text-sm">
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> WA Licensed &amp; Insured</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> Family-Owned Since 1999</span>
+      <span class="flex items-center gap-1.5"><svg class="w-4 h-4 text-brand-gold" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg> No Subcontractors</span>
+    </div>
+  </div>
+
+  <!-- LeadConnector embed script (handles auto-resize) -->
+  <script src="https://link.msgsndr.com/js/form_embed.js" is:inline></script>
+</BaseLayout>

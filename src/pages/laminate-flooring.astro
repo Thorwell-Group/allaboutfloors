@@ -1,0 +1,69 @@
+---
+import ServiceLayout from '@layouts/ServiceLayout.astro';
+import { services } from '@data/services';
+import { company } from '@data/company';
+
+const service = services.find(s => s.slug === 'laminate-flooring')!;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Laminate Flooring in Vancouver, WA',
+  description: service.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  url: `https://www.allaboutfloorsnw.com${service.urlPath}`,
+};
+---
+
+<ServiceLayout
+  service={service}
+  title="Laminate Flooring in Vancouver, WA | All About Floors NW"
+  description="Durable, affordable laminate flooring in Vancouver, WA. Shop hundreds of styles at All About Floors NW. Free in-home estimates from your local Clark County flooring experts."
+  schema={schema}
+>
+  <Fragment slot="intro">
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Modern laminate flooring has come a long way. Today's laminate products offer incredibly realistic wood and stone visuals, impressive scratch resistance, and long-lasting durability, all at a price point that makes beautiful floors accessible for any budget.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      At All About Floors NW, our laminate selection features products in a wide range of thicknesses (8mm to 12mm+), plank widths, and surface textures. We carry Quick Step, Mohawk, Shaw, and other top laminate brands, all available in our Vancouver showroom.
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      Laminate is especially popular for rental properties, finished basements, and high-traffic living spaces in Clark County homes. Our flooring consultants will recommend the right AC rating and underlayment for your specific installation.
+    </p>
+  </Fragment>
+
+  <section slot="body" class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="section-heading">Choosing the Right Laminate Thickness</h2>
+        <p class="section-subheading mx-auto text-center">Thicker laminate feels more solid underfoot and handles subfloor imperfections better. Here's our quick guide:</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { thickness: '6–8mm', best: 'Budget Installs', desc: 'Great for low-traffic areas and tight budgets. Suitable for bedrooms and closets.' },
+          { thickness: '10–12mm', best: 'Residential Standard', desc: 'Our most popular range, excellent feel, sound absorption, and durability for family homes.' },
+          { thickness: '12mm+', best: 'Premium Performance', desc: 'Best sound insulation and stability. Ideal for open-plan spaces and active households.' },
+        ].map(item => (
+          <div class="bg-white rounded-2xl p-8 text-center shadow-sm">
+            <div class="text-3xl font-heading font-bold text-brand-gold mb-2">{item.thickness}</div>
+            <div class="font-semibold text-brand-navy mb-2">{item.best}</div>
+            <p class="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

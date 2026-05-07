@@ -1,0 +1,97 @@
+---
+---
+<div
+  x-data="flooringEstimator"
+  class="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 text-white shadow-2xl"
+>
+  <!-- Header -->
+  <div class="mb-4">
+    <div class="flex items-center gap-2 mb-1">
+      <svg class="w-5 h-5 text-brand-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 11h.01M12 11h.01M15 11h.01M4 19h16a2 2 0 002-2V7a2 2 0 00-2-2H4a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+      </svg>
+      <h3 class="font-heading font-bold text-lg leading-none">Flooring Calculator</h3>
+    </div>
+    <p class="text-gray-300 text-xs pl-7">Adjust square footage and flip between home value added and project timeline.</p>
+  </div>
+
+  <!-- Mode toggle -->
+  <div class="flex rounded-lg overflow-hidden border border-white/20 mb-5 text-sm font-semibold">
+    <button
+      @click="mode = 'value'"
+      :class="mode === 'value' ? 'bg-brand-gold text-white' : 'bg-white/5 text-gray-300 hover:bg-white/10'"
+      class="flex-1 py-2 transition-colors duration-200"
+    >
+      Home Value Added
+    </button>
+    <button
+      @click="mode = 'time'"
+      :class="mode === 'time' ? 'bg-brand-gold text-white' : 'bg-white/5 text-gray-300 hover:bg-white/10'"
+      class="flex-1 py-2 transition-colors duration-200"
+    >
+      Project Timeline
+    </button>
+  </div>
+
+  <!-- Slider -->
+  <div class="mb-5">
+    <div class="flex justify-between items-center mb-2">
+      <span class="text-sm text-gray-300">Room Size</span>
+      <span class="font-bold text-brand-gold text-sm" x-text="sqft.toLocaleString() + ' sq ft'"></span>
+    </div>
+    <input
+      type="range"
+      min="100"
+      max="3000"
+      step="50"
+      x-model.number="sqft"
+      aria-label="Square footage"
+      class="estimator-slider w-full"
+    />
+    <div class="flex justify-between text-xs text-gray-500 mt-1">
+      <span>100 sq ft</span>
+      <span>3,000 sq ft</span>
+    </div>
+  </div>
+
+  <!-- Flooring rows -->
+  <div class="space-y-3">
+    <template x-for="t in types" :key="t.name">
+      <a :href="t.slug" class="block group" tabindex="0">
+        <div class="flex justify-between items-center mb-1">
+          <span class="text-sm font-medium group-hover:text-brand-gold transition-colors" x-text="t.name"></span>
+          <span
+            class="text-xs font-semibold tabular-nums"
+            :class="mode === 'value' ? 'text-green-400' : 'text-gray-200'"
+            x-text="displayLabel(t)"
+          ></span>
+        </div>
+        <div class="h-1.5 bg-white/10 rounded-full overflow-hidden">
+          <div
+            class="h-full rounded-full transition-all duration-500"
+            :style="{ width: barPct(t) + '%', backgroundColor: t.color }"
+          ></div>
+        </div>
+      </a>
+    </template>
+  </div>
+
+  <!-- Context note -->
+  <p
+    class="text-xs text-gray-400 mt-4 leading-snug"
+    x-text="mode === 'value'
+      ? 'Estimated resale value increase based on Pacific Northwest market data. Results vary by home and neighborhood.'
+      : 'Rough installation timelines for professional crews. Tile includes grout cure time. Hardwood includes acclimation.'"
+  ></p>
+
+  <!-- CTA -->
+  <a
+    href="/free-estimate/"
+    class="mt-4 flex items-center justify-center gap-2 text-sm font-semibold bg-brand-gold hover:bg-brand-gold-light text-white px-4 py-2.5 rounded-full transition-colors w-full"
+  >
+    Get Your Free Estimate
+    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+    </svg>
+  </a>
+</div>

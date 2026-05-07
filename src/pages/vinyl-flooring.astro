@@ -1,0 +1,78 @@
+---
+import ServiceLayout from '@layouts/ServiceLayout.astro';
+import { services } from '@data/services';
+import { company } from '@data/company';
+
+const service = services.find(s => s.slug === 'vinyl-flooring')!;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Vinyl Flooring in Vancouver, WA',
+  description: service.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  url: `https://www.allaboutfloorsnw.com${service.urlPath}`,
+};
+---
+
+<ServiceLayout
+  service={service}
+  title="Vinyl Flooring in Vancouver, WA | All About Floors NW"
+  description="Sheet vinyl, vinyl tile & vinyl plank flooring in Vancouver, WA. Affordable, waterproof & durable. All About Floors NW, Clark County's flooring experts since 1999."
+  schema={schema}
+>
+  <Fragment slot="intro">
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Vinyl flooring is the practical, budget-smart choice for homeowners who need durable, waterproof floors without breaking the bank. All About Floors NW carries sheet vinyl, vinyl tile, and vinyl plank flooring in a wide range of colors, patterns, and performance grades.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Sheet vinyl is particularly popular for laundry rooms, utility spaces, and bathrooms where a seamless, fully waterproof surface is essential. Our vinyl selections include cushion-backed options that provide extra comfort underfoot.
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      Looking for the best value waterproof floor? Ask our consultants about our vinyl lineup, including commercial-grade options for heavy-duty applications throughout Clark County and Portland.
+    </p>
+  </Fragment>
+
+  <section slot="body" class="py-16 bg-brand-light">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="section-heading mb-4">Sheet Vinyl vs. Vinyl Plank (LVP)</h2>
+      <p class="text-gray-600 leading-relaxed mb-8">Both are waterproof and affordable, here's how to choose the right one for your project.</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <h3 class="font-heading font-bold text-brand-navy text-xl mb-4">Sheet Vinyl</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>✔ Seamless, no grout lines or seams to trap water</li>
+            <li>✔ Most affordable vinyl option</li>
+            <li>✔ Ideal for full-room wet areas (bathrooms, laundry)</li>
+            <li>✔ Cushion-backed for comfort</li>
+            <li>❌ Harder to repair individual sections</li>
+            <li>❌ Limited to full-roll installation</li>
+          </ul>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <h3 class="font-heading font-bold text-brand-navy text-xl mb-4">Luxury Vinyl Plank (LVP)</h3>
+          <ul class="space-y-2 text-gray-600 text-sm">
+            <li>✔ Realistic wood/stone visuals</li>
+            <li>✔ Click-lock floating installation</li>
+            <li>✔ Individual planks can be replaced</li>
+            <li>✔ Works in all rooms including basements</li>
+            <li>✔ Wide variety of thicknesses and wear layers</li>
+            <li>⬆ Higher cost than sheet vinyl</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

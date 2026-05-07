@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ProcessSteps from '@components/ProcessSteps.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CTABanner from '@components/CTABanner.astro';
+import FAQ from '@components/FAQ.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { installationServices } from '@data/services';
+import { company } from '@data/company';
+
+const svc = installationServices.find(s => s.slug === 'hardwood-refinishing')!;
+
+const faq = [
+  { q: 'How do I know if my floors can be refinished?', a: 'Solid hardwood can typically be refinished 3–5 times depending on thickness and prior refinishing history. Engineered hardwood can be refinished if the veneer layer is 3mm or thicker. Our consultant will assess your floors during your free estimate.' },
+  { q: 'How long does hardwood refinishing take?', a: 'Most whole-home refinishing projects take 3–5 days including sanding, staining, and applying multiple coats of finish. We schedule to minimize your time out of the space.' },
+  { q: 'How long must I stay off the floors after refinishing?', a: 'Light foot traffic is usually possible after 24 hours. We recommend keeping pets off for 48–72 hours and avoiding heavy furniture for 5–7 days to allow the finish to fully cure.' },
+  { q: 'Can you match the existing stain color?', a: 'Yes, our refinishing experts provide on-site stain samples to match or update your existing color. We also offer custom color mixing and popular trending stains.' },
+  { q: 'Is refinishing less expensive than replacing hardwood?', a: 'Almost always, yes. Refinishing typically costs 40–60% less than hardwood replacement, delivers nearly identical results, and preserves the existing wood that has already acclimated to your home.' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Hardwood Floor Refinishing in Vancouver, WA',
+  description: svc.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  url: 'https://www.allaboutfloorsnw.com/hardwood-refinishing/',
+};
+---
+
+<BaseLayout
+  title="Hardwood Floor Refinishing in Vancouver, WA | All About Floors NW"
+  description="Professional hardwood floor refinishing in Vancouver, WA. Restore scratched, dull, or damaged floors to like-new condition. Free estimates from All About Floors NW. Call (360) 947-2876."
+  schema={schema}
+>
+  <Hero
+    heading="Hardwood Floor Refinishing in Vancouver, WA"
+    subheading="Don't replace your hardwood, restore it! Our professional refinishing service removes scratches, dullness, and damage to reveal beautiful floors at a fraction of replacement cost."
+    image={svc.heroImage}
+    imageAlt={svc.heroImageAlt}
+    badge="Save 40–60% vs. Replacement"
+  />
+
+  <Breadcrumb items={[{ label: 'Services', href: '/services/' }, { label: 'Hardwood Refinishing' }]} />
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span class="badge-gold mb-3">Refinish, Don't Replace</span>
+          <h2 class="section-heading mt-2 mb-5">
+            Give Your Hardwood Floors a Second Life
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Over time, even the finest hardwood floors lose their luster. Scratches from pets, dents from furniture, and years of foot traffic can leave your floors looking worn and tired. But here's the good news: in most cases, those floors don't need to be replaced, they need to be refinished.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            All About Floors NW's refinishing team uses professional-grade drum and edge sanders to remove the worn surface layer of your hardwood, revealing the fresh, beautiful wood underneath. We then apply your choice of stain and multiple coats of professional-grade finish to protect and beautify your floors for years to come.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Our Vancouver customers consistently tell us they can't believe how different their floors look after refinishing, like they just installed brand-new hardwood, at a fraction of the cost.
+          </p>
+          <a href="/free-estimate/" class="btn-primary">Get Free Refinishing Estimate</a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { label: 'Sand & Prepare', icon: '🔧' },
+            { label: 'Custom Stain', icon: '🎨' },
+            { label: 'Apply Finish', icon: '✨' },
+            { label: 'Final Inspection', icon: '✅' },
+          ].map(item => (
+            <div class="bg-brand-light rounded-2xl p-6 text-center">
+              <div class="text-4xl mb-2">{item.icon}</div>
+              <div class="font-semibold text-brand-navy">{item.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faq} title="Hardwood Refinishing FAQ" />
+  <ReviewsSection max={3} />
+  <CTABanner heading="Ready to Restore Your Hardwood Floors?" subtext="Schedule your free in-home assessment. We'll evaluate your floors and let you know whether refinishing is the right solution, honestly, with no pressure." />
+</BaseLayout>

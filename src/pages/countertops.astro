@@ -1,0 +1,132 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ProcessSteps from '@components/ProcessSteps.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CTABanner from '@components/CTABanner.astro';
+import FAQ from '@components/FAQ.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { installationServices } from '@data/services';
+import { company } from '@data/company';
+
+const svc = installationServices.find(s => s.slug === 'countertops')!;
+
+const faq = [
+  { q: 'What countertop materials do you install?', a: 'We install tile, porcelain slab, natural stone, and quartz countertops. Tile countertops are our specialty — we can create custom layouts, edge profiles, and backsplash combinations to suit any kitchen or bath style.' },
+  { q: 'How long does countertop installation take?', a: 'Most countertop projects are completed in 1–2 days. Tile and stone countertops require additional cure time for grout and sealant before full use, typically 24–48 hours.' },
+  { q: 'Can you match my countertops to my floor tile?', a: 'Absolutely. We can coordinate tile countertops with your flooring for a cohesive look throughout the space. Our showroom has samples from the same product lines so you can see combinations side by side.' },
+  { q: 'Do you install backsplashes as well?', a: 'Yes, backsplash installation is a natural extension of our tile and countertop work. We can design and install a coordinating backsplash at the same time as your countertops for a seamless finish.' },
+  { q: 'Do you provide a warranty on countertop installation?', a: 'Yes, all countertop installations are covered by our workmanship warranty. We also follow manufacturer guidelines for material warranties on any quartz or stone products we install.' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Countertop Installation in Vancouver, WA',
+  description: svc.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  url: 'https://www.allaboutfloorsnw.com/countertops/',
+};
+---
+
+<BaseLayout
+  title="Countertop Installation in Vancouver, WA | All About Floors NW"
+  description="Professional countertop installation in Vancouver, WA. Tile, porcelain, quartz & stone countertops for kitchens and bathrooms. Free estimates from All About Floors NW. Call (360) 947-2876."
+  schema={schema}
+>
+  <Hero
+    heading="Countertop Installation in Vancouver, WA"
+    subheading="Complete your kitchen or bathroom with beautiful, professionally installed countertops. We install tile, quartz, and natural stone with the same craftsmanship we bring to every floor."
+    image={svc.heroImage}
+    imageAlt={svc.heroImageAlt}
+    badge="Free In-Home Estimates"
+  />
+
+  <Breadcrumb items={[{ label: 'Services', href: '/services/' }, { label: 'Countertop Installation' }]} />
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span class="badge-gold mb-3">Kitchen & Bath Countertops</span>
+          <h2 class="section-heading mt-2 mb-5">
+            The Right Surface for Every Space
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Countertops are one of the most used surfaces in your home, and they deserve the same level of care and craftsmanship as your floors. All About Floors NW brings 25+ years of tile and stone expertise to every countertop project, from a single bathroom vanity to a full kitchen renovation.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            We work with tile, large-format porcelain slabs, quartz, and natural stone. Our team handles substrate prep, waterproofing, layout, grouting, and sealing — everything from demo to the final polished surface.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            Because we also install tile flooring and backsplashes, we can coordinate your entire kitchen or bathroom renovation in one project — saving you time and ensuring a cohesive look throughout the space.
+          </p>
+          <a href="/free-estimate/" class="btn-primary">Get Free Countertop Estimate</a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          {[
+            { label: 'Tile Countertops', icon: '🏛️' },
+            { label: 'Porcelain Slab', icon: '✨' },
+            { label: 'Natural Stone', icon: '🪨' },
+            { label: 'Backsplash Tile', icon: '🎨' },
+          ].map(item => (
+            <div class="bg-brand-light rounded-2xl p-6 text-center">
+              <div class="text-4xl mb-2">{item.icon}</div>
+              <div class="font-semibold text-brand-navy">{item.label}</div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="section-heading">Countertop Options We Install</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[
+          { name: 'Tile Countertops', desc: 'Ceramic, porcelain, and natural stone tile in any layout. Custom edge profiles, coordinating grout, and unlimited design flexibility.', image: '/images/countertop.webp', alt: 'Tile countertop installation in a Vancouver WA kitchen' },
+          { name: 'Porcelain Slab', desc: 'Large-format porcelain panels deliver a seamless, contemporary look with minimal grout lines — durable, hygienic, and stunning.', image: '/images/countertop1.webp', alt: 'Porcelain slab countertop in a modern Vancouver WA bathroom' },
+          { name: 'Quartz & Stone', desc: 'Engineered quartz and natural stone surfaces professionally templated and installed for a precise, lasting fit in kitchens and bathrooms.', image: '/images/MarbelTileBathroom.png', alt: 'Natural stone marble countertop and tile in a Vancouver WA bathroom' },
+        ].map(item => (
+          <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col">
+            <img
+              src={item.image}
+              alt={item.alt}
+              class="w-full aspect-video object-cover"
+              loading="lazy"
+              width="600"
+              height="338"
+            />
+            <div class="p-6">
+              <h3 class="font-heading font-semibold text-brand-navy mb-2">{item.name}</h3>
+              <p class="text-gray-600 text-sm">{item.desc}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <FAQ items={faq} title="Countertop Installation FAQ" />
+  <ReviewsSection max={3} />
+  <CTABanner
+    heading="Ready to Upgrade Your Countertops?"
+    subtext="Schedule a free in-home estimate. We'll bring samples, measure your space, and provide a transparent quote — no pressure, no obligation."
+  />
+</BaseLayout>

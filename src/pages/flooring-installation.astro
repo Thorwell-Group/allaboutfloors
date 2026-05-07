@@ -1,0 +1,99 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ProcessSteps from '@components/ProcessSteps.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CTABanner from '@components/CTABanner.astro';
+import BrandLogos from '@components/BrandLogos.astro';
+import FAQ from '@components/FAQ.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ServiceCards from '@components/ServiceCards.astro';
+import { installationServices } from '@data/services';
+import { company } from '@data/company';
+
+const svc = installationServices.find(s => s.slug === 'flooring-installation')!;
+
+const faq = [
+  { q: 'How long does flooring installation take?', a: 'Most single-room installations are completed in one day. Whole-home projects typically take 2–5 days depending on square footage and flooring type. We provide a detailed timeline at your estimate appointment.' },
+  { q: 'Do you move furniture?', a: 'Yes, our crews move standard household furniture at no extra charge. Please remove fragile items, electronics, plants, and personal valuables before installation day.' },
+  { q: 'What is included in your installation service?', a: 'Our installation service includes subfloor preparation, underlayment installation, flooring installation, trim and transition installation, and cleanup. We leave your home clean and beautiful.' },
+  { q: 'Do you handle subfloor repairs?', a: 'Yes, if we discover subfloor issues during installation (squeaks, soft spots, unevenness), we address them before laying your new floor. Any needed repairs are quoted transparently upfront.' },
+  { q: 'What warranty comes with installation?', a: 'All About Floors NW provides an industry-leading installation warranty on all projects. Product warranties vary by manufacturer. We follow up within 10 days of completion to verify your satisfaction.' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Flooring Installation in Vancouver, WA',
+  description: svc.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  url: 'https://www.allaboutfloorsnw.com/flooring-installation/',
+};
+---
+
+<BaseLayout
+  title="Professional Flooring Installation in Vancouver, WA | All About Floors NW"
+  description="Expert flooring installation in Vancouver, WA for carpet, hardwood, LVP, laminate, tile & vinyl. Licensed installers, satisfaction guarantee. Free estimates, call (360) 947-2876."
+  schema={schema}
+>
+  <Hero
+    heading="Professional Flooring Installation in Vancouver, WA"
+    subheading="Expert installation for every floor type, carpet, hardwood, LVP, laminate, tile, and vinyl. Certified crews, satisfaction guaranteed."
+    image={svc.heroImage}
+    imageAlt={svc.heroImageAlt}
+    badge="Licensed & Insured"
+  />
+
+  <Breadcrumb items={[{ label: 'Services', href: '/services/' }, { label: 'Flooring Installation' }]} />
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+        <div>
+          <span class="badge-gold mb-3">Expert Installation</span>
+          <h2 class="section-heading mt-2 mb-5">
+            Quality Flooring Installation You Can Count On
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            The best flooring in the world is only as good as its installation. At All About Floors NW, our certified flooring installers bring 25+ years of collective experience to every project, whether it's a single bedroom carpet or a whole-home LVP installation.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            We do not subcontract. Every crew member is an All About Floors NW employee, background-checked, trained, and committed to the quality standards our Vancouver customers have trusted since 1999.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            From proper subfloor prep and moisture testing to precise cutting, seamless transitions, and final trim work, we handle every detail with care.
+          </p>
+          <a href="/free-estimate/" class="btn-primary">Schedule Free Estimate</a>
+        </div>
+
+        <div class="space-y-4">
+          {['Carpet Installation', 'Hardwood Installation', 'Luxury Vinyl Plank Installation', 'Laminate Installation', 'Tile & Grout Installation', 'Vinyl Sheet Installation'].map(item => (
+            <div class="flex items-center gap-3 bg-brand-light rounded-xl px-5 py-4">
+              <svg class="w-5 h-5 text-brand-gold flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+              <span class="font-medium text-brand-navy">{item}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <ProcessSteps />
+  <ReviewsSection max={3} />
+  <FAQ items={faq} title="Flooring Installation FAQ" />
+  <ServiceCards title="Explore Our Flooring Products" />
+  <BrandLogos />
+  <CTABanner heading="Ready for Expert Flooring Installation in Vancouver, WA?" subtext="Get your free in-home estimate today. Our certified installation crews are ready to transform your space." />
+</BaseLayout>

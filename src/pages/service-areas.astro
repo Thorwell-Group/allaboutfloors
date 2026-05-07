@@ -1,0 +1,79 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTABanner from '@components/CTABanner.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import { areas } from '@data/areas';
+import { localServices } from '@data/services';
+import { company } from '@data/company';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Flooring Service Areas, All About Floors NW',
+  description: 'All About Floors NW serves Vancouver, WA and surrounding communities in Clark County and the Portland metro area.',
+  url: 'https://www.allaboutfloorsnw.com/service-areas/',
+};
+---
+
+<BaseLayout
+  title="Flooring Service Areas in Vancouver, WA & Clark County | All About Floors NW"
+  description="All About Floors NW serves Vancouver, Battle Ground, Camas, Washougal, Ridgefield, Salmon Creek, Hazel Dell, and Portland, OR. Premium flooring & installation throughout Clark County, WA."
+  schema={schema}
+>
+  <div class="bg-brand-navy text-white py-14">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-4">Areas We Serve</h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+        Serving homeowners and businesses across Clark County, WA and the greater Portland, OR metro area.
+      </p>
+    </div>
+  </div>
+
+  <Breadcrumb items={[{ label: 'Service Areas' }]} />
+
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {areas.map(area => (
+          <div class="card p-6">
+            <h2 class="font-heading font-bold text-brand-navy text-xl mb-2">
+              <a href={`/flooring-in-${area.slug}/`} class="hover:text-brand-gold transition-colors">
+                Flooring in {area.displayName}
+              </a>
+            </h2>
+            <p class="text-gray-600 text-sm mb-4 leading-relaxed">
+              {area.description.slice(0, 120)}...
+            </p>
+            <div class="space-y-1.5">
+              {localServices.map(svc => (
+                <a
+                  href={`/${svc.slug}-in-${area.slug}/`}
+                  class="block text-sm text-gray-700 hover:text-brand-navy hover:translate-x-1 transition-all"
+                >
+                  → {svc.name} in {area.displayName}
+                </a>
+              ))}
+            </div>
+            <a href={`/flooring-in-${area.slug}/`} class="inline-block mt-4 text-brand-gold font-semibold text-sm hover:text-brand-navy transition-colors">
+              View All Flooring in {area.name} →
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-14 bg-brand-light">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="section-heading mb-4">Don't See Your City?</h2>
+      <p class="text-gray-700 leading-relaxed mb-6">
+        Our service area covers most of Clark County, WA and the Portland, OR metro. If your city isn't listed, give us a call, we may still be able to help, and we're always expanding our service radius.
+      </p>
+      <a href="tel:{company.phoneDashes}" class="btn-primary">{company.phone}</a>
+    </div>
+  </section>
+
+  <ReviewsSection />
+  <CTABanner />
+</BaseLayout>

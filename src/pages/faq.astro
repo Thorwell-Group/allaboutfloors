@@ -1,0 +1,87 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTABanner from '@components/CTABanner.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+
+const faqItems = [
+  { q: 'Do you offer free estimates?', a: 'Yes! We provide completely free in-home estimates throughout Clark County, WA and the Portland metro. Our consultant visits your home with samples, takes precise measurements, and provides a detailed quote within 24 hours, no pressure, no obligation.' },
+  { q: 'What flooring types do you carry?', a: 'We carry carpet, hardwood (solid and engineered), luxury vinyl plank (LVP), laminate, tile (porcelain, ceramic, glass, and natural stone), and vinyl. We also offer area rugs, countertops, and commercial flooring solutions.' },
+  { q: 'How long does flooring installation take?', a: 'Most single-room installations are completed in one day. Whole-home projects typically take 2–5 days depending on square footage and flooring type. We provide a detailed timeline during your estimate appointment.' },
+  { q: 'Do you move furniture?', a: 'Yes, our installation crews move standard household furniture at no extra charge. We ask that you remove fragile items, electronics, and personal valuables before installation day.' },
+  { q: 'What areas do you serve?', a: 'We serve all of Clark County, WA including Vancouver, Battle Ground, Camas, Washougal, Ridgefield, La Center, Brush Prairie, Salmon Creek, and Hazel Dell. We also serve Portland, OR and Gresham, OR.' },
+  { q: 'Do you offer financing?', a: 'Yes, special financing is available for qualified customers. Options include 0% APR promotions for 12–24 months. Financing is discussed and applied for during your estimate appointment.' },
+  { q: 'What brands do you carry?', a: 'We are authorized dealers for Mohawk, Shaw, Stanton, Dal Tile, Marazzi, Florida Tile, Hallmark, American Olean, Aladdin, Anderson Tuftex, Dream Weaver, Godfrey Hirst, DuChateau, and Quick Step.' },
+  { q: 'Do you do commercial flooring?', a: 'Yes, we serve restaurants, offices, retail stores, healthcare facilities, and other commercial spaces. We have commercial-grade products for high-traffic environments and can work around your business schedule.' },
+  { q: 'Do you offer hardwood refinishing?', a: 'Yes, our hardwood refinishing service sands, stains, and recoats existing hardwood floors to restore them to like-new condition. This is a fraction of the cost of replacement and can dramatically improve the look of your home.' },
+  { q: 'What warranty do you provide?', a: 'We provide an industry-leading installation warranty on all flooring projects. Product warranties vary by manufacturer. Our consultant will explain all applicable warranties during your estimate. We also follow up within 10 days of project completion to ensure your satisfaction.' },
+  { q: 'Can I see samples before committing?', a: 'Absolutely. Our showroom at 6700 NE 152nd Ave #140, Vancouver, WA 98682 has hundreds of samples on display. You can also request that our consultant bring samples to your home during a free estimate visit.' },
+  { q: 'Is LVP (Luxury Vinyl Plank) better than hardwood?', a: 'Neither is universally "better", it depends on your needs. LVP is 100% waterproof, more affordable, and extremely durable. Hardwood adds more resale value, can be refinished, and offers a timeless natural look. Our consultants help you choose the right product for your lifestyle and budget.' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map(item => ({
+    '@type': 'Question',
+    name: item.q,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: item.a,
+    },
+  })),
+};
+---
+
+<BaseLayout
+  title="Flooring FAQ | All About Floors NW, Vancouver, WA"
+  description="Frequently asked questions about flooring products, installation, estimates, and services from All About Floors NW in Vancouver, WA. Get the answers you need before your project begins."
+  schema={schema}
+>
+  <div class="bg-brand-navy text-white py-14">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <h1 class="font-heading font-bold text-4xl md:text-5xl mb-4">
+        Flooring FAQ
+      </h1>
+      <p class="text-gray-300 text-lg max-w-2xl mx-auto">
+        Answers to the most common questions from Vancouver, WA homeowners planning their flooring projects.
+      </p>
+    </div>
+  </div>
+
+  <Breadcrumb items={[{ label: 'FAQ' }]} />
+
+  <section class="py-16 bg-brand-light">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="space-y-3" x-data="{ active: null }">
+        {faqItems.map((item, i) => (
+          <div class="bg-white rounded-xl shadow-sm overflow-hidden">
+            <button
+              @click={`active === ${i} ? active = null : active = ${i}`}
+              class="w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+            >
+              <span class="font-semibold text-brand-navy">{item.q}</span>
+              <svg
+                class="w-5 h-5 text-brand-gold flex-shrink-0 transition-transform duration-200"
+                :class={`active === ${i} ? 'rotate-180' : ''`}
+                fill="none" viewBox="0 0 24 24" stroke="currentColor"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+              </svg>
+            </button>
+            <div
+              x-show={`active === ${i}`}
+              x-transition
+              class="px-6 pb-5"
+            >
+              <p class="text-gray-700 leading-relaxed">{item.a}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <ReviewsSection />
+  <CTABanner heading="Still Have Questions? Give Us a Call." subtext="Our flooring experts are happy to answer any questions over the phone or in person at our Vancouver showroom." />
+</BaseLayout>

@@ -1,0 +1,96 @@
+---
+import ServiceLayout from '@layouts/ServiceLayout.astro';
+import { services } from '@data/services';
+import { company } from '@data/company';
+
+const service = services.find(s => s.slug === 'luxury-vinyl-plank')!;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Luxury Vinyl Plank Flooring in Vancouver, WA',
+  description: service.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  url: `https://www.allaboutfloorsnw.com${service.urlPath}`,
+};
+---
+
+<ServiceLayout
+  service={service}
+  title="Luxury Vinyl Plank (LVP) Flooring in Vancouver, WA | All About Floors NW"
+  description="Waterproof luxury vinyl plank flooring in Vancouver, WA. 100% waterproof, pet-friendly, & scratch-resistant. Free estimates from All About Floors NW. Call (360) 947-2876."
+  schema={schema}
+>
+  <Fragment slot="intro">
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Luxury Vinyl Plank is the #1 fastest-growing flooring category in the Pacific Northwest, and it's easy to see why. LVP combines the authentic look of hardwood or stone with 100% waterproof performance that stands up to the rainy Vancouver, WA climate, pets, kids, and everyday life.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      At All About Floors NW, we carry the best LVP brands on the market including COREtec, Mohawk, Shaw, Quick Step, and Hallmark. From rigid-core WPC to SPC and traditional LVP, we'll help you choose the right product and thickness for your subfloor and lifestyle.
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      LVP is especially popular in Vancouver-area kitchens, bathrooms, laundry rooms, and basements, anywhere moisture resistance is critical. And with realistic wood and stone visuals, no one will know it's not the real thing.
+    </p>
+  </Fragment>
+
+  <section slot="body" class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+        <div>
+          <h2 class="section-heading mb-5">LVP vs. Hardwood vs. Laminate</h2>
+          <div class="overflow-hidden rounded-2xl border border-gray-200">
+            <table class="w-full text-sm">
+              <thead class="bg-brand-navy text-white">
+                <tr>
+                  <th class="px-4 py-3 text-left">Feature</th>
+                  <th class="px-4 py-3 text-center">LVP</th>
+                  <th class="px-4 py-3 text-center">Hardwood</th>
+                  <th class="px-4 py-3 text-center">Laminate</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-gray-100">
+                {[
+                  ['Waterproof', '✅ 100%', '❌ No', '⚠️ Partial'],
+                  ['Scratch Resistant', '✅ High', '⚠️ Moderate', '✅ High'],
+                  ['Pet Friendly', '✅ Yes', '⚠️ Moderate', '✅ Yes'],
+                  ['Refinishable', '❌ No', '✅ Yes', '❌ No'],
+                  ['Cost', '💲💲', '💲💲💲', '💲'],
+                  ['Resale Value', '⚠️ Good', '✅ High', '⚠️ Good'],
+                  ['Best For', 'Kitchens, baths, below-grade', 'Main living areas', 'Budget renovations'],
+                ].map(row => (
+                  <tr class="even:bg-gray-50">
+                    {row.map((cell, i) => (
+                      <td class={`px-4 py-2.5 ${i === 0 ? 'font-medium text-gray-800' : 'text-center text-gray-600'}`}>{cell}</td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div>
+          <img
+            src="/images/LVP_laminateLivingRoom.webp"
+            alt="Luxury vinyl plank flooring installed in a Vancouver WA living room, waterproof and beautiful"
+            class="rounded-2xl shadow-lg w-full object-cover aspect-square"
+            loading="lazy"
+            width="600"
+            height="600"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

@@ -1,0 +1,70 @@
+---
+import ServiceLayout from '@layouts/ServiceLayout.astro';
+import { services } from '@data/services';
+import { company } from '@data/company';
+
+const service = services.find(s => s.slug === 'tile-flooring')!;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Tile Flooring in Vancouver, WA',
+  description: service.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  url: `https://www.allaboutfloorsnw.com${service.urlPath}`,
+};
+---
+
+<ServiceLayout
+  service={service}
+  title="Tile Flooring in Vancouver, WA | All About Floors NW"
+  description="Porcelain, ceramic, glass & natural stone tile flooring in Vancouver, WA. Expert tile installation from All About Floors NW. Serving Clark County since 1999. Call (360) 947-2876."
+  schema={schema}
+>
+  <Fragment slot="intro">
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Tile flooring is the ultimate choice for bathrooms, kitchens, entryways, and any space where durability and design matter equally. All About Floors NW carries thousands of tile options including porcelain, ceramic, glass, mosaic, and natural stone, along with expert tile setting and waterproofing services.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      We are authorized dealers for Dal Tile, Marazzi, Florida Tile, American Olean, and other premier tile brands. Whether you're after large-format porcelain slabs, classic subway tile, or handcrafted artisan tile, our showroom has inspiration for every style and budget.
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      Our professional tile setters handle everything from substrate prep and waterproofing to grout selection and sealing, delivering flawless results that last a lifetime in your Vancouver home.
+    </p>
+  </Fragment>
+
+  <section slot="body" class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="section-heading">Tile Types We Carry & Install</h2>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+        {[
+          { name: 'Porcelain Tile', desc: 'Extremely dense and durable, ideal for floors, walls, and wet areas.' },
+          { name: 'Ceramic Tile', desc: 'Versatile and affordable, great for walls, backsplashes, and low-traffic floors.' },
+          { name: 'Natural Stone', desc: 'Marble, travertine, slate, and granite for luxury bathroom and kitchen applications.' },
+          { name: 'Glass Tile', desc: 'Luminous mosaic and subway tiles for backsplashes and decorative accents.' },
+          { name: 'Large Format Tile', desc: '24"x24" and larger slabs for a contemporary, seamless look.' },
+          { name: 'Mosaic Tile', desc: 'Small-format tile in endless patterns for shower floors, borders, and feature walls.' },
+        ].map(item => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 class="font-heading font-semibold text-brand-navy mb-2">{item.name}</h3>
+            <p class="text-gray-600 text-sm">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

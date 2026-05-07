@@ -1,0 +1,68 @@
+---
+import ServiceLayout from '@layouts/ServiceLayout.astro';
+import { services } from '@data/services';
+import { company } from '@data/company';
+
+const service = services.find(s => s.slug === 'carpet-flooring')!;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Carpet Flooring in Vancouver, WA',
+  description: service.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  areaServed: { '@type': 'City', name: 'Vancouver', containedInPlace: { '@type': 'State', name: 'Washington' } },
+  url: `https://www.allaboutfloorsnw.com${service.urlPath}`,
+};
+---
+
+<ServiceLayout
+  service={service}
+  title="Carpet Flooring in Vancouver, WA | All About Floors NW"
+  description="Shop carpet flooring in Vancouver, WA at All About Floors NW. Hundreds of styles, textures & colors from Mohawk, Shaw, Dream Weaver & more. Free in-home estimates. Call (360) 947-2876."
+  schema={schema}
+>
+  <Fragment slot="intro">
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Carpet remains the most popular flooring choice for bedrooms, living rooms, and family spaces throughout Vancouver, WA, and with good reason. It provides warmth, comfort, and sound insulation that no hard floor can match.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      At All About Floors NW, we carry hundreds of carpet styles from top manufacturers like Mohawk, Shaw, Dream Weaver, Stanton, and Aladdin. Whether you're looking for a plush bedroom carpet, a durable berber for high-traffic hallways, or a patterned accent carpet for your living room, we have the selection and the expertise to find your perfect match.
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      Our free in-home estimate service means our consultant visits your Vancouver home, measures every room accurately, brings samples in your lighting, and gives you a full quote with no surprises.
+    </p>
+  </Fragment>
+
+  <section slot="body" class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {[
+          { title: 'Plush & Frieze Carpet', desc: 'Soft, luxurious pile carpet perfect for bedrooms and low-traffic spaces. Available in a wide range of colors and textures.' },
+          { title: 'Berber & Loop Carpet', desc: 'Durable, casual-style carpet ideal for family rooms, basements, and high-traffic areas. Highly stain-resistant.' },
+          { title: 'Patterned Carpet', desc: 'Stylish geometric and floral patterns that add personality to any room. Hides traffic patterns beautifully.' },
+          { title: 'Pet-Friendly Carpet', desc: 'Stain and soil-resistant lines including Mohawk SmartStrand and Shaw\'s LifeGuard waterproof backing.' },
+          { title: 'Commercial Carpet', desc: 'Heavy-duty commercial carpet tile and broadloom for offices, retail, and hospitality spaces.' },
+          { title: 'Eco-Friendly Options', desc: 'Sustainable carpet made from recycled materials and low-VOC fibers, perfect for green-conscious homeowners.' },
+        ].map(item => (
+          <div class="bg-white rounded-2xl p-6 shadow-sm">
+            <h3 class="font-heading font-semibold text-brand-navy text-lg mb-2">{item.title}</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">{item.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</ServiceLayout>

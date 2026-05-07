@@ -1,0 +1,74 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Hero from '@components/Hero.astro';
+import ProcessSteps from '@components/ProcessSteps.astro';
+import CTABanner from '@components/CTABanner.astro';
+import BrandLogos from '@components/BrandLogos.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import { services, installationServices } from '@data/services';
+import { company } from '@data/company';
+---
+
+<BaseLayout
+  title="Flooring Services in Vancouver, WA | All About Floors NW"
+  description="All About Floors NW offers professional flooring services in Vancouver, WA, installation, refinishing, repair, and commercial flooring. Free estimates. (360) 947-2876."
+>
+  <Hero
+    heading="Flooring Services in Vancouver, WA"
+    subheading="From first install to refinishing and repair, All About Floors NW is your complete flooring services partner in Clark County, WA."
+    compact={true}
+    badge="25+ Years of Service"
+  />
+
+  <Breadcrumb items={[{ label: 'Services' }]} />
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-heading">Flooring Products We Carry</h2>
+        <p class="section-subheading mx-auto text-center">Premium flooring types for every room and budget, in stock at our Vancouver showroom.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {services.map(svc => (
+          <a href={svc.urlPath} class="card group p-6 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+            <div class="text-3xl mb-3">{svc.icon}</div>
+            <h3 class="font-heading font-semibold text-brand-navy text-xl mb-2">{svc.name}</h3>
+            <p class="text-gray-600 text-sm flex-1">{svc.tagline}</p>
+            <div class="mt-4 text-brand-gold font-semibold text-sm flex items-center gap-1">
+              Explore {svc.shortName} <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="section-heading">Installation & Specialty Services</h2>
+        <p class="section-subheading mx-auto text-center">Expert installation, refinishing, repair, and commercial flooring solutions throughout Clark County.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        {installationServices.map(svc => (
+          <a href={svc.urlPath} class="card group p-6 flex gap-6 hover:-translate-y-1 transition-transform duration-300">
+            <img src={svc.heroImage} alt={svc.heroImageAlt} class="w-28 h-28 rounded-xl object-cover flex-shrink-0" loading="lazy" width="112" height="112" />
+            <div>
+              <h3 class="font-heading font-semibold text-brand-navy text-xl mb-1">{svc.name}</h3>
+              <p class="text-gray-600 text-sm mb-3">{svc.description.slice(0, 100)}...</p>
+              <span class="text-brand-gold font-semibold text-sm flex items-center gap-1">
+                Learn More <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <ProcessSteps />
+  <ReviewsSection />
+  <BrandLogos />
+  <CTABanner heading="Ready to Transform Your Floors?" subtext="Contact All About Floors NW for a free in-home estimate anywhere in Clark County, WA." />
+</BaseLayout>

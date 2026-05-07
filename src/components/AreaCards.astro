@@ -1,0 +1,46 @@
+---
+import { areas } from '@data/areas';
+
+interface Props {
+  title?: string;
+  currentSlug?: string;
+}
+
+const { title = 'Serving Vancouver, WA and Surrounding Communities', currentSlug } = Astro.props;
+
+const displayAreas = currentSlug ? areas.filter(a => a.slug !== currentSlug) : areas;
+---
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-animate="fade-up">
+      <span class="badge-gold mb-3">Areas We Serve</span>
+      <h2 class="section-heading mt-2">{title}</h2>
+      <p class="section-subheading mx-auto text-center">
+        We proudly serve homeowners and businesses throughout Clark County, WA and the greater Portland, OR metro area. Same-day quotes available for most locations.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-10">
+      {displayAreas.map(area => (
+        <a
+          href={`/flooring-in-${area.slug}/`}
+          class="group bg-brand-light hover:bg-brand-navy rounded-xl p-4 text-center transition-all duration-200 hover:-translate-y-1 hover:shadow-lg"
+        >
+          <div class="font-semibold text-brand-navy group-hover:text-white transition-colors leading-tight">
+            {area.name}
+          </div>
+          <div class="text-xs text-gray-500 group-hover:text-gray-300 transition-colors mt-0.5">
+            {area.state}
+          </div>
+        </a>
+      ))}
+    </div>
+
+    <div class="text-center">
+      <a href="/service-areas/" class="btn-secondary">
+        View All Service Areas
+      </a>
+    </div>
+  </div>
+</section>

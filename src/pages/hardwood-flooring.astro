@@ -1,0 +1,64 @@
+---
+import ServiceLayout from '@layouts/ServiceLayout.astro';
+import { services } from '@data/services';
+import { company } from '@data/company';
+
+const service = services.find(s => s.slug === 'hardwood-flooring')!;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Hardwood Flooring in Vancouver, WA',
+  description: service.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  areaServed: { '@type': 'State', name: 'Washington' },
+  url: `https://www.allaboutfloorsnw.com${service.urlPath}`,
+};
+---
+
+<ServiceLayout
+  service={service}
+  title="Hardwood Flooring in Vancouver, WA | All About Floors NW"
+  description="Premium hardwood flooring in Vancouver, WA, solid & engineered options from DuChateau, Hallmark, Anderson Tuftex & more. Expert installation. Free estimates. (360) 947-2876."
+  schema={schema}
+>
+  <Fragment slot="intro">
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Nothing adds warmth and enduring value to a Pacific Northwest home quite like authentic hardwood flooring. All About Floors NW carries an exceptional selection of solid and engineered hardwood in every species, width, finish, and color, all available in our Vancouver showroom.
+    </p>
+    <p class="text-gray-700 leading-relaxed mb-4">
+      Our hardwood experts understand the unique climate considerations of the Vancouver, WA area. We recommend the right species and installation method for your specific subfloor, humidity levels, and lifestyle, ensuring your investment looks beautiful for decades.
+    </p>
+    <p class="text-gray-700 leading-relaxed">
+      From light, airy white oak to rich, dark walnut, we stock hundreds of hardwood options and can special-order virtually any product from our top manufacturer partners including DuChateau, Hallmark, Anderson Tuftex, and Quick Step.
+    </p>
+  </Fragment>
+
+  <section slot="body" class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-10">
+        <h2 class="section-heading">Hardwood Flooring Species We Carry</h2>
+        <p class="section-subheading mx-auto text-center">Each wood species offers a unique character, hardness, and grain pattern. Our showroom has samples of them all.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        {['White Oak', 'Red Oak', 'Maple', 'Hickory', 'Walnut', 'Cherry', 'Ash', 'Bamboo', 'Brazilian Cherry', 'Acacia', 'Birch', 'Pine'].map(species => (
+          <div class="bg-white rounded-xl p-4 text-center shadow-sm">
+            <div class="font-semibold text-brand-navy text-sm">{species}</div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</ServiceLayout>
