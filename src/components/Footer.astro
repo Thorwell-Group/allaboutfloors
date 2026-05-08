@@ -100,16 +100,45 @@ import { areas } from '@data/areas';
 
   <!-- Bottom bar -->
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-gray-500">
-      <span>© {new Date().getFullYear()} <a href="https://thorwellgroup.com" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Thorwell Group Inc.</a> All rights reserved.</span>
-      <div class="flex gap-4">
-        <a href="/privacy-policy/" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
-        <a href="/sitemap-index.xml" class="hover:text-gray-300 transition-colors">Sitemap</a>
+    <div class="max-w-7xl mx-auto px-4 py-5 flex flex-col md:flex-row items-center md:items-end justify-between gap-4">
+      <!-- Left: logo + copyright -->
+      <div class="flex flex-col items-center md:items-start gap-2">
+        <img
+          src="/images/all-about-floors-nw-logo.webp"
+          alt="All About Floors NW"
+          class="h-8 w-auto max-w-[160px] object-contain"
+          width="160"
+          height="32"
+          loading="lazy"
+        />
+        <div class="text-xs text-gray-500">
+          © {new Date().getFullYear()} {company.name}. All rights reserved.
+        </div>
+        <div class="flex gap-3 text-xs text-gray-500">
+          <a href="/privacy-policy/" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+          <span class="text-gray-700">·</span>
+          <a href="/sitemap-index.xml" class="hover:text-gray-300 transition-colors">Sitemap</a>
+        </div>
       </div>
-      <div class="flex items-center gap-1">
-        <span class="text-amber-400">★★★★★</span>
-        <span>5.0 Google Rating</span>
-      </div>
+
+      <!-- Right: Thorwell Group credit -->
+      <a
+        href="https://thorwellgroup.com"
+        target="_blank"
+        rel="noopener"
+        class="group flex flex-col items-center md:items-end gap-0.5 text-gray-400 hover:text-white transition-colors"
+        style="font-family: 'Raleway', sans-serif; font-weight: 400;"
+      >
+        <span class="text-xs uppercase tracking-widest text-gray-500 group-hover:text-gray-400 transition-colors">
+          Site designed and hosted by
+        </span>
+        <span class="text-lg md:text-xl leading-none">
+          Thor<span style="color: #CBFBB4;">w</span>ell Group
+        </span>
+        <span class="text-xs md:text-sm text-gray-500 group-hover:text-gray-400 transition-colors">
+          Future of Flooring
+        </span>
+      </a>
     </div>
   </div>
 </footer>
