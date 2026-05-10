@@ -75,55 +75,18 @@ function formatDate(dateStr: string) {
     </div>
   </div>
 
-  <!-- Hero with calendar embed -->
+  <!-- Hero + calendar -->
   <section class="bg-brand-navy text-white relative overflow-hidden">
     <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 30%, #C8A55B 0%, transparent 50%), radial-gradient(circle at 80% 70%, #C8A55B 0%, transparent 50%);"></div>
-    <div class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 lg:grid-cols-2 gap-12 items-start relative z-10">
-      <!-- Left: copy -->
-      <div>
-        <span class="inline-block bg-brand-gold/20 border border-brand-gold/40 text-brand-gold-light text-xs md:text-sm font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-          Vancouver, WA Showroom
-        </span>
+    <div class="max-w-5xl mx-auto px-4 pt-6 pb-4 md:pt-10 md:pb-6 relative z-10 text-center">
+      <h1 class="font-heading font-bold text-2xl md:text-4xl leading-tight">
+        Book Your Showroom Appointment
+      </h1>
+    </div>
 
-        <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-[1.05] mb-5">
-          Book Your <span class="text-brand-gold">Showroom Appointment.</span>
-        </h1>
-
-        <p class="text-gray-200 text-lg md:text-xl leading-relaxed mb-7 max-w-lg">
-          Pick a time below — a flooring designer will be ready to walk you through samples, answer questions, and help you build a plan for your project.
-        </p>
-
-        <ul class="space-y-2.5 text-gray-100 text-base mb-7">
-          <li class="flex items-start gap-2.5">
-            <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <span><strong class="text-white">Hundreds of samples</strong> — carpet, hardwood, LVP, laminate, tile</span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <span><strong class="text-white">One-on-one with a designer</strong> — no pressure, no upselling</span>
-          </li>
-          <li class="flex items-start gap-2.5">
-            <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
-            <span><strong class="text-white">Take samples home</strong> — see colors in your own light</span>
-          </li>
-        </ul>
-
-        <div class="text-sm text-gray-300 pt-5 border-t border-white/10 space-y-1">
-          <div><strong class="text-white">Showroom:</strong> {company.address.full}</div>
-          <div><strong class="text-white">Hours:</strong> {company.hoursDisplay}</div>
-        </div>
-      </div>
-
-      <!-- Right: GHL booking calendar -->
-      <div id="book" class="lg:sticky lg:top-6 rounded-xl overflow-hidden shadow-2xl">
-        <div class="bg-red-600 text-white px-5 py-3 text-center">
-          <h2 class="font-heading font-bold text-xl md:text-2xl leading-tight">
-            Pick Your Showroom Time
-          </h2>
-          <p class="text-red-50 text-xs md:text-sm mt-0.5 leading-snug">
-            Confirmation sent instantly to your inbox.
-          </p>
-        </div>
+    <!-- Calendar embed -->
+    <div class="max-w-4xl mx-auto px-4 pb-12 md:pb-16 relative z-10">
+      <div id="book" class="rounded-xl overflow-hidden shadow-2xl">
         <iframe
           src="https://api.leadconnectorhq.com/widget/booking/hk8tZZc5d7XNSLkkRi0P"
           style="border:none;width:100%;min-height:780px;display:block;background:white;margin:0;overflow:hidden;"

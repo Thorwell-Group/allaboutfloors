@@ -79,39 +79,15 @@ function formatDate(dateStr: string) {
   <!-- Hero + calendar -->
   <section class="bg-brand-navy text-white relative overflow-hidden">
     <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle at 20% 30%, #C8A55B 0%, transparent 50%), radial-gradient(circle at 80% 70%, #C8A55B 0%, transparent 50%);"></div>
-    <div class="max-w-5xl mx-auto px-4 py-12 md:py-16 relative z-10 text-center">
-      <!-- Spots remaining pill -->
-      <span class="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/40 text-red-100 text-xs md:text-sm font-semibold uppercase tracking-widest px-4 py-1.5 rounded-full mb-5">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-red-500"></span>
-        </span>
-        Only 10 Spots Available This Week
-      </span>
-
-      <h1 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl leading-tight mb-4">
+    <div class="max-w-5xl mx-auto px-4 pt-6 pb-4 md:pt-10 md:pb-6 relative z-10 text-center">
+      <h1 class="font-heading font-bold text-2xl md:text-4xl leading-tight">
         Pick a Time That Works for You
       </h1>
-      <p class="text-gray-200 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-2">
-        Choose a slot below and a member of our Vancouver team will arrive with samples, measure your space, and email you a transparent itemized quote within 24 hours.
-      </p>
-      <p class="text-brand-gold-light text-sm md:text-base">
-        Same-week appointments · Evening slots available · 100% free, no obligation
-      </p>
     </div>
 
     <!-- Calendar embed -->
-    <div class="max-w-4xl mx-auto px-4 pb-16 relative z-10">
+    <div class="max-w-4xl mx-auto px-4 pb-12 md:pb-16 relative z-10">
       <div id="book-calendar" class="rounded-xl overflow-hidden shadow-2xl">
-        <!-- Red headline flush with calendar -->
-        <div class="bg-red-600 text-white px-5 py-3 text-center">
-          <h2 class="font-heading font-bold text-xl md:text-2xl leading-tight">
-            Book Your Appointment
-          </h2>
-          <p class="text-red-50 text-xs md:text-sm mt-0.5 leading-snug">
-            Pick a date and time — confirmation sent instantly to your inbox.
-          </p>
-        </div>
 
         <!-- LeadConnector calendar widget -->
         <iframe
