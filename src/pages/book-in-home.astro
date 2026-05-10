@@ -223,24 +223,52 @@ function formatDate(dateStr: string) {
         }
       }
 
+      // Fallback trigger: if GHL is configured to redirect to ?booked=1
+      // after submission, show the overlay immediately on page load.
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('booked') === '1' || params.get('thank-you') === '1') {
+          show();
+        }
+      } catch (_) {}
+
+      function flatten(obj, depth) {
+        if (depth > 3) return '';
+        if (obj == null) return '';
+        if (typeof obj === 'string') return obj;
+        if (typeof obj === 'number' || typeof obj === 'boolean') return String(obj);
+        if (typeof obj !== 'object') return '';
+        try {
+          return Object.keys(obj).map(k => k + ':' + flatten(obj[k], depth + 1)).join(' ');
+        } catch (_) {
+          return '';
+        }
+      }
+
       function isBookingSuccess(payload) {
         if (!payload) return false;
-        if (typeof payload === 'string') {
-          const s = payload.toLowerCase();
-          return (s.includes('appointment') && s.includes('book')) ||
-                 s.includes('booking-success') ||
-                 s.includes('form-submission-success');
+        const flat = (typeof payload === 'string' ? payload : flatten(payload, 0)).toLowerCase();
+        // Reject obvious resize/height/error chatter
+        if (!flat) return false;
+        if (flat.includes('error') || flat.includes('failed')) return false;
+        // Heuristics: any clear success/booked indicator wins
+        if (flat.includes('appointment-booked')) return true;
+        if (flat.includes('booking-success')) return true;
+        if (flat.includes('booking-confirmed')) return true;
+        if (flat.includes('booking-completed')) return true;
+        if (flat.includes('appointment-confirmed')) return true;
+        if (flat.includes('appointment-completed')) return true;
+        if (flat.includes('form-submission-success')) return true;
+        if (flat.includes('survey-submission-success')) return true;
+        // Generic appointment/booking + success/booked combo
+        if ((flat.includes('appointment') || flat.includes('booking')) &&
+            (flat.includes('success') || flat.includes('booked') ||
+             flat.includes('completed') || flat.includes('confirmed'))) {
+          return true;
         }
+        // Payload contains an appointmentId/bookingId — implies booking persisted
         if (typeof payload === 'object') {
-          const t = (payload.type || payload.event || '').toString().toLowerCase();
-          if (t.includes('appointment') || t.includes('booking') || t.includes('submission')) {
-            if (t.includes('success') || t.includes('booked') || t.includes('completed') || t.includes('confirmed')) {
-              return true;
-            }
-          }
-          if (payload.success === true && (payload.appointmentId || payload.bookingId || payload.contactId)) {
-            return true;
-          }
+          if (payload.appointmentId || payload.bookingId) return true;
         }
         return false;
       }
