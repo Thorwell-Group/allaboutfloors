@@ -239,30 +239,36 @@ function formatDate(dateStr: string) {
       const overlay = document.getElementById('booking-thank-you');
       if (!overlay) return;
 
+      const params = new URLSearchParams(window.location.search);
+      const DEBUG = params.get('debug') === '1';
+      function dlog() {
+        if (!DEBUG) return;
+        try { console.log.apply(console, ['[booking-debug]'].concat([].slice.call(arguments))); } catch (_) {}
+      }
+
       let fired = false;
-      function show() {
+      function show(reason) {
         if (fired) return;
         fired = true;
+        dlog('show() reason:', reason);
         overlay.classList.remove('hidden');
         overlay.classList.add('flex');
         document.body.style.overflow = 'hidden';
         window.scrollTo({ top: 0, behavior: 'smooth' });
         if (typeof window.fbq === 'function') {
           window.fbq('track', 'Schedule');
+          dlog('fbq Schedule fired');
+        } else {
+          dlog('fbq not loaded — Schedule NOT fired');
         }
       }
 
-      // Fallback trigger: if GHL is configured to redirect to ?booked=1
-      // after submission, show the overlay immediately on page load.
-      try {
-        const params = new URLSearchParams(window.location.search);
-        if (params.get('booked') === '1' || params.get('thank-you') === '1') {
-          show();
-        }
-      } catch (_) {}
+      if (params.get('booked') === '1' || params.get('thank-you') === '1') {
+        show('url-param');
+      }
 
       function flatten(obj, depth) {
-        if (depth > 3) return '';
+        if (depth > 4) return '';
         if (obj == null) return '';
         if (typeof obj === 'string') return obj;
         if (typeof obj === 'number' || typeof obj === 'boolean') return String(obj);
@@ -279,21 +285,26 @@ function formatDate(dateStr: string) {
         const flat = (typeof payload === 'string' ? payload : flatten(payload, 0)).toLowerCase();
         if (!flat) return false;
         if (flat.includes('error') || flat.includes('failed')) return false;
-        if (flat.includes('appointment-booked')) return true;
-        if (flat.includes('booking-success')) return true;
-        if (flat.includes('booking-confirmed')) return true;
-        if (flat.includes('booking-completed')) return true;
-        if (flat.includes('appointment-confirmed')) return true;
-        if (flat.includes('appointment-completed')) return true;
-        if (flat.includes('form-submission-success')) return true;
-        if (flat.includes('survey-submission-success')) return true;
-        if ((flat.includes('appointment') || flat.includes('booking')) &&
+        const successWords = ['success','booked','completed','confirmed','submitted','scheduled','thank','appointment','booking'];
+        const isResizeLike = (flat.includes('resize') || flat.includes('height')) && !successWords.some(w => flat.includes(w));
+        if (isResizeLike) return false;
+        const directHits = [
+          'appointment-booked','appointment-confirmed','appointment-completed','appointment-scheduled',
+          'booking-success','booking-confirmed','booking-completed','booking-scheduled',
+          'form-submission-success','survey-submission-success','submission-completed',
+          'thank-you','thankyou','thank_you',
+        ];
+        for (let i = 0; i < directHits.length; i++) if (flat.includes(directHits[i])) return true;
+        if ((flat.includes('appointment') || flat.includes('booking') || flat.includes('schedule')) &&
             (flat.includes('success') || flat.includes('booked') ||
-             flat.includes('completed') || flat.includes('confirmed'))) {
+             flat.includes('completed') || flat.includes('confirmed') ||
+             flat.includes('scheduled'))) {
           return true;
         }
         if (typeof payload === 'object') {
-          if (payload.appointmentId || payload.bookingId) return true;
+          if (payload.appointmentId || payload.bookingId || payload.submissionId) return true;
+          if (payload.data && (payload.data.appointmentId || payload.data.bookingId || payload.data.submissionId)) return true;
+          if (payload.params && (payload.params.appointmentId || payload.params.bookingId)) return true;
         }
         return false;
       }
@@ -305,7 +316,11 @@ function formatDate(dateStr: string) {
           e.origin.includes('gohighlevel.com')
         );
         if (!okOrigin) return;
-        if (isBookingSuccess(e.data)) show();
+        dlog('postMessage from', e.origin, e.data);
+        if (isBookingSuccess(e.data)) {
+          const tag = typeof e.data === 'string' ? e.data : JSON.stringify(e.data).slice(0, 200);
+          show('postMessage:' + tag);
+        }
       });
     })();
   </script>
