@@ -101,7 +101,13 @@ const productServices = countertopsService
     </ul>
 
     <!-- CTA + mobile toggle -->
-    <div class="flex items-center gap-4">
+    <div class="flex items-center gap-3">
+      <a
+        href="/book-in-store/"
+        class="hidden md:inline-flex items-center text-sm font-semibold text-white/90 hover:text-brand-gold border border-white/30 hover:border-brand-gold rounded-md py-2 px-4 transition-colors"
+      >
+        Visit Showroom
+      </a>
       <a href="/free-estimate/" class="hidden md:inline-flex btn-primary text-sm py-2 px-5">
         Free Estimate
       </a>
@@ -145,9 +151,14 @@ const productServices = countertopsService
           <a href="/financing/" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded">Financing</a>
           <a href="/about/" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-white/10 rounded">About</a>
         </div>
-        <div class="pt-3 flex gap-3">
-          <a href="/free-estimate/" class="btn-primary text-sm py-2 flex-1 text-center">Free Estimate</a>
-          <a href={company.cta.phone} class="btn-outline-white text-sm py-2 flex-1 text-center">{company.phone}</a>
+        <div class="pt-3 space-y-2">
+          <div class="flex gap-3">
+            <a href="/free-estimate/" class="btn-primary text-sm py-2 flex-1 text-center">Free Estimate</a>
+            <a href={company.cta.phone} class="btn-outline-white text-sm py-2 flex-1 text-center">{company.phone}</a>
+          </div>
+          <a href="/book-in-store/" class="block w-full text-center text-sm font-semibold text-white/90 hover:text-brand-gold border border-white/30 hover:border-brand-gold rounded-md py-2 transition-colors">
+            Visit Showroom
+          </a>
         </div>
       </div>
     </div>
