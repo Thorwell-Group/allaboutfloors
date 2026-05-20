@@ -28,7 +28,7 @@ function formatDate(dateStr: string) {
   bare={true}
   noIndex={true}
 >
-  <!-- Meta Pixel Code (in <head>) — Schedule fires later on booking confirmation -->
+  <!-- Meta Pixel Code (in <head>) — Lead fires on arrival, Schedule on booking confirmation -->
   <Fragment slot="head">
     <script is:inline>
       !function(f,b,e,v,n,t,s)
@@ -41,9 +41,10 @@ function formatDate(dateStr: string) {
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1975197519985839');
       fbq('track', 'PageView');
+      fbq('track', 'Lead');
     </script>
     <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1975197519985839&ev=PageView&noscript=1"
+      src="https://www.facebook.com/tr?id=1975197519985839&ev=Lead&noscript=1"
     /></noscript>
   </Fragment>
 

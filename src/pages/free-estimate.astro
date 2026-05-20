@@ -321,14 +321,14 @@ const faqs = [
   <!-- LeadConnector form auto-resize script -->
   <script src="https://link.msgsndr.com/js/form_embed.js" is:inline></script>
 
-  <!-- Redirect to /choose-appointment/ after the survey is submitted -->
+  <!-- Redirect to /book-in-home/ after the survey is submitted -->
   <script is:inline>
     (function () {
       let redirected = false;
       function go() {
         if (redirected) return;
         redirected = true;
-        window.location.href = '/choose-appointment/';
+        window.location.href = '/book-in-home/';
       }
 
       // Recursively flatten payload to a searchable string (handles nested objects)

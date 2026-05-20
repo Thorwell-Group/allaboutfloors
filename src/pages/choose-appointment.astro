@@ -1,74 +1,25 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-
-const schema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: 'Choose Your Appointment Type',
-  url: 'https://www.allaboutfloorsnw.com/choose-appointment/',
-  description: 'Pick how you want to meet with All About Floors NW — in your home or at our Vancouver, WA showroom.',
-};
+// Legacy redirect — the showroom/in-home choice step has been removed.
+// All traffic now goes straight to the in-home booking funnel.
+// Kept as a static page so any existing ad URLs / bookmarks pointing here
+// still flow to the new destination with query params preserved.
 ---
-
-<BaseLayout
-  title="Pick Your Appointment Type | All About Floors NW"
-  description="Pick your appointment type — in your home or at our Vancouver, WA showroom."
-  schema={schema}
-  bare={true}
-  noIndex={true}
->
-  <!-- Meta Pixel Code (in <head>) — fire Lead on arrival -->
-  <Fragment slot="head">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <meta name="robots" content="noindex,nofollow" />
+    <link rel="canonical" href="https://www.allaboutfloorsnw.com/book-in-home/" />
+    <meta http-equiv="refresh" content="0; url=/book-in-home/" />
     <script is:inline>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1975197519985839');
-      fbq('track', 'PageView');
-      fbq('track', 'Lead');
+      (function () {
+        var target = '/book-in-home/' + (window.location.search || '') + (window.location.hash || '');
+        window.location.replace(target);
+      })();
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1975197519985839&ev=Lead&noscript=1"
-    /></noscript>
-  </Fragment>
-
-  <!-- Brand bar -->
-  <div class="bg-brand-navy py-4 border-b border-white/5">
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-center">
-      <img
-        src="/images/all-about-floors-nw-logo.webp"
-        alt="All About Floors NW"
-        class="h-10 w-auto max-w-[200px] object-contain"
-        width="200"
-        height="40"
-        loading="eager"
-      />
-    </div>
-  </div>
-
-  <!-- Choice screen -->
-  <section class="bg-white min-h-[80vh] flex items-center">
-    <div class="max-w-2xl mx-auto px-4 py-16 md:py-24 w-full">
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <a
-          href="/book-in-home/"
-          class="flex items-center justify-center bg-black hover:bg-brand-gold text-white font-heading font-semibold text-lg md:text-xl px-6 py-8 rounded-2xl shadow-lg transition-colors duration-200"
-        >
-          In-Home Estimate
-        </a>
-
-        <a
-          href="/book-in-store/"
-          class="flex items-center justify-center bg-black hover:bg-brand-gold text-white font-heading font-semibold text-lg md:text-xl px-6 py-8 rounded-2xl shadow-lg transition-colors duration-200"
-        >
-          Showroom Appointment
-        </a>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/book-in-home/">/book-in-home/</a>…</p>
+  </body>
+</html>
