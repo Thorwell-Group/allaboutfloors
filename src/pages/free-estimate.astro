@@ -13,7 +13,7 @@ const schema = {
 };
 
 const benefitStrip = [
-  '⭐ 5.0 stars · 100+ verified Google reviews',
+  '⭐ 4.9 ★ on Google',
   'Same-week appointments across Clark County',
   'Free flooring estimates',
   'In-home or showroom appointments',
@@ -22,7 +22,7 @@ const benefitStrip = [
 
 const stats = [
   { num: '5,000+', label: 'Floors Installed' },
-  { num: '100+', label: '5-Star Reviews' },
+  { num: '4.9 ★', label: 'on Google' },
   { num: '25+', label: 'Years in Vancouver' },
   { num: 'Lifetime', label: 'Workmanship Warranty' },
 ];
@@ -81,6 +81,11 @@ const faqs = [
 >
   <!-- Meta Pixel Code (in <head>) -->
   <Fragment slot="head">
+    <!-- Warm the GHL connection so the survey iframe paints fast -->
+    <link rel="preconnect" href="https://api.leadconnectorhq.com" crossorigin />
+    <link rel="preconnect" href="https://link.msgsndr.com" crossorigin />
+    <link rel="dns-prefetch" href="https://api.leadconnectorhq.com" />
+    <link rel="preload" as="script" href="https://link.msgsndr.com/js/form_embed.js" />
     <script is:inline>
       !function(f,b,e,v,n,t,s)
       {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -238,7 +243,7 @@ const faqs = [
   </section>
 
   <!-- 5. Reviews / social proof -->
-  <ReviewsSection title="Real 5-Star Reviews from Clark County Neighbors" />
+  <ReviewsSection title="Real 5-Star Reviews from Clark County Neighbors" showGoogleLink={false} />
 
   <!-- 6. Financing pitch -->
   <section class="py-16 bg-brand-navy text-white">
