@@ -1,18 +1,16 @@
 ---
 import { reviews } from '@data/reviews';
+import { company } from '@data/company';
 
 interface Props {
   title?: string;
   max?: number;
+  showGoogleLink?: boolean;
 }
 
-const { title = 'What Our Customers Are Saying', max = 12 } = Astro.props;
+const { title = 'What Our Customers Are Saying', max = 12, showGoogleLink = true } = Astro.props;
 
 const displayedReviews = reviews.slice(0, max);
-
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
-}
 ---
 
 <section class="py-20 bg-white">
@@ -22,7 +20,7 @@ function formatDate(dateStr: string) {
       <h2 class="section-heading mt-2">{title}</h2>
       <div class="flex items-center justify-center gap-2 mt-3">
         <div class="flex gap-0.5 text-amber-400 text-xl">★★★★★</div>
-        <span class="text-gray-600 font-medium">5.0 rating · 100+ Google reviews from Clark County homeowners</span>
+        <span class="text-gray-600 font-medium">{company.rating} ★ on Google</span>
       </div>
     </div>
 
@@ -36,7 +34,7 @@ function formatDate(dateStr: string) {
             </div>
             <div class="flex-1 min-w-0">
               <div class="font-semibold text-brand-navy">{review.name}</div>
-              <div class="text-sm text-gray-500">{review.location} · {formatDate(review.date)}</div>
+              <div class="text-sm text-gray-500">{review.location}</div>
             </div>
             <!-- Google G logo -->
             <svg class="w-5 h-5 flex-shrink-0 mt-1" viewBox="0 0 48 48" aria-label="Google">
@@ -61,10 +59,12 @@ function formatDate(dateStr: string) {
       ))}
     </div>
 
-    <div class="text-center">
-      <a href="/reviews/" class="btn-secondary">
-        See All Reviews
-      </a>
-    </div>
+    {showGoogleLink && (
+      <div class="text-center">
+        <a href={company.social.googleSearch} target="_blank" rel="noopener" class="btn-secondary">
+          {company.rating} ★ on Google · see more reviews
+        </a>
+      </div>
+    )}
   </div>
 </section>

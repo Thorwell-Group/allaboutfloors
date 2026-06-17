@@ -15,10 +15,6 @@ const schema = {
   url: 'https://www.allaboutfloorsnw.com/book-in-home/',
   description: 'Pick a time for your free in-home flooring estimate from All About Floors NW in Vancouver, WA.',
 };
-
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
-}
 ---
 
 <BaseLayout
@@ -56,7 +52,7 @@ function formatDate(dateStr: string) {
           <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> ⏳ Limited time offer</span>
           <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> Only 10 spots available this week</span>
           <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> Free in-home estimate</span>
-          <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> ⭐ 5.0 stars · 100+ Google reviews</span>
+          <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> ⭐ 4.9 ★ on Google</span>
           <span class="flex items-center gap-2"><span class="inline-block w-1.5 h-1.5 bg-yellow-300 rounded-full animate-pulse"></span> Family-owned since 1999</span>
         </div>
       ))}
@@ -108,7 +104,7 @@ function formatDate(dateStr: string) {
       <div class="text-center mb-8">
         <div class="inline-flex items-center gap-2 mb-2">
           <div class="flex gap-0.5 text-amber-400 text-lg">★★★★★</div>
-          <span class="font-heading font-bold text-brand-navy">5.0</span>
+          <span class="font-heading font-bold text-brand-navy">{company.rating} ★ on Google</span>
         </div>
         <h2 class="font-heading font-bold text-2xl md:text-3xl text-brand-navy">
           You're in good hands.
@@ -125,7 +121,7 @@ function formatDate(dateStr: string) {
               </div>
               <div class="flex-1 min-w-0">
                 <div class="font-semibold text-brand-navy text-sm">{review.name}</div>
-                <div class="text-xs text-gray-500">{review.location} · {formatDate(review.date)}</div>
+                <div class="text-xs text-gray-500">{review.location}</div>
               </div>
               <svg class="w-4 h-4 flex-shrink-0 mt-1" viewBox="0 0 48 48" aria-label="Google">
                 <path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4 12.955 4 4 12.955 4 24s8.955 20 20 20 20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/>

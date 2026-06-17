@@ -5,17 +5,13 @@ import CTABanner from '@components/CTABanner.astro';
 import { reviews } from '@data/reviews';
 import { company } from '@data/company';
 
-function formatDate(dateStr: string) {
-  return new Date(dateStr).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
-}
-
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: company.name,
   aggregateRating: {
     '@type': 'AggregateRating',
-    ratingValue: '5.0',
+    ratingValue: company.rating,
     reviewCount: reviews.length,
     bestRating: '5',
   },
@@ -23,7 +19,6 @@ const schema = {
     '@type': 'Review',
     author: { '@type': 'Person', name: r.name },
     reviewRating: { '@type': 'Rating', ratingValue: r.rating, bestRating: 5 },
-    datePublished: r.date,
     reviewBody: r.text,
   })),
 };
@@ -31,7 +26,7 @@ const schema = {
 
 <BaseLayout
   title="Customer Reviews | All About Floors NW, Vancouver, WA"
-  description="Read verified 5-star reviews from All About Floors NW customers across Vancouver, Camas, Battle Ground, Washougal, and the Portland metro. Hundreds of happy homeowners and counting."
+  description="Read verified 5-star Google reviews from All About Floors NW customers across Vancouver, Camas, Battle Ground, Washougal, and the Portland metro."
   schema={schema}
 >
   <div class="bg-brand-navy text-white py-14">
@@ -41,7 +36,7 @@ const schema = {
         Customer Reviews
       </h1>
       <p class="text-gray-300 text-lg">
-        5.0 Rating · 100+ Verified Google Reviews
+        {company.rating} ★ on Google
       </p>
     </div>
   </div>
@@ -59,7 +54,7 @@ const schema = {
               </div>
               <div class="flex-1 min-w-0">
                 <div class="font-semibold text-brand-navy">{review.name}</div>
-                <div class="text-sm text-gray-500">{review.location} · {formatDate(review.date)}</div>
+                <div class="text-sm text-gray-500">{review.location}</div>
               </div>
               <!-- Google G logo -->
               <svg class="w-5 h-5 flex-shrink-0 mt-1" viewBox="0 0 48 48" aria-label="Google">
@@ -84,12 +79,12 @@ const schema = {
 
       <div class="text-center mt-12">
         <p class="text-gray-600 mb-4">Want to see more reviews? Visit us on Google.</p>
-        <a href={company.social.google} target="_blank" rel="noopener" class="btn-primary">
-          Read More Reviews on Google
+        <a href={company.social.googleSearch} target="_blank" rel="noopener" class="btn-primary">
+          {company.rating} ★ on Google · see more reviews
         </a>
       </div>
     </div>
   </section>
 
-  <CTABanner heading="Join Hundreds of Happy Clark County Homeowners" subtext="See for yourself why All About Floors NW has hundreds of 5-star reviews. Schedule your free estimate today." />
+  <CTABanner heading="Join Happy Clark County Homeowners" subtext="See for yourself why All About Floors NW is rated 4.9 ★ on Google. Schedule your free estimate today." />
 </BaseLayout>

@@ -1,7 +1,9 @@
+# robots.txt -- all crawlers and AI agents are welcome.
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
 User-agent: *
 Allow: /
-
-Sitemap: https://www.allaboutfloorsnw.com/sitemap-index.xml
-
 Disallow: /thank-you/
 Disallow: /search/
+
+Sitemap: https://www.allaboutfloorsnw.com/sitemap-index.xml

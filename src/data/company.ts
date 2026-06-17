@@ -29,10 +29,12 @@ export const company = {
   textAvailability: 'Text us 24/7 — we reply fast',
   founded: '1999',
   yearsExperience: '25+',
+  rating: '4.9',
   social: {
     facebook: 'https://www.facebook.com/allaboutfloorsnw',
     instagram: 'https://www.instagram.com/allaboutfloorsnw',
     google: 'https://g.page/allaboutfloorsnw',
+    googleSearch: 'https://www.google.com/search?q=All+About+Floors+NW+Vancouver+WA',
     houzz: 'https://www.houzz.com/professionals/flooring-contractors/all-about-floors-nw',
   },
   mapEmbedUrl:
