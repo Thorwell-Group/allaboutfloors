@@ -192,3 +192,31 @@ export const areas: Area[] = [
     zipCodes: ['97030', '97080'],
   },
 ];
+
+// Unique, grounded per-city context used to differentiate location pages.
+// Built from each area's real neighborhoods (above) + documented local character
+// + verifiable Pacific Northwest climate guidance. No invented landmarks or stats.
+export const areaLocalContext: Record<string, string> = {
+  'vancouver-wa':
+    "From mid-century homes in Hazel Dell and Minnehaha to newer construction in Cascade Park and Fisher's Landing, Vancouver's housing spans the full range of eras and styles. That mix means we fit everything from moisture-tolerant luxury vinyl in busy family homes to refinished original hardwood in established east-side neighborhoods.",
+  'battle-ground-wa':
+    "Battle Ground's strong residential growth has filled neighborhoods around Daybreak and downtown with newer homes, while properties toward Yacolt and Heisson lean rural and acreage-based. We help Battle Ground homeowners choose durable, low-maintenance floors that stand up to mudrooms, pets, and wet Pacific Northwest winters.",
+  'camas-wa':
+    "Camas is one of Clark County's most design-conscious communities, with upscale homes on Prune Hill and around Lacamas Lake. Camas homeowners often invest in premium hardwood and large-format tile, and our in-home design service helps match those finishes to the area's Columbia Gorge setting.",
+  'washougal-wa':
+    "Sitting at the mouth of the Columbia River Gorge, Washougal homes meet the region's damp, humidity-swinging climate head-on. We steer Washougal homeowners toward waterproof luxury vinyl and stable engineered hardwood that handle Gorge moisture better than solid wood.",
+  'ridgefield-wa':
+    "Ridgefield is one of Clark County's fastest-growing cities, with new subdivisions around Union Ridge and South Ridgefield adding homes every year. We work with both Ridgefield builders and homeowners to spec floors for new construction and to upgrade builder-grade materials.",
+  'la-center-wa':
+    "La Center's rural, farm-country setting means many homes sit on acreage with hard-working entryways and pets. We help La Center homeowners pick scratch- and moisture-resistant floors that hold up to country living without sacrificing style.",
+  'brush-prairie-wa':
+    "Brush Prairie and neighboring Hockinson are known for spacious properties and rural character northeast of Vancouver. Larger homes and busy mudrooms make durable luxury vinyl and refinished hardwood popular choices for Brush Prairie families.",
+  'salmon-creek-wa':
+    "Salmon Creek blends established neighborhoods with newer development around Felida and Lakeshore, just minutes from our Vancouver showroom. We outfit Salmon Creek homes with everything from cozy carpet to waterproof plank for high-traffic living areas.",
+  'hazel-dell-wa':
+    "Hazel Dell's mix of long-established homes and busy commercial corridors means a lot of older flooring is ready for an update. We help Hazel Dell homeowners refresh worn carpet and dated surfaces with durable, modern flooring built for daily wear.",
+  'portland-or':
+    "Portland's character homes, from Irvington four-squares to Sellwood bungalows, often feature original wood floors worth preserving. We help Portland-metro homeowners refinish vintage hardwood or add moisture-smart flooring suited to the city's wet winters.",
+  'gresham-or':
+    "Gresham's diverse housing stock, from established Powell Valley homes to newer east-county developments, calls for flooring as varied as its neighborhoods. We bring samples and expert guidance to Gresham homeowners for projects of every size and budget.",
+};

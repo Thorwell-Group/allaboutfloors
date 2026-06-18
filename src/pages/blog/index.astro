@@ -1,0 +1,63 @@
+---
+import BaseLayout from '@layouts/BaseLayout.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import CTABanner from '@components/CTABanner.astro';
+import { getCollection } from 'astro:content';
+import { company } from '@data/company';
+
+const posts = (await getCollection('blog')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Blog',
+  name: `${company.name} Flooring Blog`,
+  url: 'https://www.allaboutfloorsnw.com/blog/',
+  description:
+    'Flooring guides, comparisons, and tips for Vancouver, WA and the Pacific Northwest.',
+};
+---
+
+<BaseLayout
+  title="Flooring Blog, Guides & Tips | All About Floors NW"
+  description="Flooring guides, cost breakdowns, and honest comparisons for Vancouver, WA and the Pacific Northwest, from the experts at All About Floors NW."
+  canonicalURL="https://www.allaboutfloorsnw.com/blog/"
+  schema={schema}
+>
+  <Breadcrumb items={[{ label: 'Blog' }]} />
+
+  <section class="py-16 bg-white">
+    <div class="max-w-5xl mx-auto px-4">
+      <span class="badge-gold mb-3">Flooring Resources</span>
+      <h1 class="section-heading mt-2 mb-4">Flooring Guides for Pacific Northwest Homes</h1>
+      <p class="text-gray-700 leading-relaxed mb-10 max-w-2xl">
+        Buying guides, cost breakdowns, and honest comparisons to help Vancouver, WA and Clark
+        County homeowners choose floors that look great and last in our climate.
+      </p>
+
+      <div class="grid gap-6 sm:grid-cols-2">
+        {posts.map(post => (
+          <a
+            href={`/blog/${post.slug}/`}
+            class="block border border-gray-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow"
+          >
+            <span class="text-xs font-semibold text-brand-gold uppercase tracking-wide">{post.data.category}</span>
+            <h2 class="font-heading font-semibold text-brand-navy text-xl mt-2 mb-2">{post.data.title}</h2>
+            <p class="text-gray-600 text-sm mb-3">{post.data.description}</p>
+            <span class="text-xs text-gray-400">{fmt(post.data.date)}</span>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTABanner
+    heading="Ready to start your flooring project?"
+    subtext="Get a free, no-pressure in-home estimate from Vancouver's trusted flooring experts since 1999."
+    ctaText="Get Your Free Estimate"
+  />
+</BaseLayout>
