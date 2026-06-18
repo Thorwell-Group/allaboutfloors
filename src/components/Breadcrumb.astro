@@ -9,7 +9,26 @@ interface Props {
 }
 
 const { items } = Astro.props;
+
+const SITE = 'https://www.allaboutfloorsnw.com';
+const abs = (h?: string) =>
+  !h ? undefined : h.startsWith('http') ? h : `${SITE}${h.startsWith('/') ? h : `/${h}`}`;
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    ...items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 2,
+      name: item.label,
+      ...(abs(item.href) ? { item: abs(item.href) } : {}),
+    })),
+  ],
+};
 ---
+<script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
 
 <nav aria-label="Breadcrumb" class="bg-gray-50 border-b border-gray-100">
   <div class="max-w-7xl mx-auto px-4 py-3">
