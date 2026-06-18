@@ -76,14 +76,14 @@ const schema = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: company.rating,
-    reviewCount: '8',
+    reviewCount: company.reviewCount,
   },
 };
 ---
 
 <BaseLayout
   title={`Flooring Company in ${area.displayName} | All About Floors NW`}
-  description={`All About Floors NW serves ${area.displayName} with premium carpet, hardwood, LVP, laminate, and tile flooring. Free in-home estimates. 25+ years serving ${area.county}. Call (360) 525-2962.`}
+  description={`Carpet, hardwood, LVP, laminate & tile flooring in ${area.displayName} by All About Floors NW. Free in-home estimates. Call (360) 525-2962.`}
   canonicalURL={`https://www.allaboutfloorsnw.com/flooring-in-${area.slug}/`}
   schema={schema}
 >

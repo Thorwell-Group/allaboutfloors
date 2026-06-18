@@ -12,7 +12,7 @@ const schema = {
   aggregateRating: {
     '@type': 'AggregateRating',
     ratingValue: company.rating,
-    reviewCount: reviews.length,
+    reviewCount: company.reviewCount,
     bestRating: '5',
   },
   review: reviews.map(r => ({

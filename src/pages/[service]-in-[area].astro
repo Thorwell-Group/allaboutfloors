@@ -8,7 +8,7 @@ import FAQ from '@components/FAQ.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import GoogleMap from '@components/GoogleMap.astro';
 import BrandLogos from '@components/BrandLogos.astro';
-import { areas } from '@data/areas';
+import { areas, areaLocalContext } from '@data/areas';
 import { localServices, services } from '@data/services';
 import { company } from '@data/company';
 
@@ -41,6 +41,19 @@ const serviceIntros: Record<string, string> = {
 };
 
 const introText = serviceIntros[localService.slug] ?? `All About Floors NW proudly provides ${localService.name} to ${area.displayName} homeowners. With 25+ years of experience and a dedication to quality, we are ${area.county}'s trusted flooring partner.`;
+
+// Per-service Pacific Northwest climate/performance guidance (grounded; varies by service + city)
+const climateNotes: Record<string, string> = {
+  'carpet-flooring': `In the Pacific Northwest's damp climate, we recommend moisture- and mildew-resistant carpet pads and fibers for bedrooms and living areas in ${area.name}, keeping plush comfort where you want it while steering moisture-prone rooms toward hard surfaces.`,
+  'hardwood-flooring': `Because our region swings between wet winters and drier summers, we often guide ${area.name} homeowners toward engineered hardwood for above-grade rooms, it resists the cupping and gapping solid wood can show when indoor humidity isn't held near 40–45%.`,
+  'hardwood-refinishing-flooring': `Refinishing is a great fit for the Pacific Northwest's older homes with original solid wood. We sand, repair, and reseal to protect ${area.name} floors against the moisture and foot-traffic wear common in our climate, often for a fraction of replacement cost.`,
+  'luxury-vinyl-flooring': `LVP is one of the best flooring choices for our rainy climate, it's 100% waterproof at the surface and ideal for ${area.name} kitchens, laundry rooms, and busy entryways, though we still recommend porcelain tile for primary bathrooms and showers.`,
+  'laminate-flooring': `Modern water-resistant laminate gives ${area.name} homeowners the look of wood with better moisture tolerance than older products. We'll help you choose a line rated for our damp conditions and pair it with the right underlayment.`,
+  'tile-flooring': `Porcelain and ceramic tile are fully waterproof at the surface, making them the gold standard for Pacific Northwest bathrooms, showers, and mudrooms in ${area.name}, where they outlast every other flooring type.`,
+};
+const climateNote = climateNotes[localService.slug];
+const localContext = areaLocalContext[area.slug];
+const neighborhoodList = area.neighborhoods.slice(0, 5).join(', ');
 
 // Location-specific FAQ
 const faq = [
@@ -110,7 +123,7 @@ const schema = [
 
 <BaseLayout
   title={`${pageTitle} | All About Floors NW`}
-  description={`Looking for ${localService.name} in ${area.displayName}? All About Floors NW offers premium products & expert installation. Free in-home estimates. 25+ years serving ${area.county}. Call (360) 525-2962.`}
+  description={`${localService.name} in ${area.displayName} by All About Floors NW. Expert install, free in-home estimates. Call (360) 525-2962.`}
   canonicalURL={`https://www.allaboutfloorsnw.com/${localService.slug}-in-${area.slug}/`}
   schema={schema}
 >
@@ -141,9 +154,19 @@ const schema = [
 
           <p class="text-gray-700 leading-relaxed mb-4">{introText}</p>
 
-          <p class="text-gray-700 leading-relaxed mb-4">
-            Proudly serving {area.displayName} and all surrounding communities, our experienced team has completed thousands of flooring projects across {area.county}. We understand the unique character of {area.name} homes, from newly constructed subdivisions to established neighborhoods, and we bring the right flooring solutions for every style and budget.
-          </p>
+          {localContext && (
+            <p class="text-gray-700 leading-relaxed mb-4">{localContext}</p>
+          )}
+
+          {area.neighborhoods.length > 0 && (
+            <p class="text-gray-700 leading-relaxed mb-4">
+              We bring {localService.name.toLowerCase()} to homeowners across {area.name}, including {neighborhoodList}, and throughout {area.county}. From established streets to newer subdivisions, our team tailors each project to the home in front of us.
+            </p>
+          )}
+
+          {climateNote && (
+            <p class="text-gray-700 leading-relaxed mb-6">{climateNote}</p>
+          )}
 
           <p class="text-gray-700 leading-relaxed mb-6">
             When you choose All About Floors NW for {localService.name} in {area.displayName}, you get a locally owned company with {company.yearsExperience} years of experience, a free in-home estimate with no pressure, transparent pricing, certified installation crews, and a follow-up visit within 10 days to ensure your complete satisfaction.

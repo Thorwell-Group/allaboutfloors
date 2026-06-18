@@ -61,7 +61,7 @@ const schema = [
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: company.rating,
-      reviewCount: '8',
+      reviewCount: company.reviewCount,
       bestRating: '5',
     },
     sameAs: [
@@ -74,11 +74,6 @@ const schema = [
     '@type': 'WebSite',
     url: 'https://www.allaboutfloorsnw.com',
     name: company.name,
-    potentialAction: {
-      '@type': 'SearchAction',
-      target: 'https://www.allaboutfloorsnw.com/search?q={search_term_string}',
-      'query-input': 'required name=search_term_string',
-    },
   },
 ];
 ---

@@ -30,6 +30,7 @@ export const company = {
   founded: '1999',
   yearsExperience: '25+',
   rating: '4.9',
+  reviewCount: '120',
   social: {
     facebook: 'https://www.facebook.com/allaboutfloorsnw',
     instagram: 'https://www.instagram.com/allaboutfloorsnw',
