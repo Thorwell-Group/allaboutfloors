@@ -3,6 +3,7 @@ title: "Best Flooring for the Pacific Northwest's Wet Climate"
 description: "Rain, humidity, and temperature swings are hard on floors. Here's how to choose flooring that lasts in Vancouver, WA and the greater Portland metro."
 date: 2026-05-26
 category: "Buying Guides"
+heroImage: "/images/LVPKitchen.webp"
 ---
 
 The Pacific Northwest is one of the most beautiful places to live, and one of the toughest on flooring. Our wet winters, humid shoulder seasons, and the moisture that comes in on boots and paws all put real stress on floors. Choosing the right material up front saves you from cupping, warping, and premature wear.

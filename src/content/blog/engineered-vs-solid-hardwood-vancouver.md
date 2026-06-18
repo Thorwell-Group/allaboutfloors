@@ -3,6 +3,7 @@ title: "Engineered vs. Solid Hardwood for Vancouver, WA Homes"
 description: "Both are real wood, but they behave differently in our humid climate. Here's how to choose between engineered and solid hardwood in the Pacific Northwest."
 date: 2026-06-09
 category: "Comparisons"
+heroImage: "/images/Hardwoodlivingroom.webp"
 ---
 
 If you want real wood floors in your Vancouver, WA home, you'll choose between **solid** and **engineered** hardwood. Both are genuine wood and both look beautiful, but they're built differently, and in our climate that difference matters.

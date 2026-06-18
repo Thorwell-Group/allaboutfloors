@@ -3,6 +3,7 @@ title: "LVP vs. Laminate: Which Is Better for a Rainy Climate?"
 description: "Luxury vinyl plank and laminate look similar but perform very differently in moisture. Here's how to choose for a Vancouver, WA home."
 date: 2026-06-02
 category: "Comparisons"
+heroImage: "/images/Laminate_Vinyl.webp"
 ---
 
 Luxury vinyl plank (LVP) and laminate are two of the most popular wood-look floors, and they're often cross-shopped because they can look almost identical. But in a rainy climate like ours, the difference that matters most is how they handle water.

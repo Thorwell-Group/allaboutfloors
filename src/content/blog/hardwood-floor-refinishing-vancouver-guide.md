@@ -3,6 +3,7 @@ title: "Hardwood Floor Refinishing in Vancouver: Process, Cost & Timeline"
 description: "What to expect when you refinish hardwood floors in Vancouver, WA, the steps, how long it takes, and why it's often a better value than replacement."
 date: 2026-06-16
 category: "Guides"
+heroImage: "/images/hardwood-refinishing-vancouver-wa.webp"
 ---
 
 If your hardwood floors look scratched, dull, or gray, you may not need to replace them. **Refinishing** restores solid hardwood to like-new condition, usually for a fraction of the cost of new flooring. It's one of the highest-value upgrades available to older Vancouver, WA and Portland-area homes.

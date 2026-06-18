@@ -3,6 +3,7 @@ title: "How Much Does Flooring Cost in Vancouver, WA? (2026 Guide)"
 description: "A clear breakdown of flooring installation costs in Vancouver, WA and Clark County, by material, plus what drives the price up or down."
 date: 2026-05-12
 category: "Buying Guides"
+heroImage: "/images/all-about-floors-nw-showroom-interior-vancouver-wa.webp"
 ---
 
 One of the first questions we hear from Vancouver-area homeowners is simple: *what's this going to cost?* The honest answer is that flooring pricing depends on the material, the size and condition of your space, and how much prep your subfloor needs. But you deserve real ranges before you start, so here's how flooring costs generally break down in the Vancouver, WA and Clark County market.
