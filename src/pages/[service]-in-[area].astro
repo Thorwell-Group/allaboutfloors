@@ -27,6 +27,18 @@ export async function getStaticPaths() {
 
 const { area, localService } = Astro.props;
 
+// SEO: the Vancouver, WA versions of these local pages duplicate the dedicated
+// service pages (identical title/H1, e.g. "Laminate Flooring in Vancouver, WA").
+// Canonicalize them to the primary service page to stop them competing. Other
+// cities have distinct local content and remain self-canonical.
+const vancouverCanonicalOverrides: Record<string, string> = {
+  'laminate-flooring': '/laminate-flooring/',
+  'luxury-vinyl-flooring': '/luxury-vinyl-plank/',
+};
+const canonicalURL = (area.slug === 'vancouver-wa' && vancouverCanonicalOverrides[localService.slug])
+  ? `https://www.allaboutfloorsnw.com${vancouverCanonicalOverrides[localService.slug]}`
+  : `https://www.allaboutfloorsnw.com/${localService.slug}-in-${area.slug}/`;
+
 // Match to full service data for features/benefits/FAQ
 const fullService = services.find(s => s.slug === localService.mainSlug);
 
@@ -124,7 +136,7 @@ const schema = [
 <BaseLayout
   title={`${pageTitle} | All About Floors NW`}
   description={`${localService.name} in ${area.displayName} by All About Floors NW. Expert install, free in-home estimates. Call (360) 525-2962.`}
-  canonicalURL={`https://www.allaboutfloorsnw.com/${localService.slug}-in-${area.slug}/`}
+  canonicalURL={canonicalURL}
   schema={schema}
 >
   <Hero

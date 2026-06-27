@@ -22,7 +22,7 @@ const faq = [
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
-  name: 'Commercial Flooring in Vancouver, WA',
+  name: 'Commercial & Office Flooring in Vancouver, WA',
   description: svc.description,
   provider: {
     '@type': 'LocalBusiness',
@@ -42,12 +42,12 @@ const schema = {
 ---
 
 <BaseLayout
-  title="Commercial Flooring in Vancouver, WA | All About Floors NW"
-  description="Professional commercial flooring solutions in Vancouver, WA. Offices, restaurants, retail, healthcare & more. All About Floors NW, your Clark County commercial flooring partner."
+  title="Commercial & Office Flooring in Vancouver, WA | All About Floors NW"
+  description="Professional commercial & office flooring in Vancouver, WA. Offices, restaurants, retail, healthcare & more. All About Floors NW, your Clark County commercial flooring partner."
   schema={schema}
 >
   <Hero
-    heading="Commercial Flooring in Vancouver, WA"
+    heading="Commercial & Office Flooring in Vancouver, WA"
     subheading="Durable, professional-grade flooring solutions for offices, retail, restaurants, healthcare, and more. Serving Clark County businesses since 1999."
     image={svc.heroImage}
     imageAlt={svc.heroImageAlt}
@@ -77,6 +77,45 @@ const schema = {
             <div class="font-semibold text-brand-navy text-sm">{space.name}</div>
           </div>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Office Flooring -->
+  <section class="py-20 bg-brand-light">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
+        <div>
+          <span class="badge-gold mb-3">Workplace Specialists</span>
+          <h2 class="section-heading mt-2 mb-5">Office Flooring in Vancouver, WA</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            The right office flooring sets the tone for your workplace while standing up to chair casters, foot traffic, and daily wear. All About Floors NW helps Vancouver and Clark County offices choose durable, professional flooring that looks great for years, from open-plan workspaces and private offices to lobbies, conference rooms, and break rooms.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            For most offices we recommend commercial-grade carpet tile and luxury vinyl tile (LVT): both are hard-wearing, easy to maintain, and simple to repair section-by-section without re-flooring the whole space. We can phase installation around your business hours to keep your team productive throughout the project.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <a href="/free-estimate/" class="btn-primary">Get an Office Flooring Quote</a>
+            <a href={company.cta.phone} class="btn-secondary">{company.phone}</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-2xl p-8 shadow-sm">
+          <h3 class="font-heading font-semibold text-brand-navy text-xl mb-4">Popular Office Flooring Options</h3>
+          <ul class="space-y-3 text-gray-700">
+            {[
+              'Commercial carpet tile, modular & easy to replace',
+              'Luxury vinyl tile (LVT) for high-traffic durability',
+              'Rubber & resilient flooring for safety and comfort',
+              'Sound-dampening options for open workspaces',
+              'Phased, after-hours installation to minimize downtime',
+            ].map(item => (
+              <li class="flex items-start gap-2.5">
+                <svg class="w-5 h-5 text-brand-gold flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   </section>
