@@ -22,6 +22,13 @@ export async function getStaticPaths() {
 
 const { area } = Astro.props;
 
+// SEO: the Vancouver, WA local page is a near-duplicate of the homepage (same
+// "flooring company in Vancouver, WA" target). Canonicalize it to the homepage
+// to avoid keyword cannibalization. Other cities have distinct local content.
+const canonicalURL = area.slug === 'vancouver-wa'
+  ? 'https://www.allaboutfloorsnw.com/'
+  : `https://www.allaboutfloorsnw.com/flooring-in-${area.slug}/`;
+
 const faq = [
   {
     q: `Why should I choose All About Floors NW for flooring in ${area.displayName}?`,
@@ -84,7 +91,7 @@ const schema = {
 <BaseLayout
   title={`Flooring Company in ${area.displayName} | All About Floors NW`}
   description={`Carpet, hardwood, LVP, laminate & tile flooring in ${area.displayName} by All About Floors NW. Free in-home estimates. Call (360) 525-2962.`}
-  canonicalURL={`https://www.allaboutfloorsnw.com/flooring-in-${area.slug}/`}
+  canonicalURL={canonicalURL}
   schema={schema}
 >
   <Hero
