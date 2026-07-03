@@ -331,15 +331,6 @@ export const installationServices = [
     heroImageAlt: 'Hardwood floor refinishing service in Vancouver WA',
   },
   {
-    slug: 'floor-repair',
-    name: 'Floor Repair',
-    urlPath: '/floor-repair/',
-    tagline: 'Fast, Reliable Flooring Repairs',
-    description: 'Squeaky boards, cracked tile, water-damaged areas, or loose planks, our repair specialists fix all types of flooring damage quickly and affordably.',
-    heroImage: '/images/floor-repair-vancouver-wa.webp',
-    heroImageAlt: 'Floor repair service fixing damaged hardwood in a Vancouver WA home',
-  },
-  {
     slug: 'commercial-flooring',
     name: 'Commercial Flooring',
     urlPath: '/commercial-flooring/',
