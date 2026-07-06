@@ -29,7 +29,7 @@ export const company = {
   textAvailability: 'Text us 24/7 — we reply fast',
   founded: '1999',
   yearsExperience: '25+',
-  rating: '4.9',
+  rating: '4.8',
   reviewCount: '120',
   social: {
     facebook: 'https://www.facebook.com/allaboutfloorsnw',

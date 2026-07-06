@@ -34,6 +34,7 @@ const { area, localService } = Astro.props;
 const vancouverCanonicalOverrides: Record<string, string> = {
   'laminate-flooring': '/laminate-flooring/',
   'luxury-vinyl-flooring': '/luxury-vinyl-plank/',
+  'hardwood-flooring': '/hardwood-flooring/',
 };
 const canonicalURL = (area.slug === 'vancouver-wa' && vancouverCanonicalOverrides[localService.slug])
   ? `https://www.allaboutfloorsnw.com${vancouverCanonicalOverrides[localService.slug]}`

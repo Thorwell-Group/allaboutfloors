@@ -1,1 +1,5 @@
+# Canonical host: force apex -> www
+https://allaboutfloorsnw.com/* https://www.allaboutfloorsnw.com/:splat 301
+
 /hardwood-flooring-info  /hardwood-flooring/  301
+/hardwood-flooring-info/  /hardwood-flooring/  301

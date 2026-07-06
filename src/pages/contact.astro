@@ -3,11 +3,73 @@ import BaseLayout from '@layouts/BaseLayout.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import GoogleMap from '@components/GoogleMap.astro';
 import { company } from '@data/company';
+
+// Same LocalBusiness block as the homepage so contact signals (NAP, hours,
+// rating) are machine-readable on the contact page too.
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': 'https://www.allaboutfloorsnw.com/#business',
+  name: company.name,
+  description: company.description,
+  url: 'https://www.allaboutfloorsnw.com',
+  telephone: company.phoneDashes,
+  image: 'https://www.allaboutfloorsnw.com/images/all-about-floors-nw-storefront.webp',
+  logo: 'https://www.allaboutfloorsnw.com/images/all-about-floors-nw-logo.webp',
+  priceRange: company.priceRange,
+  currenciesAccepted: company.currency,
+  paymentAccepted: 'Cash, Check, Visa, Mastercard, American Express',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: company.address.street,
+    addressLocality: company.address.city,
+    addressRegion: company.address.state,
+    postalCode: company.address.zip,
+    addressCountry: 'US',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: company.geo.lat,
+    longitude: company.geo.lng,
+  },
+  openingHoursSpecification: [
+    { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '09:00', closes: '18:00' },
+  ],
+  areaServed: [
+    'Vancouver, WA', 'Battle Ground, WA', 'Camas, WA', 'Washougal, WA',
+    'Ridgefield, WA', 'La Center, WA', 'Brush Prairie, WA', 'Salmon Creek, WA',
+    'Hazel Dell, WA', 'Portland, OR', 'Gresham, OR',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Flooring Products & Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Carpet Flooring' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hardwood Flooring' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Luxury Vinyl Plank' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Laminate Flooring' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Tile Flooring' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Flooring Installation' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Hardwood Refinishing' } },
+    ],
+  },
+  aggregateRating: {
+    '@type': 'AggregateRating',
+    ratingValue: company.rating,
+    reviewCount: company.reviewCount,
+    bestRating: '5',
+  },
+  sameAs: [
+    company.social.facebook,
+    company.social.google,
+  ],
+};
 ---
 
 <BaseLayout
   title="Contact All About Floors NW | Vancouver, WA Flooring Company"
   description="Contact All About Floors NW in Vancouver, WA. Visit our showroom, call (360) 525-2962, or send us a message. We're open Mon–Sat and happy to answer all your flooring questions."
+  schema={schema}
 >
   <div class="bg-brand-navy text-white py-14">
     <div class="max-w-7xl mx-auto px-4 text-center">
