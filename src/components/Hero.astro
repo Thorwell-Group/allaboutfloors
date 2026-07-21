@@ -3,6 +3,7 @@ import { company } from '@data/company';
 
 interface Props {
   heading: string;
+  eyebrow?: string;
   subheading?: string;
   image?: string;
   imageAlt?: string;
@@ -16,6 +17,7 @@ interface Props {
 
 const {
   heading,
+  eyebrow,
   subheading,
   image = '/images/hero-flooring-vancouver-wa.webp',
   imageAlt = 'Beautiful flooring installed by All About Floors NW in Vancouver, WA',
@@ -58,6 +60,11 @@ const hasRight = Astro.slots.has('right');
         <span class="inline-block bg-brand-gold text-white text-sm font-semibold px-4 py-1.5 rounded-full mb-5 shadow-md animate-float">
           {badge}
         </span>
+      )}
+      {eyebrow && (
+        <p class="text-brand-gold font-heading font-semibold text-lg md:text-xl uppercase tracking-wide text-shadow mb-2">
+          {eyebrow}
+        </p>
       )}
       <h1 class="font-heading font-bold text-white text-shadow leading-tight mb-5"
         class:list={compact ? 'text-3xl md:text-4xl' : 'text-4xl md:text-5xl lg:text-6xl'}
