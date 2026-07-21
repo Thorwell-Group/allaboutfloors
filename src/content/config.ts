@@ -9,6 +9,9 @@ const blog = defineCollection({
     author: z.string().default('All About Floors NW'),
     category: z.string(),
     heroImage: z.string().optional(),
+    faq: z
+      .array(z.object({ q: z.string(), a: z.string() }))
+      .optional(),
   }),
 });
 

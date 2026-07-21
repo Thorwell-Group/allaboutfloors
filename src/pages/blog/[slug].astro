@@ -38,6 +38,18 @@ const schema = [
     url,
   },
 ];
+
+if (post.data.faq && post.data.faq.length) {
+  schema.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: post.data.faq.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: { '@type': 'Answer', text: f.a },
+    })),
+  } as any);
+}
 ---
 
 <BaseLayout
