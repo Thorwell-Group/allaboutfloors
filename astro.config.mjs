@@ -15,6 +15,11 @@ export default defineConfig({
         'https://www.allaboutfloorsnw.com/flooring-in-vancouver-wa/',
         'https://www.allaboutfloorsnw.com/laminate-flooring-in-vancouver-wa/',
         'https://www.allaboutfloorsnw.com/hardwood-flooring-in-vancouver-wa/',
+        // Canonicalizes to /luxury-vinyl-plank/ (its mainSlug differs from its
+        // localSlug in services.ts, unlike the other local services), so it was
+        // missed when this list was written. Listing a URL that canonicalizes
+        // elsewhere is a contradictory signal to Google.
+        'https://www.allaboutfloorsnw.com/luxury-vinyl-flooring-in-vancouver-wa/',
       ].includes(page),
     }),
     alpinejs({ entrypoint: '/src/entrypoint' }),
