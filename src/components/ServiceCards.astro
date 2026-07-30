@@ -31,9 +31,10 @@ const visibleServices = excludeSlug ? services.filter(s => s.slug !== excludeSlu
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {visibleServices.map((service, i) => {
-        const href = locationSlug
-          ? `/${service.localSlug}-in-${locationSlug}/`
-          : service.urlPath;
+        // Always the flat service page. The {service}-in-{city} pages were
+        // consolidated away 2026-07-30 — they duplicated this page 79-89% and
+        // put up to 10 of our own URLs in competition for one query.
+        const href = service.urlPath;
 
         return (
           <a href={href} class="card group flex flex-col hover:-translate-y-1 transition-transform duration-300" data-animate="fade-up" data-delay={String(Math.min(i + 1, 6))}>

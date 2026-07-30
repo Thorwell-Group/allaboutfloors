@@ -79,4 +79,4 @@ Vacuum regularly, and more often in traffic paths. This is genuinely the single 
 
 Carpet is the flooring category where showroom visits matter most, because the whole point is how it feels and photographs convey nothing about that. Walk on samples, press into them, and feel the difference between pads while you're at it.
 
-We serve [Vancouver](/carpet-flooring-in-vancouver-wa/), [Camas](/carpet-flooring-in-camas-wa/), [Hazel Dell](/carpet-flooring-in-hazel-dell-wa/), [La Center](/carpet-flooring-in-la-center-wa/), and communities across Clark County. See our [carpet flooring page](/carpet-flooring/) for the range, or [book a free estimate](/free-estimate/) and we'll bring samples to your home.
+We serve [Vancouver](/flooring-in-vancouver-wa/), [Camas](/flooring-in-camas-wa/), [Hazel Dell](/flooring-in-hazel-dell-wa/), [La Center](/flooring-in-la-center-wa/), and communities across Clark County. See our [carpet flooring page](/carpet-flooring/) for the range, or [book a free estimate](/free-estimate/) and we'll bring samples to your home.

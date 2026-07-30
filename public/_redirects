@@ -3,3 +3,78 @@ https://allaboutfloorsnw.com/* https://www.allaboutfloorsnw.com/:splat 301
 
 /hardwood-flooring-info  /hardwood-flooring/  301
 /hardwood-flooring-info/  /hardwood-flooring/  301
+
+# --- {service}-in-{city} consolidation (2026-07-30) ---
+# 63 pages that duplicated the flat service pages they sit beside:
+# 79% identical across cities, 88.8% identical across services in the same city.
+# GSC showed the cost directly - 10 of our own pages competing for "hardwood
+# flooring vancouver wa" (324 impressions, 0 clicks, position 15.3), 11 for
+# "vinyl flooring vancouver wa", 9 for "laminate flooring vancouver wa".
+# The flat service pages are longer than the combos (1,482-1,497 vs 1,299 words).
+# The 10 /flooring-in-{city}/ pages are KEPT - they serve city intent and do not
+# duplicate a service page. Enumerated, not wildcarded: these are single-segment
+# URLs, so a Cloudflare placeholder cannot split {service}-in-{city}.
+
+/carpet-flooring-in-battle-ground-wa/  /carpet-flooring/  301
+/carpet-flooring-in-brush-prairie-wa/  /carpet-flooring/  301
+/carpet-flooring-in-camas-wa/  /carpet-flooring/  301
+/carpet-flooring-in-gresham-or/  /carpet-flooring/  301
+/carpet-flooring-in-hazel-dell-wa/  /carpet-flooring/  301
+/carpet-flooring-in-la-center-wa/  /carpet-flooring/  301
+/carpet-flooring-in-portland-or/  /carpet-flooring/  301
+/carpet-flooring-in-ridgefield-wa/  /carpet-flooring/  301
+/carpet-flooring-in-salmon-creek-wa/  /carpet-flooring/  301
+/carpet-flooring-in-vancouver-wa/  /carpet-flooring/  301
+/carpet-flooring-in-washougal-wa/  /carpet-flooring/  301
+/hardwood-flooring-in-battle-ground-wa/  /hardwood-flooring/  301
+/hardwood-flooring-in-brush-prairie-wa/  /hardwood-flooring/  301
+/hardwood-flooring-in-camas-wa/  /hardwood-flooring/  301
+/hardwood-flooring-in-gresham-or/  /hardwood-flooring/  301
+/hardwood-flooring-in-hazel-dell-wa/  /hardwood-flooring/  301
+/hardwood-flooring-in-la-center-wa/  /hardwood-flooring/  301
+/hardwood-flooring-in-portland-or/  /hardwood-flooring/  301
+/hardwood-flooring-in-ridgefield-wa/  /hardwood-flooring/  301
+/hardwood-flooring-in-salmon-creek-wa/  /hardwood-flooring/  301
+/hardwood-flooring-in-washougal-wa/  /hardwood-flooring/  301
+/hardwood-refinishing-flooring-in-battle-ground-wa/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-brush-prairie-wa/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-camas-wa/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-gresham-or/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-hazel-dell-wa/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-la-center-wa/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-portland-or/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-ridgefield-wa/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-salmon-creek-wa/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-vancouver-wa/  /hardwood-refinishing/  301
+/hardwood-refinishing-flooring-in-washougal-wa/  /hardwood-refinishing/  301
+/laminate-flooring-in-battle-ground-wa/  /laminate-flooring/  301
+/laminate-flooring-in-brush-prairie-wa/  /laminate-flooring/  301
+/laminate-flooring-in-camas-wa/  /laminate-flooring/  301
+/laminate-flooring-in-gresham-or/  /laminate-flooring/  301
+/laminate-flooring-in-hazel-dell-wa/  /laminate-flooring/  301
+/laminate-flooring-in-la-center-wa/  /laminate-flooring/  301
+/laminate-flooring-in-portland-or/  /laminate-flooring/  301
+/laminate-flooring-in-ridgefield-wa/  /laminate-flooring/  301
+/laminate-flooring-in-salmon-creek-wa/  /laminate-flooring/  301
+/laminate-flooring-in-washougal-wa/  /laminate-flooring/  301
+/luxury-vinyl-flooring-in-battle-ground-wa/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-brush-prairie-wa/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-camas-wa/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-gresham-or/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-hazel-dell-wa/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-la-center-wa/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-portland-or/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-ridgefield-wa/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-salmon-creek-wa/  /luxury-vinyl-plank/  301
+/luxury-vinyl-flooring-in-washougal-wa/  /luxury-vinyl-plank/  301
+/tile-flooring-in-battle-ground-wa/  /tile-flooring/  301
+/tile-flooring-in-brush-prairie-wa/  /tile-flooring/  301
+/tile-flooring-in-camas-wa/  /tile-flooring/  301
+/tile-flooring-in-gresham-or/  /tile-flooring/  301
+/tile-flooring-in-hazel-dell-wa/  /tile-flooring/  301
+/tile-flooring-in-la-center-wa/  /tile-flooring/  301
+/tile-flooring-in-portland-or/  /tile-flooring/  301
+/tile-flooring-in-ridgefield-wa/  /tile-flooring/  301
+/tile-flooring-in-salmon-creek-wa/  /tile-flooring/  301
+/tile-flooring-in-vancouver-wa/  /tile-flooring/  301
+/tile-flooring-in-washougal-wa/  /tile-flooring/  301

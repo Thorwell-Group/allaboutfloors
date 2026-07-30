@@ -29,7 +29,7 @@ A note for either floor: "waterproof" refers to the plank surface. Standing wate
 
 ## Cost
 
-Both are budget-friendly compared to hardwood. Laminate is often a little less expensive per square foot, while LVP commands a small premium for its waterproof core. See our general [flooring cost guide](/flooring-cost-vancouver-wa/) for ranges.
+Both are budget-friendly compared to hardwood. Laminate is often a little less expensive per square foot, while LVP commands a small premium for its waterproof core. See our general [flooring cost guide](/blog/flooring-cost-vancouver-wa/) for ranges.
 
 ## Bottom line for Vancouver-area homes
 

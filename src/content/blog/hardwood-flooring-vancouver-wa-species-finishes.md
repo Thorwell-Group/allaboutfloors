@@ -56,7 +56,7 @@ Homeowners always want a number, and the honest answer is that hardwood pricing 
 - **Finish.** Custom site-finished and specialty finishes add labor.
 - **Subfloor prep.** Leveling, moisture barriers, and repairs protect your investment but affect the total.
 
-Rather than invent a per-foot figure that won't match your home, we measure your rooms, check your subfloor, and give you an itemized quote. For a sense of how hardwood compares to other materials, our [Vancouver flooring cost guide](/flooring-cost-vancouver-wa/) lays out general ranges.
+Rather than invent a per-foot figure that won't match your home, we measure your rooms, check your subfloor, and give you an itemized quote. For a sense of how hardwood compares to other materials, our [Vancouver flooring cost guide](/blog/flooring-cost-vancouver-wa/) lays out general ranges.
 
 ## Frequently asked questions
 

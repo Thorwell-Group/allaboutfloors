@@ -39,7 +39,7 @@ Why it matters: when one company measures, sells, and installs, there's a single
 
 A trustworthy store puts the numbers in writing. Your estimate should spell out the material, the labor, any subfloor prep, tear-out and disposal of old flooring, and transitions or trim. Vague, all-in verbal quotes make it impossible to compare stores fairly, and they tend to grow once the work starts.
 
-Good estimates are also honest about cost drivers instead of promising a magic number. If you want to understand what moves flooring pricing up or down before you shop, our [Vancouver flooring cost guide](/flooring-cost-vancouver-wa/) breaks down the factors.
+Good estimates are also honest about cost drivers instead of promising a magic number. If you want to understand what moves flooring pricing up or down before you shop, our [Vancouver flooring cost guide](/blog/flooring-cost-vancouver-wa/) breaks down the factors.
 
 ## Check reviews and how long they've been around
 
