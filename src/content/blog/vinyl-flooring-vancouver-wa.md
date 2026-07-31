@@ -84,6 +84,6 @@ Vinyl is genuinely low-maintenance, which is much of the appeal. Sweep or vacuum
 
 ## Come see it in person
 
-Vinyl is a category where samples in your own light matter, because print quality and texture vary a lot between products and photographs flatter everything. We serve [Vancouver](/flooring-in-vancouver-wa/), [Camas](/flooring-in-camas-wa/), [Battle Ground](/flooring-in-battle-ground-wa/), [Ridgefield](/flooring-in-ridgefield-wa/), and the surrounding Clark County communities.
+Vinyl is a category where samples in your own light matter, because print quality and texture vary a lot between products and photographs flatter everything. We serve [Vancouver](/luxury-vinyl-flooring-in-vancouver-wa/), [Camas](/luxury-vinyl-flooring-in-camas-wa/), [Battle Ground](/luxury-vinyl-flooring-in-battle-ground-wa/), [Ridgefield](/luxury-vinyl-flooring-in-ridgefield-wa/), and the surrounding Clark County communities.
 
 Visit our [vinyl flooring page](/vinyl-flooring/) for the full product range, or [book a free estimate](/free-estimate/) and we'll bring samples to your home so you can see them against your own cabinets and light.

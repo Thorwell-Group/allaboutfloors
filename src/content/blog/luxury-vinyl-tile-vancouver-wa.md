@@ -74,4 +74,4 @@ LVT is more forgiving than real tile, which cracks if the substrate moves, but i
 
 Print quality is the whole game with LVT, and photographs and showroom lighting flatter everything. The only reliable way to judge is to look at samples in the room they're going into, next to your cabinets and counters.
 
-We serve [Vancouver](/flooring-in-vancouver-wa/), [Camas](/flooring-in-camas-wa/), [Salmon Creek](/flooring-in-salmon-creek-wa/), [Hazel Dell](/flooring-in-hazel-dell-wa/), and communities across Clark County. Browse our [vinyl flooring range](/vinyl-flooring/), or [book a free estimate](/free-estimate/) and we'll bring samples to you.
+We serve [Vancouver](/luxury-vinyl-flooring-in-vancouver-wa/), [Camas](/luxury-vinyl-flooring-in-camas-wa/), [Salmon Creek](/luxury-vinyl-flooring-in-salmon-creek-wa/), [Hazel Dell](/luxury-vinyl-flooring-in-hazel-dell-wa/), and communities across Clark County. Browse our [vinyl flooring range](/vinyl-flooring/), or [book a free estimate](/free-estimate/) and we'll bring samples to you.

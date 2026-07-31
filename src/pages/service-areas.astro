@@ -48,7 +48,7 @@ const schema = {
             <div class="space-y-1.5">
               {localServices.map(svc => (
                 <a
-                  href={`/${svc.mainSlug}/`}
+                  href={`/${svc.slug}-in-${area.slug}/`}
                   class="block text-sm text-gray-700 hover:text-brand-navy hover:translate-x-1 transition-all"
                 >
                   → {svc.name} in {area.displayName}

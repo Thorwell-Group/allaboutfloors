@@ -81,4 +81,4 @@ Keep a few spare planks from your installation. If a plank ever gets damaged, ha
 
 Laminate has improved enough that the reasonable move is to see current product rather than judge from memory. The difference between entry-level and quality laminate is obvious side by side and hard to convey in photos.
 
-We serve [Vancouver](/flooring-in-vancouver-wa/), [Camas](/flooring-in-camas-wa/), [Ridgefield](/flooring-in-ridgefield-wa/), [Brush Prairie](/flooring-in-brush-prairie-wa/), and communities across Clark County. Browse our [laminate flooring page](/laminate-flooring/), or [book a free estimate](/free-estimate/) and we'll bring samples to your home and tell you honestly which rooms it suits.
+We serve [Vancouver](/laminate-flooring-in-vancouver-wa/), [Camas](/laminate-flooring-in-camas-wa/), [Ridgefield](/laminate-flooring-in-ridgefield-wa/), [Brush Prairie](/laminate-flooring-in-brush-prairie-wa/), and communities across Clark County. Browse our [laminate flooring page](/laminate-flooring/), or [book a free estimate](/free-estimate/) and we'll bring samples to your home and tell you honestly which rooms it suits.
