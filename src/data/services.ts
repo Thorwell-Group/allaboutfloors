@@ -357,4 +357,10 @@ export const localServices = [
   { slug: 'luxury-vinyl-flooring', name: 'Luxury Vinyl Flooring', mainSlug: 'luxury-vinyl-plank' },
   { slug: 'laminate-flooring', name: 'Laminate Flooring', mainSlug: 'laminate-flooring' },
   { slug: 'tile-flooring', name: 'Tile Flooring', mainSlug: 'tile-flooring' },
+  // Added 2026-07-30: these two have genuinely distinct intent from the material
+  // pages above, so they earn their own city pages. Deliberately NOT added:
+  // 'flooring-installation' (overlaps every material page) and 'vinyl-flooring'
+  // (overlaps luxury-vinyl-plank) — those would be duplicates by construction.
+  { slug: 'commercial-flooring', name: 'Commercial Flooring', mainSlug: 'commercial-flooring' },
+  { slug: 'countertops', name: 'Countertops', mainSlug: 'countertops' },
 ];
