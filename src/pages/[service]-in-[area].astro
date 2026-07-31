@@ -11,6 +11,7 @@ import BrandLogos from '@components/BrandLogos.astro';
 import { areas, areaLocalContext } from '@data/areas';
 import { localServices, services } from '@data/services';
 import { company } from '@data/company';
+import { AREA_PROFILE, SERVICE_BY_ARCHETYPE, localFaqs, pageVariant, INTRO_VARIANTS } from '@data/local-context';
 
 export async function getStaticPaths() {
   const paths = [];
@@ -68,8 +69,27 @@ const climateNote = climateNotes[localService.slug];
 const localContext = areaLocalContext[area.slug];
 const neighborhoodList = area.neighborhoods.slice(0, 5).join(', ');
 
+// ── Per-page differentiation ──────────────────────────────────────────────
+// These 63 pages measured 79% identical across cities and 88.8% across services,
+// and they compete with the flat service pages (GSC showed 10 of our own URLs on
+// "hardwood flooring vancouver wa" with 324 impressions and 0 clicks).
+// areas.ts carries general marketing prose rather than housing-stock research, so
+// the archetypes below use only what those descriptions actually state — urban,
+// growth, rural, premium. Nothing about build eras is asserted. The real
+// differentiator available here is regional and verifiable: this is one of the
+// wettest metros in the country, and that genuinely changes the right answer per
+// material and per room.
+const profile = AREA_PROFILE[area.slug];
+const archetype = profile?.archetype ?? 'urban';
+const localBlock = SERVICE_BY_ARCHETYPE[localService.mainSlug]?.[archetype];
+const localFaqList = localFaqs(localService.mainSlug, localService.name, area.slug, area.displayName);
+const v = pageVariant(localService.slug, area.slug);
+const introLine = INTRO_VARIANTS[v.pick(INTRO_VARIANTS.length)](localService.name.toLowerCase(), area.displayName);
+const localFirst = v.flip(0);
+
 // Location-specific FAQ
 const faq = [
+  ...localFaqList,
   {
     q: `Do you offer ${localService.name} in ${area.displayName}?`,
     a: `Yes, All About Floors NW provides ${localService.name} throughout ${area.displayName} and all of ${area.county}. Contact us to schedule a free in-home estimate at your ${area.name} home.`,
@@ -287,6 +307,32 @@ const schema = [
   </section>
 
   <ReviewsSection title={`What ${area.name} Homeowners Say`} max={3} />
+
+  {localBlock && (
+    <section class={localFirst ? 'py-16 bg-gray-50' : 'py-16 bg-white'}>
+      <div class="max-w-3xl mx-auto px-4">
+        <span class="text-sm font-semibold uppercase tracking-wider text-brand-gold">{area.displayName} homes</span>
+        <h2 class="mt-2 text-3xl font-bold text-brand-navy">{localBlock.heading}</h2>
+        <p class="mt-5 text-gray-700 leading-relaxed">
+          {area.displayName} is {profile?.character}. {profile?.jobNote}
+        </p>
+        <p class="mt-4 text-gray-700 leading-relaxed">{localContext}</p>
+        <p class="mt-4 text-gray-700 leading-relaxed">{introLine}</p>
+        {localBlock.body.map((para) => <p class="mt-4 text-gray-700 leading-relaxed">{para}</p>)}
+        <p class="mt-4 text-gray-700 leading-relaxed">
+          Across {area.displayName} we work in {neighborhoodList} and the surrounding area.
+        </p>
+        <h3 class="mt-8 text-xl font-bold text-brand-navy">What that means on your job</h3>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-3">
+          {localBlock.checklist.map((c) => (
+            <li class="flex items-start gap-3 text-gray-700">
+              <span class="mt-1 text-brand-gold flex-none" aria-hidden="true">&#10003;</span><span>{c}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  )}
 
   <FAQ items={faq} title={`${localService.name} FAQ, ${area.displayName}`} />
 
