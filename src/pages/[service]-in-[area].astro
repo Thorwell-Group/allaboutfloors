@@ -36,6 +36,11 @@ const vancouverCanonicalOverrides: Record<string, string> = {
   'laminate-flooring': '/laminate-flooring/',
   'luxury-vinyl-flooring': '/luxury-vinyl-plank/',
   'hardwood-flooring': '/hardwood-flooring/',
+  // Carpet and tile were left out of this map, so their Vancouver pages stayed
+  // self-canonical while carrying titles identical to the primary service
+  // pages — the two URLs were competing for the same query.
+  'carpet-flooring': '/carpet-flooring/',
+  'tile-flooring': '/tile-flooring/',
 };
 const canonicalURL = (area.slug === 'vancouver-wa' && vancouverCanonicalOverrides[localService.slug])
   ? `https://www.allaboutfloorsnw.com${vancouverCanonicalOverrides[localService.slug]}`

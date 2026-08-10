@@ -18,6 +18,37 @@ const {
 } = Astro.props;
 
 const fullTitle = title.includes(company.name) ? title : `${title} | ${company.name}`;
+
+// Google cuts the snippet near 160 characters, usually mid-word. Drop whole
+// trailing sentences instead so whatever Google shows still reads as English.
+function fitDescription(d, max = 160) {
+  const text = String(d ?? '').trim().replace(/\s+/g, ' ');
+  if (text.length <= max) return text;
+  const sentences = text.match(/[^.!?]+[.!?]+(\s|$)/g);
+  if (sentences) {
+    let out = '';
+    for (const s of sentences) {
+      if ((out + s).trim().length > max) break;
+      out += s;
+    }
+    if (out.trim().length >= 70) return out.trim();
+  }
+  return text.slice(0, max).replace(/\s+\S*$/, '');
+}
+
+// Titles longer than ~60 characters get cut in the SERP, and the part that gets
+// cut is the brand — which is the least useful part. Drop the trailing brand
+// segment ourselves so the descriptive, keyword-carrying half always survives.
+function fitTitle(t, max = 60) {
+  const text = String(t ?? '').trim().replace(/\s+/g, ' ');
+  if (text.length <= max) return text;
+  const m = text.match(/^(.*?)(\s+[|·–-]\s+[^|·–]+)$/);
+  if (m && m[1].trim().length >= 30) {
+    const head = m[1].trim();
+    return head.length <= max ? head : fitTitle(head, max);
+  }
+  return text;
+}
 ---
 
 <meta charset="UTF-8" />
@@ -25,23 +56,23 @@ const fullTitle = title.includes(company.name) ? title : `${title} | ${company.n
 <meta name="generator" content={Astro.generator} />
 
 <!-- Primary Meta -->
-<title>{fullTitle}</title>
-<meta name="description" content={description} />
+<title>{fitTitle(fullTitle)}</title>
+<meta name="description" content={fitDescription(description)} />
 <link rel="canonical" href={canonicalURL} />
 {noIndex && <meta name="robots" content="noindex, nofollow" />}
 
 <!-- Open Graph -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={canonicalURL} />
-<meta property="og:title" content={fullTitle} />
-<meta property="og:description" content={description} />
+<meta property="og:title" content={fitTitle(fullTitle)} />
+<meta property="og:description" content={fitDescription(description)} />
 <meta property="og:image" content={new URL(ogImage, Astro.site)} />
 <meta property="og:site_name" content={company.name} />
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content={fullTitle} />
-<meta name="twitter:description" content={description} />
+<meta name="twitter:title" content={fitTitle(fullTitle)} />
+<meta name="twitter:description" content={fitDescription(description)} />
 <meta name="twitter:image" content={new URL(ogImage, Astro.site)} />
 
 <!-- Favicon -->

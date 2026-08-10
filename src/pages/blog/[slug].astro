@@ -50,10 +50,14 @@ if (post.data.faq && post.data.faq.length) {
     })),
   } as any);
 }
+
+// Google truncates near 60 characters. Keep the descriptive headline —
+// which carries the keywords — and drop the brand when it will not fit.
+const brandedTitle = (t: string) => (t + ' | All About Floors NW').length <= 60 ? t + ' | All About Floors NW' : t;
 ---
 
 <BaseLayout
-  title={`${post.data.title} | All About Floors NW`}
+  title={brandedTitle(post.data.title)}
   description={post.data.description}
   canonicalURL={url}
   ogImage={post.data.heroImage}
