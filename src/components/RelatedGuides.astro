@@ -37,9 +37,29 @@ const matches = all
   )
   .sort((a, b) => String(b.data.pubDate ?? b.data.date ?? "").localeCompare(String(a.data.pubDate ?? a.data.date ?? "")))
   .slice(0, max);
+/**
+ * Pages with no topical match — city pages mostly, since no guide is *about*
+ * a particular town — were showing nothing and passing no authority into the
+ * blog. Fall back to a rotation seeded on the page path so different city pages
+ * surface different guides, spreading links across the whole blog rather than
+ * piling them all onto the same three posts.
+ */
+const seedOf = (str: string) => {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
+  return h;
+};
+const rotated = (() => {
+  const pool = all;
+  if (!pool.length) return [];
+  const start = seedOf(here) % pool.length;
+  return Array.from({ length: Math.min(max, pool.length) }, (_, i) => pool[(start + i) % pool.length]);
+})();
+const finalMatches = matches.length ? matches : rotated;
+
 ---
 
-{matches.length > 0 && (
+{finalMatches.length > 0 && (
   <section class="bg-stone-50 py-16">
     <div class="mx-auto max-w-6xl px-4">
       <h2 class="font-serif text-3xl text-stone-900">{heading}</h2>
@@ -47,7 +67,7 @@ const matches = all
         Practical answers from the team, no sales pitch.
       </p>
       <div class="mt-8 grid gap-6 md:grid-cols-3">
-        {matches.map((p) => (
+        {finalMatches.map((p) => (
           <a
             href={`/blog/${p.id.replace(/\.md$/, "")}/`}
             class="group block rounded-lg border border-stone-200 bg-white p-6 no-underline transition hover:border-stone-400 hover:shadow-md"
