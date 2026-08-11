@@ -1,5 +1,5 @@
 ---
-import { services } from '@data/services';
+import { services, localServices } from '@data/services';
 
 interface Props {
   title?: string;
@@ -18,6 +18,11 @@ const {
 } = Astro.props;
 
 const visibleServices = excludeSlug ? services.filter(s => s.slug !== excludeSlug) : services;
+
+// Only some services get per-city pages (see localServices — 'vinyl-flooring' and
+// 'flooring-installation' are deliberately excluded as duplicates of other pages).
+// Linking every card to a city URL therefore produced links to pages that 404.
+const cityPageSlugs = new Set(localServices.map((s) => s.slug));
 ---
 
 <section class="py-20 bg-white">
@@ -31,7 +36,7 @@ const visibleServices = excludeSlug ? services.filter(s => s.slug !== excludeSlu
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
       {visibleServices.map((service, i) => {
-        const href = locationSlug
+        const href = locationSlug && cityPageSlugs.has(service.localSlug)
           ? `/${service.localSlug}-in-${locationSlug}/`
           : service.urlPath;
 

@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import RelatedGuides from '@components/RelatedGuides.astro';
 import Hero from '@components/Hero.astro';
 import ProcessSteps from '@components/ProcessSteps.astro';
 import ReviewsSection from '@components/ReviewsSection.astro';
@@ -348,4 +349,5 @@ const schema = [
     subtext={`All About Floors NW is ${area.name}'s trusted flooring contractor. Get your free in-home estimate today, no pressure, no obligation.`}
     ctaText={`Get Free Estimate in ${area.name}`}
   />
+  <RelatedGuides path={`/${localService.slug}-in-${area.slug}/`} />
 </BaseLayout>

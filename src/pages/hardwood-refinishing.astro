@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '@layouts/BaseLayout.astro';
+import RelatedGuides from '@components/RelatedGuides.astro';
 import Hero from '@components/Hero.astro';
 import ProcessSteps from '@components/ProcessSteps.astro';
 import ReviewsSection from '@components/ReviewsSection.astro';
@@ -96,4 +97,5 @@ const schema = {
   <FAQ items={faq} title="Hardwood Refinishing FAQ" />
   <ReviewsSection max={3} />
   <CTABanner heading="Ready to Restore Your Hardwood Floors?" subtext="Schedule your free in-home assessment. We'll evaluate your floors and let you know whether refinishing is the right solution, honestly, with no pressure." />
+  <RelatedGuides path="/hardwood-refinishing/" />
 </BaseLayout>
