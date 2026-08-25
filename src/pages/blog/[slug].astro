@@ -85,6 +85,20 @@ const brandedTitle = (t: string) => (t + ' | All About Floors NW').length <= 60 
       <div class="prose prose-lg max-w-none prose-headings:font-heading prose-headings:text-brand-navy prose-a:text-brand-gold hover:prose-a:text-brand-navy prose-strong:text-brand-navy prose-blockquote:border-brand-gold">
         <Content />
       </div>
+
+      {post.data.faq && post.data.faq.length > 0 && (
+        <section class="mt-12 pt-10 border-t border-gray-200">
+          <h2 class="font-heading font-bold text-brand-navy text-2xl mb-6">Frequently asked questions</h2>
+          <dl class="space-y-6">
+            {post.data.faq.map((f) => (
+              <div>
+                <dt class="font-heading font-semibold text-brand-navy text-lg">{f.q}</dt>
+                <dd class="mt-2 text-gray-600 leading-relaxed">{f.a}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
     </div>
   </article>
 

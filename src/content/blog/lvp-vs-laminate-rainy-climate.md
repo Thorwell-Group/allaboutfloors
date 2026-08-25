@@ -35,4 +35,6 @@ Both are budget-friendly compared to hardwood. Laminate is often a little less e
 
 If moisture is a concern, and in the PNW it usually is, **LVP is the more forgiving choice**. If you're flooring a dry, low-risk space and want to stretch your budget, modern water-resistant **laminate** is a smart option.
 
+Room by room, the answer shifts. See [kitchen flooring](/blog/kitchen-flooring-vancouver-wa/) and [bathroom flooring](/blog/bathroom-flooring-vancouver-wa/) for how each material holds up where water is a daily fact rather than an accident.
+
 Compare both in person: explore [luxury vinyl plank](/luxury-vinyl-plank/) and [laminate flooring](/laminate-flooring/), then [book a free in-home estimate](/free-estimate/) and we'll bring samples to you.

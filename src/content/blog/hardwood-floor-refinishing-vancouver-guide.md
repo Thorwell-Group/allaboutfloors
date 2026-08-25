@@ -34,4 +34,6 @@ Solid hardwood can usually be refinished several times. Engineered hardwood can 
 
 Modern refinishing is far cleaner than it used to be thanks to dust-containment sanding equipment. It's not 100% dust-free, but it's a world away from the old days.
 
+Not sure whether your floors are a candidate at all? Start with [refinish or replace: how to tell if your hardwood is worth saving](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/), which includes a thickness test you can do yourself in a couple of minutes. And if you're refinishing mainly to change the look, read [choosing a hardwood floor sheen](/blog/hardwood-floor-sheen-vancouver-wa/) before you pick a top coat.
+
 Ready to bring your floors back to life? Learn more about [hardwood refinishing](/hardwood-refinishing/), or [book a free in-home estimate](/free-estimate/). Call (360) 525-2962.

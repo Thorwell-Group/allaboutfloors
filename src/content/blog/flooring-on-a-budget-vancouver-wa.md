@@ -65,4 +65,6 @@ If the budget is genuinely fixed, our advice is usually to reduce the scope rath
 
 Our [guide to flooring costs in Vancouver](/blog/flooring-cost-vancouver-wa/) sets out what drives the number, and [how to choose a flooring store](/blog/how-to-choose-flooring-store-vancouver-wa/) covers reading a quote properly so you can compare like with like.
 
+Before you cut scope or downgrade material, it's worth checking whether [0% promotional financing](/blog/flooring-financing-vancouver-wa/) solves the problem instead. Spreading the same project over 24 months often costs less overall than phasing it across three years.
+
 [Book a free in-home estimate](/free-estimate/) and tell us the budget up front. It is a more useful conversation than working backwards from a number at the end.
