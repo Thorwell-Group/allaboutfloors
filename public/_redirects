@@ -3,3 +3,7 @@ https://allaboutfloorsnw.com/* https://www.allaboutfloorsnw.com/:splat 301
 
 /hardwood-flooring-info  /hardwood-flooring/  301
 /hardwood-flooring-info/  /hardwood-flooring/  301
+
+# Repair is not a service All About Floors NW offers (owner request, 2026-07).
+/blog/floor-repair-vancouver-wa   /flooring-installation/  301
+/blog/floor-repair-vancouver-wa/  /flooring-installation/  301
