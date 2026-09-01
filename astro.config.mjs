@@ -20,6 +20,13 @@ export default defineConfig({
         // missed when this list was written. Listing a URL that canonicalizes
         // elsewhere is a contradictory signal to Google.
         'https://www.allaboutfloorsnw.com/luxury-vinyl-flooring-in-vancouver-wa/',
+        // Carpet and tile were later added to vancouverCanonicalOverrides in
+        // src/pages/[service]-in-[area].astro but never added here, so both
+        // pages canonicalised to their parent service page while the sitemap
+        // still nominated them for indexing — the same contradictory signal
+        // this list exists to prevent.
+        'https://www.allaboutfloorsnw.com/carpet-flooring-in-vancouver-wa/',
+        'https://www.allaboutfloorsnw.com/tile-flooring-in-vancouver-wa/',
       ].includes(page),
     }),
     alpinejs({ entrypoint: '/src/entrypoint' }),
