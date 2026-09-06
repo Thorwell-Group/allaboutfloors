@@ -31,12 +31,28 @@ const here = normalize(path);
 
 const all = (await getCollection("blog"));
 
-const matches = all
-  .filter((p) =>
-    [...(p.body ?? "").matchAll(/\]\(([^)]+)\)/g)].some((m) => normalize(m[1]) === here),
-  )
-  .sort((a, b) => String(b.data.pubDate ?? b.data.date ?? "").localeCompare(String(a.data.pubDate ?? a.data.date ?? "")))
-  .slice(0, max);
+const seedOf = (str: string) => {
+  let h = 0;
+  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
+  return h;
+};
+
+const allMatches = all.filter((p) =>
+  [...(p.body ?? "").matchAll(/\]\(([^)]+)\)/g)].some((m) => normalize(m[1]) === here),
+);
+/**
+ * When more guides point at this page than we can show, rotate through them
+ * seeded on the page path. The previous sort compared Date.toString() output
+ * with localeCompare, which is alphabetical and timezone-dependent, so the
+ * Cloudflare build picked a different three than a local build and newer
+ * posts never surfaced from the pages they link to.
+ */
+const matches = allMatches.length <= max
+  ? allMatches
+  : (() => {
+      const start = seedOf(here) % allMatches.length;
+      return Array.from({ length: max }, (_, i) => allMatches[(start + i) % allMatches.length]);
+    })();
 /**
  * Pages with no topical match — city pages mostly, since no guide is *about*
  * a particular town — were showing nothing and passing no authority into the
@@ -44,11 +60,6 @@ const matches = all
  * surface different guides, spreading links across the whole blog rather than
  * piling them all onto the same three posts.
  */
-const seedOf = (str: string) => {
-  let h = 0;
-  for (let i = 0; i < str.length; i++) h = (h * 31 + str.charCodeAt(i)) >>> 0;
-  return h;
-};
 const rotated = (() => {
   const pool = all;
   if (!pool.length) return [];
