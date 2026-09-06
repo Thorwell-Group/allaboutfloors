@@ -77,5 +77,6 @@ If you're comparing bids, compare the **installed total**, not the monthly payme
 - [What flooring costs in Vancouver, WA](/blog/flooring-cost-vancouver-wa/)
 - [Flooring on a budget](/blog/flooring-on-a-budget-vancouver-wa/)
 - [What to expect on installation day](/blog/what-to-expect-flooring-installation/)
+- [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
 
 [Book a free in-home estimate](/free-estimate/) and we'll bring samples, measure, quote the real number, and, if you want, get you an approval decision the same visit.

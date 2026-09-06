@@ -82,3 +82,8 @@ Carpet is the flooring category where showroom visits matter most, because the w
 Once you've chosen, the install itself matters just as much, particularly whether the carpet gets power-stretched. Our guide to [carpet installation day in Vancouver](/blog/carpet-installation-vancouver-wa/) covers what should happen and what drives the price.
 
 We serve [Vancouver](/carpet-flooring-in-vancouver-wa/), [Camas](/carpet-flooring-in-camas-wa/), [Hazel Dell](/carpet-flooring-in-hazel-dell-wa/), [La Center](/carpet-flooring-in-la-center-wa/), and communities across Clark County. See our [carpet flooring page](/carpet-flooring/) for the range, or [book a free estimate](/free-estimate/) and we'll bring samples to your home.
+
+## Related reading
+
+- [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
+- [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)

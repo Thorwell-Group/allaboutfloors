@@ -38,3 +38,8 @@ If moisture is a concern, and in the PNW it usually is, **LVP is the more forgiv
 Room by room, the answer shifts. See [kitchen flooring](/blog/kitchen-flooring-vancouver-wa/) and [bathroom flooring](/blog/bathroom-flooring-vancouver-wa/) for how each material holds up where water is a daily fact rather than an accident.
 
 Compare both in person: explore [luxury vinyl plank](/luxury-vinyl-plank/) and [laminate flooring](/laminate-flooring/), then [book a free in-home estimate](/free-estimate/) and we'll bring samples to you.
+
+## Related reading
+
+- [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
+- [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)

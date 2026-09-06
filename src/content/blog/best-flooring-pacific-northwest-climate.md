@@ -34,3 +34,7 @@ Every home is different, and the right answer depends on your rooms, your subflo
 [Get a free in-home estimate](/free-estimate/) or call (360) 525-2962.
 
 *Sources: [EPA indoor humidity guidance](https://www.epa.gov/mold/mold-course-chapter-2); general Pacific Northwest flooring performance guidance.*
+
+## Related reading
+
+- [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)

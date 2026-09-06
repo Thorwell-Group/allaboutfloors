@@ -82,3 +82,8 @@ Most homes don't need one flooring type throughout. The sensible specification i
 The two rooms where this decision does most of its work are the [kitchen](/blog/kitchen-flooring-vancouver-wa/) and the [bathroom](/blog/bathroom-flooring-vancouver-wa/). Both have their own guide.
 
 We serve [Vancouver](/flooring-in-vancouver-wa/), [Camas](/flooring-in-camas-wa/), [Battle Ground](/flooring-in-battle-ground-wa/), [Salmon Creek](/flooring-in-salmon-creek-wa/), and communities throughout Clark County. [Book a free estimate](/free-estimate/) and we'll walk your home, look at where water actually shows up, and give you a straight recommendation room by room.
+
+## Related reading
+
+- [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
+- [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)

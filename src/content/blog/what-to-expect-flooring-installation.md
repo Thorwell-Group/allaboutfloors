@@ -78,3 +78,8 @@ It depends on the material. Floating floors like LVP and laminate are usually re
 Installing carpet specifically? That process differs enough to be worth its own read, see [carpet installation in Vancouver, WA: what happens on the day](/blog/carpet-installation-vancouver-wa/).
 
 Thinking about new floors? [Book a free in-home estimate](/free-estimate/) and we'll walk you through the whole process for your home.
+
+## Related reading
+
+- [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
+- [Flooring for builders and remodelers: how we work with the trades](/blog/flooring-for-builders-contractors-vancouver-wa/)

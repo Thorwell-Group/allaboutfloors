@@ -79,3 +79,7 @@ Start a few weeks ahead of when you want the work done. That leaves time to see 
 ---
 
 Ready to see the difference an experienced local store makes? [Book a free in-home estimate](/free-estimate/) and we'll bring the showroom to you.
+
+## Related reading
+
+- [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)

@@ -74,3 +74,7 @@ And a mat and a towel at whichever door they come in through. In this climate th
 Which animal, which rooms, how old, and how the household actually uses the space all change the answer. Our guide to [the best flooring for the Pacific Northwest climate](/blog/best-flooring-pacific-northwest-climate/) covers the moisture side in more depth, and [waterproof flooring options](/blog/waterproof-flooring-vancouver-wa/) covers what waterproof genuinely means.
 
 Or [book a free in-home estimate](/free-estimate/) and we will bring samples to the house, meet the dog, and tell you honestly which of these will still look right in five years.
+
+## Related reading
+
+- [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)

@@ -67,3 +67,8 @@ Yes. From our Vancouver, WA base we serve businesses throughout Clark County and
 ---
 
 Planning a commercial or office flooring project? [Request a free estimate](/free-estimate/) and we'll help you spec floors that look professional and last.
+
+## Related reading
+
+- [Flooring for builders and remodelers: how we work with the trades](/blog/flooring-for-builders-contractors-vancouver-wa/)
+- [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)

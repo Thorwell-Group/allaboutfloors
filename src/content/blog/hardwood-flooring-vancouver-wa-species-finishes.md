@@ -77,3 +77,8 @@ Cost depends on the species, whether it's solid or engineered, the plank width a
 One decision this guide only touches on deserves its own read: sheen. Matte, satin, and semi-gloss change how a floor lives in a room far more than most homeowners expect. See [matte, satin, or semi-gloss?](/blog/hardwood-floor-sheen-vancouver-wa/) before you finalize a finish.
 
 Want to see hardwood samples in your own home? [Request a free in-home estimate](/free-estimate/) and we'll help you find the species and finish that fit your space.
+
+## Related reading
+
+- [Hardwood stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
+- [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)

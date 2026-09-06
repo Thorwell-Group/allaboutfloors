@@ -68,3 +68,7 @@ Our [guide to flooring costs in Vancouver](/blog/flooring-cost-vancouver-wa/) se
 Before you cut scope or downgrade material, it's worth checking whether [0% promotional financing](/blog/flooring-financing-vancouver-wa/) solves the problem instead. Spreading the same project over 24 months often costs less overall than phasing it across three years.
 
 [Book a free in-home estimate](/free-estimate/) and tell us the budget up front. It is a more useful conversation than working backwards from a number at the end.
+
+## Related reading
+
+- [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)

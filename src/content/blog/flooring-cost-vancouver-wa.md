@@ -40,3 +40,8 @@ Ballpark ranges are useful for planning, but your actual cost comes down to your
 If the total is right but the timing isn't, [0% promotional financing](/blog/flooring-financing-vancouver-wa/) is worth understanding before you scale the project down. Planning a single room? See our guides to [kitchen flooring](/blog/kitchen-flooring-vancouver-wa/), [bathroom flooring](/blog/bathroom-flooring-vancouver-wa/), and [carpet installation](/blog/carpet-installation-vancouver-wa/).
 
 [Request your free in-home estimate](/free-estimate/) or call (360) 525-2962.
+
+## Related reading
+
+- [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
+- [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)

@@ -75,3 +75,7 @@ A peel-and-stick installation does not, and moisture arriving from underneath is
 If the room is small, low-stakes and temporary, buy the cheap option and do not feel bad about it.
 
 If it is a kitchen, a main living space, or a floor you want to stop thinking about for a decade, the cheap option is the expensive one. Our [vinyl flooring guide](/blog/vinyl-flooring-vancouver-wa/) covers what to look for, and [a free in-home estimate](/free-estimate/) will tell you what the proper version costs in your actual room — which is usually less than people assume before they ask.
+
+## Related reading
+
+- [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)

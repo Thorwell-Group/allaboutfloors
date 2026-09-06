@@ -72,5 +72,6 @@ Get samples into the room they're going in. Look at them at night with the lamps
 - [Engineered vs. solid hardwood](/blog/engineered-vs-solid-hardwood-vancouver/)
 - [Should you refinish or replace your hardwood floors?](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/)
 - [Pet-friendly, scratch-resistant flooring](/blog/pet-friendly-scratch-resistant-flooring-vancouver-wa/)
+- [Hardwood stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
 
 We bring samples to your house for exactly this reason. [Book a free in-home estimate](/free-estimate/) and see the sheen in your own light before you commit.

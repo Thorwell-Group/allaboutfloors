@@ -32,3 +32,8 @@ Solid wood's big advantage is longevity: it can be refinished repeatedly, which 
 - Choose **solid** if you want a floor you can refinish for generations and you can keep indoor humidity steady.
 
 Explore options on our [hardwood flooring](/hardwood-flooring/) page, or [request a free in-home estimate](/free-estimate/) and we'll help you choose the right wood for your home and your rooms. Call (360) 525-2962.
+
+## Related reading
+
+- [Hardwood stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
+- [Flooring for builders and remodelers: how we work with the trades](/blog/flooring-for-builders-contractors-vancouver-wa/)
