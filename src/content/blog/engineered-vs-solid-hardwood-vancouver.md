@@ -37,3 +37,4 @@ Explore options on our [hardwood flooring](/hardwood-flooring/) page, or [reques
 
 - [Hardwood stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
 - [Flooring for builders and remodelers: how we work with the trades](/blog/flooring-for-builders-contractors-vancouver-wa/)
+- [Hardwood floor installation in Vancouver, WA: nail-down, glue-down or floating](/blog/hardwood-floor-installation-vancouver-wa/)

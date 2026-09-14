@@ -69,7 +69,7 @@ Tile is the most labor-intensive common flooring to install, and the part that d
 
 The subfloor has to be flat and, critically, **stiff**. Tile is rigid and doesn't tolerate movement. A floor that flexes underfoot will crack tiles and crack grout, and no amount of quality tile prevents it. Over a wood subfloor that usually means backer board or an appropriate underlayment, and sometimes structural reinforcement. In wet areas it means a waterproofing membrane.
 
-Then tile is set in mortar and has to cure before it's grouted, and grout has to cure before the floor is sealed and used normally. This sequence can't be compressed. Plan for the room to be unavailable for several days, and be skeptical of anyone promising a one-day tile floor. Our [installation guide](/blog/what-to-expect-flooring-installation/) covers what to expect during a project.
+Then tile is set in mortar and has to cure before it's grouted, and grout has to cure before the floor is sealed and used normally. This sequence can't be compressed. Plan for the room to be unavailable for several days, and be skeptical of anyone promising a one-day tile floor. Our [tile installation guide](/blog/tile-installation-vancouver-wa/) goes through each step in detail, including the stricter rules for large-format tile.
 
 ## Choosing tile that works underfoot
 
@@ -86,3 +86,5 @@ We serve [Vancouver](/tile-flooring-in-vancouver-wa/), [Camas](/tile-flooring-in
 ## Related reading
 
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
+- [Tile installation in Vancouver, WA: prep, large-format tile and timeline](/blog/tile-installation-vancouver-wa/)
+- [What to expect during a professional flooring installation](/blog/what-to-expect-flooring-installation/)

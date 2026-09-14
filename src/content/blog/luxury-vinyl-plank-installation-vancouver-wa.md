@@ -108,3 +108,5 @@ The only way to price an LVP install accurately is to see the subfloor, the tran
 - [LVP vs. laminate: which is better for a rainy climate?](/blog/lvp-vs-laminate-rainy-climate/)
 - [Luxury vinyl tile in Vancouver, WA: the stone look without the cold](/blog/luxury-vinyl-tile-vancouver-wa/)
 - [Luxury vinyl flooring in Vancouver, WA](/luxury-vinyl-flooring-in-vancouver-wa/)
+- [Tile installation in Vancouver, WA: prep, large-format tile and timeline](/blog/tile-installation-vancouver-wa/)
+- [Hiring a flooring contractor in Vancouver, WA: what to verify](/blog/how-to-hire-flooring-contractor-vancouver-wa/)

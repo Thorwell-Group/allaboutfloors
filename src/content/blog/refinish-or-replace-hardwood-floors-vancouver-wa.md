@@ -73,5 +73,6 @@ If the kitchen took a dishwasher leak but the living room and hallway are health
 - [Hardwood refinishing: the full process](/blog/hardwood-floor-refinishing-vancouver-guide/)
 - [Hardwood cleaning and maintenance](/blog/hardwood-floor-cleaning-maintenance-vancouver-wa/)
 - [Hardwood species and finishes](/blog/hardwood-flooring-vancouver-wa-species-finishes/)
+- [If you replace: how hardwood floor installation works](/blog/hardwood-floor-installation-vancouver-wa/)
 
 Not sure which category your floor falls into? [Book a free in-home estimate](/free-estimate/). We'll pull a vent, measure the wear layer, and tell you straight, including when the answer is "leave it alone for another five years."

@@ -83,3 +83,4 @@ Ready to see the difference an experienced local store makes? [Book a free in-ho
 ## Related reading
 
 - [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
+- [Hiring a flooring contractor in Vancouver, WA: what to verify before you sign](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
