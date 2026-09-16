@@ -1,30 +1,27 @@
 ---
-// Screening step between the /free-estimate/ survey and the booking calendars.
-// Hardwood + refinishing → in-home estimate. Everything else → showroom visit.
+// Screening step between the /free-estimate/ survey and the booking calendars:
+// the visitor picks an in-home estimate or a showroom appointment.
 // Intentionally NO Meta Pixel on this page: Lead fires on arrival at whichever
 // calendar the visitor lands on, Schedule fires on booking (unchanged).
 import BaseLayout from '@layouts/BaseLayout.astro';
 
-const inHome = [
-  { key: 'hardwood', label: 'Hardwood Flooring', desc: 'New solid or engineered hardwood' },
-  { key: 'refinishing', label: 'Hardwood Refinishing', desc: 'Sand, stain & refinish existing floors' },
-];
-
-const showroom = [
-  { key: 'lvp', label: 'Luxury Vinyl Plank (LVP)' },
-  { key: 'laminate', label: 'Laminate' },
-  { key: 'carpet', label: 'Carpet' },
-  { key: 'tile', label: 'Tile' },
-  { key: 'vinyl', label: 'Sheet Vinyl' },
-  { key: 'countertops', label: 'Countertops' },
-  { key: 'commercial', label: 'Commercial Flooring' },
-  { key: 'other', label: 'Not Sure / Something Else' },
+const options = [
+  {
+    href: '/book-in-home/',
+    label: 'In-Home Appointment',
+    desc: 'We come to you with samples and take measurements. Free, no obligation.',
+  },
+  {
+    href: '/book-in-store/?screen=1',
+    label: 'Showroom Appointment',
+    desc: 'Visit our Vancouver showroom and see hundreds of options side by side.',
+  },
 ];
 ---
 
 <BaseLayout
-  title="What Are You Looking For? | All About Floors NW"
-  description="Tell us what you're shopping for so we can book the right appointment."
+  title="Choose Your Appointment | All About Floors NW"
+  description="Pick an in-home estimate or a showroom appointment with All About Floors NW."
   bare={true}
   noIndex={true}
 >
@@ -50,44 +47,23 @@ const showroom = [
           Step 2 of 3
         </span>
         <h1 class="font-heading font-bold text-2xl md:text-4xl leading-tight">
-          What are you shopping for?
+          How would you like to meet?
         </h1>
-        <p class="text-gray-300 mt-2 md:text-lg">Pick one so we can book the right appointment for you.</p>
+        <p class="text-gray-300 mt-2 md:text-lg">Pick the appointment that works best for you.</p>
       </div>
 
-      <div class="bg-white text-brand-navy rounded-2xl shadow-2xl p-5 md:p-8">
-        <h2 class="font-heading font-semibold text-lg mb-1">Free in-home estimate</h2>
-        <p class="text-sm text-gray-500 mb-4">We come to you with samples and take measurements.</p>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
-          {inHome.map(o => (
-            <a
-              href="/book-in-home/"
-              class="screen-option block rounded-xl border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/5 p-4 transition-colors"
-            >
-              <div class="font-heading font-bold text-lg">{o.label}</div>
-              <div class="text-sm text-gray-500 mt-0.5">{o.desc}</div>
-            </a>
-          ))}
-        </div>
-
-        <h2 class="font-heading font-semibold text-lg mb-1">Showroom visit</h2>
-        <p class="text-sm text-gray-500 mb-4">
-          For every product outside hardwood and refinishing, we start in the showroom. Styles, colors, thicknesses
-          and pricing vary a lot between these products, so it's far easier to see and feel them side by side than
-          to bring a handful of samples to your home.
-        </p>
-        <div class="grid grid-cols-2 gap-3">
-          {showroom.map(o => (
-            <a
-              href="/book-in-store/?screen=1"
-              class="screen-option block rounded-xl border-2 border-gray-200 hover:border-brand-navy hover:bg-brand-light p-3 md:p-4 text-center font-semibold transition-colors"
-            >
-              {o.label}
-            </a>
-          ))}
-        </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        {options.map(o => (
+          <a
+            href={o.href}
+            class="block bg-white text-brand-navy rounded-2xl shadow-2xl border-2 border-transparent hover:border-brand-gold p-6 md:p-8 text-center transition-colors"
+          >
+            <div class="font-heading font-bold text-xl md:text-2xl">{o.label}</div>
+            <p class="text-sm text-gray-500 mt-2 leading-relaxed">{o.desc}</p>
+            <span class="btn-primary mt-5 w-full justify-center">Book {o.label}</span>
+          </a>
+        ))}
       </div>
     </div>
   </section>
-
 </BaseLayout>

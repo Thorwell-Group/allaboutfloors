@@ -87,16 +87,6 @@ const schema = {
       <h1 class="font-heading font-bold text-2xl md:text-4xl leading-tight">
         Book Your Showroom Appointment
       </h1>
-      <p id="screen-note" class="hidden mt-3 text-gray-200 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-        Outside of hardwood and refinishing, every product starts with a showroom visit. Styles, colors and pricing
-        vary a lot, so you'll see and feel your options side by side with one of our flooring pros, then we'll
-        measure your home once you've picked.
-      </p>
-      <script is:inline>
-        if (new URLSearchParams(window.location.search).get('screen') === '1') {
-          document.getElementById('screen-note').classList.remove('hidden');
-        }
-      </script>
     </div>
 
     <!-- Calendar embed -->
