@@ -23,7 +23,7 @@ const schema = {
   bare={true}
   noIndex={true}
 >
-  <!-- Meta Pixel Code (in <head>) — Schedule fires on booking confirmation -->
+  <!-- Meta Pixel Code (in <head>) — Lead fires on arrival from the ad funnel (?screen=1), Schedule on booking confirmation -->
   <Fragment slot="head">
     <script is:inline>
       !function(f,b,e,v,n,t,s)
@@ -36,6 +36,15 @@ const schema = {
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1975197519985839');
       fbq('track', 'PageView');
+      if (new URLSearchParams(window.location.search).get('screen') === '1') {
+        // Lead fires once per session across both calendars (visitor may go back and re-pick)
+        try {
+          if (!sessionStorage.getItem('aafnwLeadFired')) {
+            fbq('track', 'Lead');
+            sessionStorage.setItem('aafnwLeadFired', '1');
+          }
+        } catch (_) { fbq('track', 'Lead'); }
+      }
     </script>
     <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1975197519985839&ev=PageView&noscript=1"
@@ -78,6 +87,16 @@ const schema = {
       <h1 class="font-heading font-bold text-2xl md:text-4xl leading-tight">
         Book Your Showroom Appointment
       </h1>
+      <p id="screen-note" class="hidden mt-3 text-gray-200 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+        Outside of hardwood and refinishing, every product starts with a showroom visit. Styles, colors and pricing
+        vary a lot, so you'll see and feel your options side by side with one of our flooring pros, then we'll
+        measure your home once you've picked.
+      </p>
+      <script is:inline>
+        if (new URLSearchParams(window.location.search).get('screen') === '1') {
+          document.getElementById('screen-note').classList.remove('hidden');
+        }
+      </script>
     </div>
 
     <!-- Calendar embed -->

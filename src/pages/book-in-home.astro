@@ -37,7 +37,13 @@ const schema = {
       'https://connect.facebook.net/en_US/fbevents.js');
       fbq('init', '1975197519985839');
       fbq('track', 'PageView');
-      fbq('track', 'Lead');
+      // Lead fires once per session across both calendars (visitor may go back and re-pick)
+      try {
+        if (!sessionStorage.getItem('aafnwLeadFired')) {
+          fbq('track', 'Lead');
+          sessionStorage.setItem('aafnwLeadFired', '1');
+        }
+      } catch (_) { fbq('track', 'Lead'); }
     </script>
     <noscript><img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1975197519985839&ev=Lead&noscript=1"
