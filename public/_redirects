@@ -1,5 +1,7 @@
-# Canonical host: force apex -> www
-https://allaboutfloorsnw.com/* https://www.allaboutfloorsnw.com/:splat 301
+# Canonical host (apex -> www) is enforced in functions/_middleware.js, NOT here.
+# Cloudflare Pages _redirects cannot match on hostname, so a rule like
+#   https://allaboutfloorsnw.com/* https://www.allaboutfloorsnw.com/:splat 301
+# is silently inert. One lived here for months while the apex served 200.
 
 /hardwood-flooring-info  /hardwood-flooring/  301
 /hardwood-flooring-info/  /hardwood-flooring/  301
