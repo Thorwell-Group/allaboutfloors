@@ -77,7 +77,7 @@ Vacuum regularly, and more often in traffic paths. This is genuinely the single 
 
 ## Come feel it in person
 
-Carpet is the flooring category where showroom visits matter most, because the whole point is how it feels and photographs convey nothing about that. Walk on samples, press into them, and feel the difference between pads while you're at it.
+Carpet is the flooring category where showroom visits matter most, because the whole point is how it feels and photographs convey nothing about that. Walk on samples, press into them, and feel the difference between pads while you're at it. If you're still deciding where to shop, our guide to [comparing carpet stores in Vancouver, WA](/blog/carpet-stores-vancouver-wa/) covers what to ask about quotes, pad and installers.
 
 Once you've chosen, the install itself matters just as much, particularly whether the carpet gets power-stretched. Our guide to [carpet installation day in Vancouver](/blog/carpet-installation-vancouver-wa/) covers what should happen and what drives the price.
 
@@ -87,3 +87,4 @@ We serve [Vancouver](/carpet-flooring-in-vancouver-wa/), [Camas](/carpet-floorin
 
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
 - [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
+- [Carpet stores in Vancouver, WA: how to compare them before you buy](/blog/carpet-stores-vancouver-wa/)

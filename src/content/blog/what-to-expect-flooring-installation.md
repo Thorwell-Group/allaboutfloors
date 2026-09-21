@@ -86,3 +86,4 @@ Thinking about new floors? [Book a free in-home estimate](/free-estimate/) and w
 - [Hardwood floor installation: methods, prep and timeline](/blog/hardwood-floor-installation-vancouver-wa/)
 - [Tile installation: prep, large-format tile and timeline](/blog/tile-installation-vancouver-wa/)
 - [Hiring a flooring contractor in Vancouver, WA: what to verify](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
+- [Laminate flooring installation: subfloor prep, underlayment and timeline](/blog/laminate-flooring-installation-vancouver-wa/)

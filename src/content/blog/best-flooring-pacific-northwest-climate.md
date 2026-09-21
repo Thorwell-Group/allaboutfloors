@@ -38,3 +38,4 @@ Every home is different, and the right answer depends on your rooms, your subflo
 ## Related reading
 
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
+- [Engineered hardwood flooring: wear layers, cores and where it belongs](/blog/engineered-hardwood-flooring-vancouver-wa/)

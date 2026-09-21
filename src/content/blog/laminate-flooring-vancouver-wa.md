@@ -69,7 +69,7 @@ A mixed approach works well and is what many of the homes we work in end up doin
 
 Laminate is a floating floor. The planks lock to each other and rest on underlayment rather than being nailed or glued to the subfloor. That makes installation faster and cleaner than most alternatives, and it means the floor can usually be walked on immediately.
 
-It also means the subfloor still has to be flat. Floating floors bridge minor variation but telegraph significant dips and humps, and an uneven subfloor causes joints to flex and eventually separate. Expansion gaps at the perimeter are essential too, since the floor needs room to move seasonally and covering that gap with trim is what makes it invisible. Our [installation guide](/blog/what-to-expect-flooring-installation/) covers the process.
+It also means the subfloor still has to be flat. Floating floors bridge minor variation but telegraph significant dips and humps, and an uneven subfloor causes joints to flex and eventually separate. Expansion gaps at the perimeter are essential too, since the floor needs room to move seasonally and covering that gap with trim is what makes it invisible. Our [laminate flooring installation guide](/blog/laminate-flooring-installation-vancouver-wa/) covers subfloor prep, underlayment, kitchens and stairs in detail, and our [installation overview](/blog/what-to-expect-flooring-installation/) covers the process every flooring job shares.
 
 ## Living with laminate
 
@@ -87,3 +87,4 @@ We serve [Vancouver](/laminate-flooring-in-vancouver-wa/), [Camas](/laminate-flo
 
 - [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
+- [Laminate flooring installation: subfloor prep, underlayment and timeline](/blog/laminate-flooring-installation-vancouver-wa/)

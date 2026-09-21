@@ -111,3 +111,4 @@ A hardwood quote that was not preceded by a moisture reading and a look at the s
 - [Hardwood floor stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
 - [Refinish or replace? How to tell if your hardwood is worth saving](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/)
 - [Hiring a flooring contractor in Vancouver, WA: what to verify](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
+- [Engineered hardwood flooring: wear layers, cores and where it belongs](/blog/engineered-hardwood-flooring-vancouver-wa/)

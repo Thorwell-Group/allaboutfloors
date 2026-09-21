@@ -110,3 +110,4 @@ The only way to price an LVP install accurately is to see the subfloor, the tran
 - [Luxury vinyl flooring in Vancouver, WA](/luxury-vinyl-flooring-in-vancouver-wa/)
 - [Tile installation in Vancouver, WA: prep, large-format tile and timeline](/blog/tile-installation-vancouver-wa/)
 - [Hiring a flooring contractor in Vancouver, WA: what to verify](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
+- [Laminate flooring installation: subfloor prep, underlayment and timeline](/blog/laminate-flooring-installation-vancouver-wa/)

@@ -134,5 +134,6 @@ A [free in-home estimate](/free-estimate/) is still the fastest way to a real nu
 - [How much does flooring cost in Vancouver, WA?](/blog/flooring-cost-vancouver-wa/)
 - [How to choose a flooring store in Vancouver, WA](/blog/how-to-choose-flooring-store-vancouver-wa/)
 - [Financing new floors in Vancouver, WA](/blog/flooring-financing-vancouver-wa/)
+- [Carpet stores in Vancouver, WA: how to compare them before you buy](/blog/carpet-stores-vancouver-wa/)
 
 Want to see what is on the remnant rack and what is being closed out this month? [Visit the showroom](/book-in-store/) or [book an in-home estimate](/free-estimate/) and we will bring the current deals with us.

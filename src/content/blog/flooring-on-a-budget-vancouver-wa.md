@@ -72,3 +72,4 @@ Before you cut scope or downgrade material, it's worth checking whether [0% prom
 ## Related reading
 
 - [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
+- [Laminate flooring installation: subfloor prep, underlayment and timeline](/blog/laminate-flooring-installation-vancouver-wa/)

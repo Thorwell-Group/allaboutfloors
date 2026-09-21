@@ -24,7 +24,7 @@ Neither is ideal for below-grade basements or over concrete slabs without carefu
 
 ## Refinishing and longevity
 
-Solid wood's big advantage is longevity: it can be refinished repeatedly, which is why so many older Portland and Vancouver homes still have their original floors. Engineered floors can also be refinished, but only as many times as their wear layer allows, so ask about wear-layer thickness when you shop.
+Solid wood's big advantage is longevity: it can be refinished repeatedly, which is why so many older Portland and Vancouver homes still have their original floors. Engineered floors can also be refinished, but only as many times as their wear layer allows, so ask about wear-layer thickness when you shop. Our [engineered hardwood buyer's guide](/blog/engineered-hardwood-flooring-vancouver-wa/) explains what the numbers mean and what to look for in the core.
 
 ## Which should you choose?
 
@@ -38,3 +38,4 @@ Explore options on our [hardwood flooring](/hardwood-flooring/) page, or [reques
 - [Hardwood stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
 - [Flooring for builders and remodelers: how we work with the trades](/blog/flooring-for-builders-contractors-vancouver-wa/)
 - [Hardwood floor installation in Vancouver, WA: nail-down, glue-down or floating](/blog/hardwood-floor-installation-vancouver-wa/)
+- [Engineered hardwood flooring: wear layers, cores and where it belongs](/blog/engineered-hardwood-flooring-vancouver-wa/)

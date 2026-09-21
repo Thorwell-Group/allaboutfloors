@@ -83,5 +83,6 @@ If a room has ongoing moisture, carpet is the wrong material. [Luxury vinyl plan
 - [Carpet in Vancouver, WA: fiber, pile, and pad](/blog/carpet-vancouver-wa/)
 - [Pet-friendly, scratch-resistant flooring](/blog/pet-friendly-scratch-resistant-flooring-vancouver-wa/)
 - [What to expect on installation day](/blog/what-to-expect-flooring-installation/)
+- [Carpet stores in Vancouver, WA: how to compare them before you buy](/blog/carpet-stores-vancouver-wa/)
 
 Want a real number for your house? [Book a free in-home estimate](/free-estimate/), we'll measure, plan the seams, and bring samples you can put on the floor in your own light.
