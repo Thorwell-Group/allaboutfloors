@@ -1,6 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
+import sitemapNoindexFilter from './src/integrations/sitemap-noindex-filter.mjs';
 import alpinejs from '@astrojs/alpinejs';
 
 export default defineConfig({
@@ -30,6 +31,8 @@ export default defineConfig({
       ].includes(page),
     }),
     alpinejs({ entrypoint: '/src/entrypoint' }),
+    // Runs after sitemap() and drops any URL whose built page is noindex.
+    sitemapNoindexFilter(),
   ],
   output: 'static',
   build: {
