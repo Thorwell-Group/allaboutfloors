@@ -117,3 +117,4 @@ We carry porcelain, ceramic, natural stone and large-format tile from Dal Tile, 
 - [Bathroom flooring in Vancouver, WA: beating moisture and cold feet](/blog/bathroom-flooring-vancouver-wa/)
 - [Kitchen flooring in Vancouver, WA: what actually holds up](/blog/kitchen-flooring-vancouver-wa/)
 - [Hiring a flooring contractor in Vancouver, WA: what to verify](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
+- [Tile stores in Vancouver, WA: how to shop for tile](/blog/tile-stores-vancouver-wa/)

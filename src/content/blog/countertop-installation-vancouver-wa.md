@@ -68,3 +68,9 @@ We would rather plan both together than have one trade discover the other's deci
 Countertop samples are the ones most worth seeing at full size rather than as a chip. A pattern that reads beautifully in a 4-inch square can be overwhelming across ten feet of counter, and stone that looks uniform on a sample can vary a lot slab to slab.
 
 Come and see the full pieces, or [book a free in-home estimate](/free-estimate/) and we will bring options into your kitchen, under your lighting, next to your cabinets. It is a different decision in the room than it is in a showroom.
+
+## Related reading
+
+- [Kitchen countertops in Vancouver, WA: porcelain slab, tile, quartz and stone](/blog/kitchen-countertops-vancouver-wa/)
+- [Kitchen flooring in Vancouver, WA: what actually holds up](/blog/kitchen-flooring-vancouver-wa/)
+- [Tile installation in Vancouver, WA](/blog/tile-installation-vancouver-wa/)

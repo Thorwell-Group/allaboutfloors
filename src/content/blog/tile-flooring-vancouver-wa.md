@@ -88,3 +88,4 @@ We serve [Vancouver](/tile-flooring-in-vancouver-wa/), [Camas](/tile-flooring-in
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
 - [Tile installation in Vancouver, WA: prep, large-format tile and timeline](/blog/tile-installation-vancouver-wa/)
 - [What to expect during a professional flooring installation](/blog/what-to-expect-flooring-installation/)
+- [Tile stores in Vancouver, WA: how to shop for tile](/blog/tile-stores-vancouver-wa/)

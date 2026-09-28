@@ -71,5 +71,6 @@ Kitchens are small, which is good news. Even a premium material choice on 150 to
 - [Bathroom flooring in Vancouver, WA](/blog/bathroom-flooring-vancouver-wa/)
 - [Waterproof flooring options](/blog/waterproof-flooring-vancouver-wa/)
 - [What to expect on installation day](/blog/what-to-expect-flooring-installation/)
+- [Kitchen countertops in Vancouver, WA: porcelain slab, tile, quartz and stone](/blog/kitchen-countertops-vancouver-wa/)
 
 Bring us the room and we'll bring the samples. [Book a free in-home estimate](/free-estimate/) and we'll look at your appliances, your subfloor, and your cabinet layout before recommending anything.

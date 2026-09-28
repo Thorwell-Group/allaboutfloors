@@ -62,5 +62,6 @@ It's also the room where labor is the larger share of the cost, because there's 
 - [Kitchen flooring in Vancouver, WA](/blog/kitchen-flooring-vancouver-wa/)
 - [Waterproof flooring options for Clark County homes](/blog/waterproof-flooring-vancouver-wa/)
 - [Best flooring for our Pacific Northwest climate](/blog/best-flooring-pacific-northwest-climate/)
+- [Tile stores in Vancouver, WA: how to shop for tile](/blog/tile-stores-vancouver-wa/)
 
 We'll check the subfloor before we quote the floor. [Book a free in-home estimate](/free-estimate/) and we'll tell you what's actually going on under there.

@@ -41,3 +41,4 @@ Ready to bring your floors back to life? Learn more about [hardwood refinishing]
 ## Related reading
 
 - [Hardwood stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
+- [Hardwood floor staining in Vancouver, WA: the process and timeline](/blog/hardwood-floor-staining-vancouver-wa/)

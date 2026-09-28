@@ -104,5 +104,6 @@ Either way, the goal is the same: no surprises on the day the furniture goes bac
 - [Hardwood refinishing in Vancouver: process, cost and timeline](/blog/hardwood-floor-refinishing-vancouver-guide/)
 - [Wide plank and herringbone: choosing a floor layout](/blog/wide-plank-herringbone-flooring-vancouver-wa/)
 - [Hardwood floor installation in Vancouver, WA: methods, prep and timeline](/blog/hardwood-floor-installation-vancouver-wa/)
+- [Hardwood floor staining in Vancouver, WA: the process and timeline](/blog/hardwood-floor-staining-vancouver-wa/)
 
 Ready to see real colors on your real floor? [Book a free in-home estimate](/free-estimate/) or ask about a stain test as part of a [hardwood refinishing](/hardwood-refinishing/) quote.
