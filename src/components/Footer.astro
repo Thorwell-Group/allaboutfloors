@@ -23,7 +23,7 @@ import { areas } from '@data/areas';
           <div class="bg-brand-gold rounded-lg w-10 h-10 flex items-center justify-center font-heading font-bold text-white text-xl">A</div>
           <div>
             <div class="font-heading font-bold text-white leading-none">{company.name}</div>
-            <div class="text-brand-gold text-xs">Est. {company.founded}</div>
+            <div class="text-brand-gold-light text-xs">Est. {company.founded}</div>
           </div>
         </div>
       </div>
@@ -39,7 +39,7 @@ import { areas } from '@data/areas';
           <svg class="w-4 h-4 mt-0.5 text-brand-gold flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
           <div class="leading-snug">
             <a href={company.cta.phone} class="hover:text-white transition-colors block">{company.phone}</a>
-            <span class="text-xs text-brand-gold">📱 Text us 24/7</span>
+            <span class="text-xs text-brand-gold-light">📱 Text us 24/7</span>
           </div>
         </div>
         <div class="flex items-center gap-2">
@@ -85,7 +85,7 @@ import { areas } from '@data/areas';
             </a>
           </li>
         ))}
-        <li><a href="/service-areas/" class="text-brand-gold hover:text-brand-gold-light font-medium">View All Areas →</a></li>
+        <li><a href="/service-areas/" class="text-brand-gold-light hover:text-white font-medium">View All Areas →</a></li>
       </ul>
     </div>
   </div>
@@ -115,10 +115,10 @@ import { areas } from '@data/areas';
           height="32"
           loading="lazy"
         />
-        <div class="text-xs text-gray-500">
+        <div class="text-xs text-gray-400">
           © {new Date().getFullYear()} {company.name}. All rights reserved.
         </div>
-        <div class="flex gap-3 text-xs text-gray-500">
+        <div class="flex gap-3 text-xs text-gray-400">
           <a href="/privacy-policy/" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
           <span class="text-gray-700">·</span>
           <a href="/sitemap-index.xml" class="hover:text-gray-300 transition-colors">Sitemap</a>

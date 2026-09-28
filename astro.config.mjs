@@ -7,7 +7,9 @@ import alpinejs from '@astrojs/alpinejs';
 export default defineConfig({
   site: 'https://www.allaboutfloorsnw.com',
   integrations: [
-    tailwind(),
+    // global.css already carries the @tailwind directives; the default
+    // applyBaseStyles injected a second full copy of Tailwind on every page.
+    tailwind({ applyBaseStyles: false }),
     sitemap({
       // Exclude local pages that canonicalize elsewhere (see canonical
       // overrides in the page frontmatter) so the sitemap only lists
@@ -36,7 +38,7 @@ export default defineConfig({
   ],
   output: 'static',
   build: {
-    inlineStylesheets: 'auto',
+    inlineStylesheets: 'always',
   },
   compressHTML: true,
 });

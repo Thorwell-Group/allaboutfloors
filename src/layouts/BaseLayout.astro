@@ -2,6 +2,18 @@
 import BaseHead from '@components/BaseHead.astro';
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+// Self-hosted fonts (Fontsource, latin subset) — replaces the render-blocking
+// Google Fonts @import that used to sit at the top of global.css.
+import '@fontsource/inter/latin-400.css';
+import '@fontsource/inter/latin-500.css';
+import '@fontsource/inter/latin-600.css';
+import '@fontsource/inter/latin-700.css';
+import '@fontsource/poppins/latin-400.css';
+import '@fontsource/poppins/latin-500.css';
+import '@fontsource/poppins/latin-600.css';
+import '@fontsource/poppins/latin-700.css';
+import interLatin400 from '@fontsource/inter/files/inter-latin-400-normal.woff2?url';
+import poppinsLatin700 from '@fontsource/poppins/files/poppins-latin-700-normal.woff2?url';
 import '../styles/global.css';
 
 interface Props {
@@ -20,14 +32,25 @@ const { title, description, canonicalURL, ogImage, noIndex, schema, bare = false
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script async is:inline src="https://www.googletagmanager.com/gtag/js?id=G-TMB2MPGBX3"></script>
+    <!-- Google tag (gtag.js). Commands queue in dataLayer immediately; the
+         library itself loads after the window load event so it doesn't compete
+         with first paint. -->
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-TMB2MPGBX3');
+      window.addEventListener('load', function () {
+        setTimeout(function () {
+          var s = document.createElement('script');
+          s.async = true;
+          s.src = 'https://www.googletagmanager.com/gtag/js?id=G-TMB2MPGBX3';
+          document.head.appendChild(s);
+        }, 0);
+      });
     </script>
+    <link rel="preload" href={poppinsLatin700} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={interLatin400} as="font" type="font/woff2" crossorigin />
     <BaseHead
       title={title}
       description={description}

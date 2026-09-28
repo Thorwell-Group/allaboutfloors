@@ -134,14 +134,18 @@ const faqs = [
               <div class="text-[0.65rem] uppercase tracking-[0.2em] font-bold text-white/85">Free · No obligation</div>
               <div class="font-heading text-lg font-bold text-white leading-tight">Tell us about your project</div>
             </div>
+            {/* Holds the form's settled height (469px) so nothing below moves while
+                form_embed.js briefly takes the iframe out of flow during load. */}
+            <div style="min-height:469px">
             <iframe
               src="https://api.leadconnectorhq.com/widget/survey/28BfbXbvFgh5ZaAV6B7f"
-              style="border:none;width:100%;height:560px;display:block;background:white;margin:0;"
+              style="border:none;width:100%;height:469px;display:block;background:white;margin:0;"
               scrolling="no"
               id="28BfbXbvFgh5ZaAV6B7f"
               title="Free Flooring Estimate Survey"
               loading="eager"
             ></iframe>
+            </div>
           </div>
         </div>
       </div>
