@@ -255,7 +255,7 @@ export const services: Service[] = [
         a: 'We offer sanded, unsanded, and epoxy grout options. We recommend epoxy grout for kitchen floors and wet areas for superior stain resistance.',
       },
       {
-        q: 'Can you match existing tile for a repair or addition?',
+        q: 'Can you match my existing tile for an addition or remodel?',
         a: 'We do our best to source matching tile. If an exact match is unavailable, we offer creative solutions like accent borders or complementary blends.',
       },
     ],

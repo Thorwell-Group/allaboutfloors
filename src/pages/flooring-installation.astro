@@ -11,6 +11,7 @@ import Breadcrumb from '@components/Breadcrumb.astro';
 import ServiceCards from '@components/ServiceCards.astro';
 import { installationServices } from '@data/services';
 import { company } from '@data/company';
+import { faqSchema } from '@data/faq-schema';
 
 const svc = installationServices.find(s => s.slug === 'flooring-installation')!;
 
@@ -47,7 +48,7 @@ const schema = {
 <BaseLayout
   title="Flooring Installation Vancouver WA | All About Floors NW"
   description="Expert flooring installation in Vancouver, WA, carpet, hardwood, LVP, laminate, tile & vinyl. Licensed installers, free in-home estimates. (360) 525-2962."
-  schema={schema}
+  schema={[schema, faqSchema(faq)]}
 >
   <Hero
     heading="Professional Flooring Installation in Vancouver, WA"

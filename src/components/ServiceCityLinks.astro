@@ -1,0 +1,64 @@
+---
+/**
+ * Links a service page to its own city pages.
+ *
+ * Why this exists: every {service}-in-{city} page was linked only from its
+ * sibling pages in the same city, its city hub and /service-areas/. The service
+ * page it belongs to never linked to it, so "Hardwood Flooring" passed nothing to
+ * "Hardwood Flooring in Camas, WA" and there was no path between the same
+ * service in two cities.
+ *
+ * Vancouver is skipped where its city page canonicalises back to the service
+ * page (see vancouverCanonicalOverrides in src/pages/[service]-in-[area].astro)
+ * — a link to a URL that points straight back here is no use to anyone.
+ */
+import { areas } from '@data/areas';
+import { localServices } from '@data/services';
+
+interface Props {
+  /** mainSlug of the service, e.g. "hardwood-flooring" or "luxury-vinyl-plank". */
+  mainSlug: string;
+  /** Reads naturally in "<label> in Camas, WA". */
+  label?: string;
+}
+
+const { mainSlug, label: labelProp } = Astro.props;
+
+const local = localServices.find((s) => s.mainSlug === mainSlug);
+const label = labelProp ?? local?.name ?? '';
+const canonicalisedToService = new Set([
+  'laminate-flooring',
+  'luxury-vinyl-flooring',
+  'hardwood-flooring',
+  'carpet-flooring',
+  'tile-flooring',
+]);
+const cities = local
+  ? areas.filter((a) => !(a.slug === 'vancouver-wa' && canonicalisedToService.has(local.slug)))
+  : [];
+---
+
+{local && cities.length > 0 && (
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-8">
+        <h2 class="section-heading">{label} by City</h2>
+        <p class="section-subheading mx-auto text-center">
+          One showroom in Vancouver, WA, with jobs across Clark County and the Portland metro. Pick your city for local detail.
+        </p>
+      </div>
+      <ul class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl mx-auto">
+        {cities.map((a) => (
+          <li>
+            <a
+              href={`/${local.slug}-in-${a.slug}/`}
+              class="block bg-brand-light hover:bg-brand-navy hover:text-white text-brand-navy rounded-xl px-4 py-3 text-sm font-medium transition-colors duration-200"
+            >
+              {label} in {a.displayName}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+)}

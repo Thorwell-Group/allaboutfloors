@@ -8,6 +8,8 @@ import BrandLogos from '@components/BrandLogos.astro';
 import FAQ from '@components/FAQ.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import ServiceCards from '@components/ServiceCards.astro';
+import ServiceCityLinks from '@components/ServiceCityLinks.astro';
+import { faqSchema } from '@data/faq-schema';
 import { company } from '@data/company';
 import type { Service } from '@data/services';
 
@@ -22,7 +24,7 @@ interface Props {
 const { service, title, description, schema, breadcrumb } = Astro.props;
 ---
 
-<BaseLayout title={title} description={description} schema={schema}>
+<BaseLayout title={title} description={description} schema={[schema, faqSchema(service.faq)]}>
   <Hero
     heading={`${service.name} in Vancouver, WA`}
     subheading={service.description}
@@ -96,6 +98,8 @@ const { service, title, description, schema, breadcrumb } = Astro.props;
     subtitle="We carry every major flooring type, find the perfect match for every room in your home."
     excludeSlug={service.slug}
   />
+
+  <ServiceCityLinks mainSlug={service.slug} />
 
   <BrandLogos />
   <CTABanner

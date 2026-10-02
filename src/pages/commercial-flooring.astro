@@ -9,6 +9,8 @@ import ReviewsSection from '@components/ReviewsSection.astro';
 import BrandLogos from '@components/BrandLogos.astro';
 import { installationServices } from '@data/services';
 import { company } from '@data/company';
+import { faqSchema } from '@data/faq-schema';
+import ServiceCityLinks from '@components/ServiceCityLinks.astro';
 
 const svc = installationServices.find(s => s.slug === 'commercial-flooring')!;
 
@@ -45,7 +47,7 @@ const schema = {
 <BaseLayout
   title="Commercial & Office Flooring in Vancouver, WA | All About Floors NW"
   description="Professional commercial & office flooring in Vancouver, WA. Offices, restaurants, retail, healthcare & more. All About Floors NW, your Clark County commercial flooring partner."
-  schema={schema}
+  schema={[schema, faqSchema(faq)]}
 >
   <Hero
     heading="Commercial & Office Flooring in Vancouver, WA"
@@ -123,6 +125,7 @@ const schema = {
 
   <FAQ items={faq} title="Commercial Flooring FAQ" />
   <ReviewsSection max={3} />
+  <ServiceCityLinks mainSlug="commercial-flooring" label="Commercial Flooring" />
   <BrandLogos />
   <CTABanner heading="Get a Commercial Flooring Quote in Vancouver, WA" subtext="We work with businesses of all sizes throughout Clark County and Portland. Contact us for a free commercial flooring assessment." ctaText="Request Commercial Quote" />
   <RelatedGuides path="/commercial-flooring/" />
