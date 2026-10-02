@@ -9,6 +9,8 @@ import FAQ from '@components/FAQ.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import { installationServices } from '@data/services';
 import { company } from '@data/company';
+import { faqSchema } from '@data/faq-schema';
+import ServiceCityLinks from '@components/ServiceCityLinks.astro';
 
 const svc = installationServices.find(s => s.slug === 'hardwood-refinishing')!;
 
@@ -45,7 +47,7 @@ const schema = {
 <BaseLayout
   title="Hardwood Refinishing Vancouver WA | All About Floors NW"
   description="Hardwood floor refinishing in Vancouver, WA, restore scratched, dull or damaged floors to like-new. Free in-home estimates. (360) 525-2962."
-  schema={schema}
+  schema={[schema, faqSchema(faq)]}
 >
   <Hero
     heading="Hardwood Floor Refinishing in Vancouver, WA"
@@ -96,6 +98,7 @@ const schema = {
 
   <FAQ items={faq} title="Hardwood Refinishing FAQ" />
   <ReviewsSection max={3} />
+  <ServiceCityLinks mainSlug="hardwood-refinishing" label="Hardwood Floor Refinishing" />
   <CTABanner heading="Ready to Restore Your Hardwood Floors?" subtext="Schedule your free in-home assessment. We'll evaluate your floors and let you know whether refinishing is the right solution, honestly, with no pressure." />
   <RelatedGuides path="/hardwood-refinishing/" />
 </BaseLayout>

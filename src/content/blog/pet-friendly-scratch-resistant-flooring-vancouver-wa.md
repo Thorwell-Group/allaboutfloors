@@ -3,7 +3,7 @@ title: "Pet-Friendly Flooring: What Actually Survives Dogs and Cats"
 description: "Scratch resistance is only half the problem. What claws, accidents and wet paws each do to a floor, and which materials genuinely handle a Pacific Northwest household."
 date: 2026-08-11
 category: "Buying Guides"
-heroImage: "/images/CollageOfHardwoodLVPTileAndCarpet.png"
+heroImage: "/images/hardwood-lvp-tile-carpet-collage.webp"
 faq:
   - q: "What is the most scratch-resistant flooring?"
     a: "Tile is effectively scratch-proof, and among wood-look products, laminate's aluminium-oxide wear layer is genuinely harder than most vinyl wear layers. Luxury vinyl is close behind and adds waterproofing that laminate does not have, which is why it is usually our recommendation for households with pets."

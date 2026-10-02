@@ -9,6 +9,8 @@ import FAQ from '@components/FAQ.astro';
 import Breadcrumb from '@components/Breadcrumb.astro';
 import { installationServices } from '@data/services';
 import { company } from '@data/company';
+import { faqSchema } from '@data/faq-schema';
+import ServiceCityLinks from '@components/ServiceCityLinks.astro';
 
 const svc = installationServices.find(s => s.slug === 'countertops')!;
 
@@ -45,7 +47,7 @@ const schema = {
 <BaseLayout
   title="Countertop Installation in Vancouver, WA | All About Floors NW"
   description="Professional countertop installation in Vancouver, WA. Tile, porcelain, quartz & stone countertops for kitchens and bathrooms. Free estimates from All About Floors NW. Call (360) 525-2962."
-  schema={schema}
+  schema={[schema, faqSchema(faq)]}
 >
   <Hero
     heading="Countertop Installation in Vancouver, WA"
@@ -103,7 +105,7 @@ const schema = {
         {[
           { name: 'Tile Countertops', desc: 'Ceramic, porcelain, and natural stone tile in any layout. Custom edge profiles, coordinating grout, and unlimited design flexibility.', image: '/images/countertop.webp', alt: 'Tile countertop installation in a Vancouver WA kitchen' },
           { name: 'Porcelain Slab', desc: 'Large-format porcelain panels deliver a seamless, contemporary look with minimal grout lines — durable, hygienic, and stunning.', image: '/images/countertop1.webp', alt: 'Porcelain slab countertop in a modern Vancouver WA bathroom' },
-          { name: 'Quartz & Stone', desc: 'Engineered quartz and natural stone surfaces professionally templated and installed for a precise, lasting fit in kitchens and bathrooms.', image: '/images/MarbelTileBathroom.png', alt: 'Natural stone marble countertop and tile in a Vancouver WA bathroom' },
+          { name: 'Quartz & Stone', desc: 'Engineered quartz and natural stone surfaces professionally templated and installed for a precise, lasting fit in kitchens and bathrooms.', image: '/images/marble-tile-bathroom.webp', alt: 'Natural stone marble countertop and tile in a Vancouver WA bathroom' },
         ].map(item => (
           <div class="bg-white rounded-2xl shadow-sm overflow-hidden flex flex-col">
             <img
@@ -126,6 +128,7 @@ const schema = {
 
   <FAQ items={faq} title="Countertop Installation FAQ" />
   <ReviewsSection max={3} />
+  <ServiceCityLinks mainSlug="countertops" label="Countertops" />
   <CTABanner
     heading="Ready to Upgrade Your Countertops?"
     subtext="Schedule a free in-home estimate. We'll bring samples, measure your space, and provide a transparent quote — no pressure, no obligation."

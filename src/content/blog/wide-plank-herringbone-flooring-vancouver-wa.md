@@ -3,7 +3,7 @@ title: "Wide Plank and Herringbone: Choosing a Floor Layout"
 description: "Board width and pattern change how a room reads more than colour does. What wide plank and herringbone cost in material, labour and waste, and where each works."
 date: 2026-08-11
 category: "Buying Guides"
-heroImage: "/images/Hardwood full home.png"
+heroImage: "/images/hardwood-full-home.webp"
 faq:
   - q: "Does wide plank flooring make a room look bigger?"
     a: "Generally yes. Fewer seams across the same floor area reads as a calmer, less busy surface, and that tends to make a space feel larger. The effect is most noticeable in open-plan rooms where a narrow-strip floor can look restless."

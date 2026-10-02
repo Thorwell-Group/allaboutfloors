@@ -3,7 +3,7 @@ title: "How to Clean Hardwood Floors Without Wrecking the Finish"
 description: "Most hardwood damage in Pacific Northwest homes comes from cleaning, not wear. What to use, what to never use, and the routine that keeps a floor looking new."
 date: 2026-08-11
 category: "Repair & Maintenance"
-heroImage: "/images/CloseUpHardwood.png"
+heroImage: "/images/close-up-hardwood.webp"
 faq:
   - q: "Can I use a steam mop on hardwood floors?"
     a: "No. Steam mops force hot moisture into the seams between boards, which is exactly where you least want water on a wood floor. They are excellent on tile and a slow way to ruin hardwood. This is the single most common cause of avoidable damage we see."
