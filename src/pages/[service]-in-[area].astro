@@ -10,7 +10,7 @@ import Breadcrumb from '@components/Breadcrumb.astro';
 import GoogleMap from '@components/GoogleMap.astro';
 import BrandLogos from '@components/BrandLogos.astro';
 import { areas, areaLocalContext } from '@data/areas';
-import { localServices, services } from '@data/services';
+import { localServices, services, installationServices } from '@data/services';
 import { company } from '@data/company';
 import { AREA_PROFILE, SERVICE_BY_ARCHETYPE, localFaqs, pageVariant, INTRO_VARIANTS } from '@data/local-context';
 
@@ -49,6 +49,13 @@ const canonicalURL = (area.slug === 'vancouver-wa' && vancouverCanonicalOverride
 
 // Match to full service data for features/benefits/FAQ
 const fullService = services.find(s => s.slug === localService.mainSlug);
+// Refinishing, commercial and countertops live in installationServices, so the
+// lookup above misses them and their city pages fell back to the generic
+// flooring hero photo under an alt text describing a different job.
+const specialty = installationServices.find(s => s.slug === localService.mainSlug);
+const isCommercial = localService.slug === 'commercial-flooring';
+const audience = isCommercial ? 'businesses' : 'homeowners';
+const place = isCommercial ? 'space' : 'home';
 
 // Unique opening paragraphs per service type
 const serviceIntros: Record<string, string> = {
@@ -58,6 +65,8 @@ const serviceIntros: Record<string, string> = {
   'luxury-vinyl-flooring': `Luxury Vinyl Plank has become the most popular flooring choice for ${area.displayName} homes, and it's easy to see why. 100% waterproof, scratch-resistant, and beautifully realistic, LVP is the perfect solution for ${area.name}'s active households.`,
   'laminate-flooring': `Laminate flooring is a smart, budget-friendly choice for ${area.displayName} homeowners who want the look of hardwood without the price tag. All About Floors NW carries a wide selection of durable, stylish laminate for every room in your ${area.name} home.`,
   'tile-flooring': `Tile flooring is the gold standard for ${area.displayName} bathrooms, kitchens, and entryways. All About Floors NW offers thousands of tile options, porcelain, ceramic, glass, and natural stone, with expert installation throughout ${area.name}.`,
+  'commercial-flooring': `All About Floors NW installs commercial-grade flooring for offices, retail stores, restaurants and other business spaces in ${area.displayName}. We work with business owners, property managers and general contractors, and can phase the installation around your operating hours.`,
+  'countertops': `All About Floors NW installs tile, porcelain slab, quartz and natural stone countertops for kitchens and bathrooms in ${area.displayName}. Because we also install tile flooring and backsplashes, the whole room can be handled as one project.`,
 };
 
 const introText = serviceIntros[localService.slug] ?? `All About Floors NW proudly provides ${localService.name} to ${area.displayName} homeowners. With 25+ years of experience and a dedication to quality, we are ${area.county}'s trusted flooring partner.`;
@@ -66,7 +75,7 @@ const introText = serviceIntros[localService.slug] ?? `All About Floors NW proud
 const climateNotes: Record<string, string> = {
   'carpet-flooring': `In the Pacific Northwest's damp climate, we recommend moisture- and mildew-resistant carpet pads and fibers for bedrooms and living areas in ${area.name}, keeping plush comfort where you want it while steering moisture-prone rooms toward hard surfaces.`,
   'hardwood-flooring': `Because our region swings between wet winters and drier summers, we often guide ${area.name} homeowners toward engineered hardwood for above-grade rooms, it resists the cupping and gapping solid wood can show when indoor humidity isn't held near 40–45%.`,
-  'hardwood-refinishing-flooring': `Refinishing is a great fit for the Pacific Northwest's older homes with original solid wood. We sand, repair, and reseal to protect ${area.name} floors against the moisture and foot-traffic wear common in our climate, often for a fraction of replacement cost.`,
+  'hardwood-refinishing-flooring': `Refinishing is a great fit for the Pacific Northwest's older homes with original solid wood. We sand, stain, and reseal to protect ${area.name} floors against the moisture and foot-traffic wear common in our climate, often for a fraction of replacement cost.`,
   'luxury-vinyl-flooring': `LVP is one of the best flooring choices for our rainy climate, it's 100% waterproof at the surface and ideal for ${area.name} kitchens, laundry rooms, and busy entryways, though we still recommend porcelain tile for primary bathrooms and showers.`,
   'laminate-flooring': `Modern water-resistant laminate gives ${area.name} homeowners the look of wood with better moisture tolerance than older products. We'll help you choose a line rated for our damp conditions and pair it with the right underlayment.`,
   'tile-flooring': `Porcelain and ceramic tile are fully waterproof at the surface, making them the gold standard for Pacific Northwest bathrooms, showers, and mudrooms in ${area.name}, where they outlast every other flooring type.`,
@@ -90,8 +99,33 @@ const archetype = profile?.archetype ?? 'urban';
 const localBlock = SERVICE_BY_ARCHETYPE[localService.mainSlug]?.[archetype];
 const localFaqList = localFaqs(localService.mainSlug, localService.name, area.slug, area.displayName);
 const v = pageVariant(localService.slug, area.slug);
-const introLine = INTRO_VARIANTS[v.pick(INTRO_VARIANTS.length)](localService.name.toLowerCase(), area.displayName);
+// Three of the four variants talk about floors and wet-season entries, which
+// reads wrong on a countertop page; the last one is material-neutral.
+const introLine = INTRO_VARIANTS[localService.slug === 'countertops' ? INTRO_VARIANTS.length - 1 : v.pick(INTRO_VARIANTS.length)](localService.name.toLowerCase(), area.displayName);
 const localFirst = v.flip(0);
+
+// Timelines differ by trade. The figures for refinishing and countertops are the
+// ones already published on /hardwood-refinishing/ and /countertops/; the old
+// blanket "1–3 days" contradicted both.
+const timelineFaq = localService.slug === 'hardwood-refinishing-flooring'
+  ? {
+      q: `How long does hardwood floor refinishing take in ${area.name}?`,
+      a: `Most whole-home refinishing projects in ${area.displayName} take 3–5 days including sanding, staining, and applying multiple coats of finish. We'll give you a precise timeline during your free estimate.`,
+    }
+  : localService.slug === 'countertops'
+  ? {
+      q: `How long does countertop installation take in ${area.name}?`,
+      a: `Most countertop projects in ${area.displayName} are completed in 1–2 days. Tile and stone countertops need a further 24–48 hours of cure time for grout and sealant before full use.`,
+    }
+  : isCommercial
+  ? {
+      q: `How long does a commercial flooring project take in ${area.name}?`,
+      a: `It depends on the size of the space and whether the work is phased around your business hours. We set out the schedule with your quote, so you know which areas are out of use and when.`,
+    }
+  : {
+      q: `How long does ${localService.name} installation take in ${area.name}?`,
+      a: `Most ${localService.name} installations in ${area.displayName} are completed in 1–3 days depending on the size of the project. We'll give you a precise timeline during your free estimate.`,
+    };
 
 // Location-specific FAQ
 const faq = [
@@ -100,18 +134,17 @@ const faq = [
     q: `Do you offer ${localService.name} in ${area.displayName}?`,
     a: `Yes, All About Floors NW provides ${localService.name} throughout ${area.displayName} and all of ${area.county}. Contact us to schedule a free in-home estimate at your ${area.name} home.`,
   },
-  {
-    q: `How long does ${localService.name} installation take in ${area.name}?`,
-    a: `Most ${localService.name} installations in ${area.displayName} are completed in 1–3 days depending on the size of the project. We'll give you a precise timeline during your free estimate.`,
-  },
+  timelineFaq,
   {
     q: `Do you offer free estimates for ${localService.name} in ${area.displayName}?`,
     a: `Absolutely. We offer free, no-obligation in-home estimates for ${localService.name} throughout ${area.displayName}. Our consultant will visit your home, bring samples, take measurements, and provide a detailed quote.`,
   },
-  {
+  // A flooring-brand list is the wrong answer for refinishing, commercial work
+  // and countertops, so the question only appears on the material pages.
+  ...(fullService ? [{
     q: `What brands of ${localService.name} do you carry for ${area.name} homeowners?`,
     a: `We carry top brands including Mohawk, Shaw, Quick Step, DuChateau, Dal Tile, and many more, all available for viewing in our Vancouver showroom, which serves all of ${area.county} including ${area.name}.`,
-  },
+  }] : []),
   {
     q: `Is financing available for ${localService.name} projects in ${area.displayName}?`,
     a: `Yes, special financing options including 0% APR promotional periods are available for qualified ${area.name} customers. Ask about financing when you schedule your free estimate.`,
@@ -170,8 +203,8 @@ const schema = [
     heading={pageTitle}
     subheading={`Discover top-quality ${localService.name} products and professional installation services in ${area.displayName}. Free in-home estimates from your local ${area.county} flooring experts.`}
     badge={`Serving ${area.name} · Free Estimates`}
-    image={fullService?.heroImage ?? '/images/hero-flooring-vancouver-wa.webp'}
-    imageAlt={`${localService.name} professionally installed in a ${area.displayName} home by All About Floors NW`}
+    image={fullService?.heroImage ?? specialty?.heroImage ?? '/images/hero-flooring-vancouver-wa.webp'}
+    imageAlt={fullService ? `${localService.name} professionally installed in a ${area.displayName} home by All About Floors NW` : (specialty?.heroImageAlt ?? `${localService.name} by All About Floors NW`)}
   />
 
   <Breadcrumb items={[
@@ -199,7 +232,7 @@ const schema = [
 
           {area.neighborhoods.length > 0 && (
             <p class="text-gray-700 leading-relaxed mb-4">
-              We bring {localService.name.toLowerCase()} to homeowners across {area.name}, including {neighborhoodList}, and throughout {area.county}. From established streets to newer subdivisions, our team tailors each project to the home in front of us.
+              We bring {localService.name.toLowerCase()} to {audience} across {area.name}, including {neighborhoodList}, and throughout {area.county}. From established streets to newer subdivisions, our team tailors each project to the {place} in front of us.
             </p>
           )}
 
@@ -322,7 +355,10 @@ const schema = [
         <p class="mt-5 text-gray-700 leading-relaxed">
           {area.displayName} is {profile?.character}. {profile?.jobNote}
         </p>
-        <p class="mt-4 text-gray-700 leading-relaxed">{localContext}</p>
+        {/* This slot used to repeat the localContext paragraph already shown
+            near the top of the page. It now carries the sourced city background
+            from areas.ts instead. */}
+        <p class="mt-4 text-gray-700 leading-relaxed">{area.localContent.body[0]}</p>
         <p class="mt-4 text-gray-700 leading-relaxed">{introLine}</p>
         {localBlock.body.map((para) => <p class="mt-4 text-gray-700 leading-relaxed">{para}</p>)}
         <p class="mt-4 text-gray-700 leading-relaxed">
