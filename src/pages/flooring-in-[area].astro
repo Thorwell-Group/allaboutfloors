@@ -13,6 +13,7 @@ import BrandLogos from '@components/BrandLogos.astro';
 import { areas } from '@data/areas';
 import { localServices } from '@data/services';
 import { company } from '@data/company';
+import { faqSchema } from '@data/faq-schema';
 
 export async function getStaticPaths() {
   return areas.map(area => ({
@@ -93,7 +94,7 @@ const schema = {
   title={`Flooring Company in ${area.displayName} | All About Floors NW`}
   description={`Carpet, hardwood, LVP, laminate & tile flooring in ${area.displayName} by All About Floors NW. Free in-home estimates. Call (360) 525-2962.`}
   canonicalURL={canonicalURL}
-  schema={schema}
+  schema={[schema, faqSchema(faq)]}
 >
   <Hero
     heading={`Professional Flooring Company in ${area.displayName}`}
@@ -176,6 +177,20 @@ const schema = {
       </div>
     </div>
   </section>
+
+  {/* Per-city housing and climate notes. areas.ts has carried this sourced
+      copy since June (every fact has its source URL beside it) but no template
+      ever rendered it. */}
+  {area.localContent && (
+    <section class="py-16 bg-brand-light">
+      <div class="max-w-3xl mx-auto px-4">
+        <h2 class="section-heading mb-5">{area.localContent.heading}</h2>
+        {area.localContent.body.map((para) => (
+          <p class="text-gray-700 leading-relaxed mb-4">{para}</p>
+        ))}
+      </div>
+    </section>
+  )}
 
   <ServiceCards
     title={`Flooring Types We Offer in ${area.displayName}`}
