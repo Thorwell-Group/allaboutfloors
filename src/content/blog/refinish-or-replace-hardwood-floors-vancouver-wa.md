@@ -75,5 +75,6 @@ If the kitchen took a dishwasher leak but the living room and hallway are health
 - [Hardwood species and finishes](/blog/hardwood-flooring-vancouver-wa-species-finishes/)
 - [If you replace: how hardwood floor installation works](/blog/hardwood-floor-installation-vancouver-wa/)
 - [Hardwood floor staining in Vancouver, WA: the process and timeline](/blog/hardwood-floor-staining-vancouver-wa/)
+- [Wall-to-wall carpet in Vancouver, WA: is it still the right call?](/blog/wall-to-wall-carpet-vancouver-wa/)
 
 Not sure which category your floor falls into? [Book a free in-home estimate](/free-estimate/). We'll pull a vent, measure the wear layer, and tell you straight, including when the answer is "leave it alone for another five years."

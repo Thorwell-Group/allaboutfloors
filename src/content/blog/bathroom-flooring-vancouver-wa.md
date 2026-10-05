@@ -63,5 +63,6 @@ It's also the room where labor is the larger share of the cost, because there's 
 - [Waterproof flooring options for Clark County homes](/blog/waterproof-flooring-vancouver-wa/)
 - [Best flooring for our Pacific Northwest climate](/blog/best-flooring-pacific-northwest-climate/)
 - [Tile stores in Vancouver, WA: how to shop for tile](/blog/tile-stores-vancouver-wa/)
+- [Sheet vinyl flooring in Vancouver, WA: where it beats LVP](/blog/sheet-vinyl-flooring-vancouver-wa/)
 
 We'll check the subfloor before we quote the floor. [Book a free in-home estimate](/free-estimate/) and we'll tell you what's actually going on under there.

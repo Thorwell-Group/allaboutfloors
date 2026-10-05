@@ -19,7 +19,7 @@ faq:
 
 Hard surface flooring has taken over most of the house over the last decade, and for good reasons we've written about at length. But carpet hasn't gone anywhere, and there are rooms where it's still clearly the right answer.
 
-If you're putting carpet in a Vancouver, WA home, here's how to choose well.
+Still deciding whether a room should be carpet at all? Start with our room-by-room guide to [wall-to-wall carpet](/blog/wall-to-wall-carpet-vancouver-wa/). If you're putting carpet in a Vancouver, WA home, here's how to choose well.
 
 ## Where carpet still wins
 
@@ -88,3 +88,4 @@ We serve [Vancouver](/carpet-flooring-in-vancouver-wa/), [Camas](/carpet-floorin
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
 - [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
 - [Carpet stores in Vancouver, WA: how to compare them before you buy](/blog/carpet-stores-vancouver-wa/)
+- [Wall-to-wall carpet in Vancouver, WA: is it still the right call?](/blog/wall-to-wall-carpet-vancouver-wa/)

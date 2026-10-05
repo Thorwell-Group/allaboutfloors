@@ -45,7 +45,7 @@ Neither term says anything about the assembly, the seams, or the subfloor.
 
 **Tile with a proper waterproofing membrane** is the genuine article. This is a system, not just a material, and it's why tile is the only correct answer for shower floors and surrounds. Our [tile guide](/blog/tile-flooring-vancouver-wa/) covers it.
 
-**Sheet vinyl** is underrated here. Because it comes in wide rolls, a typical room has few or no seams, which eliminates the main path water uses to get underneath. It isn't the most fashionable choice, but for a laundry room where an appliance failure is a live possibility, it's genuinely excellent.
+**Sheet vinyl** is underrated here. Because it comes in wide rolls, a typical room has few or no seams, which eliminates the main path water uses to get underneath. It isn't the most fashionable choice, but for a laundry room where an appliance failure is a live possibility, it's genuinely excellent. More in our guide to [sheet vinyl flooring](/blog/sheet-vinyl-flooring-vancouver-wa/).
 
 **Rigid-core luxury vinyl (LVP and LVT)** is the practical everyday answer for most rooms. The material is waterproof, the rigid core is dimensionally stable, and the tighter modern locking systems resist water intrusion at seams better than older click products did. It's what we recommend most often, and our [vinyl guide](/blog/vinyl-flooring-vancouver-wa/) goes into detail.
 
@@ -87,3 +87,4 @@ We serve [Vancouver](/flooring-in-vancouver-wa/), [Camas](/flooring-in-camas-wa/
 
 - [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
 - [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)
+- [Sheet vinyl flooring in Vancouver, WA: where it beats LVP](/blog/sheet-vinyl-flooring-vancouver-wa/)

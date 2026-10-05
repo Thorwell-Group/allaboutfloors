@@ -113,5 +113,6 @@ Installed in two days between tenants, with a realistic fifteen-year horizon on 
 - [LVP vs. laminate: which is better for a rainy climate?](/blog/lvp-vs-laminate-rainy-climate/)
 - [Pet-friendly flooring: what survives dogs and cats](/blog/pet-friendly-scratch-resistant-flooring-vancouver-wa/)
 - [Carpet installation in Vancouver, WA: what happens on the day](/blog/carpet-installation-vancouver-wa/)
+- [Sheet vinyl flooring in Vancouver, WA: where it beats LVP](/blog/sheet-vinyl-flooring-vancouver-wa/)
 
 Own rentals in Vancouver, Camas, Battle Ground or across the river in Portland? [Book a free estimate](/free-estimate/) and we will spec a floor that survives your tenants and your turnover schedule.

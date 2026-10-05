@@ -39,3 +39,4 @@ Explore options on our [hardwood flooring](/hardwood-flooring/) page, or [reques
 - [Flooring for builders and remodelers: how we work with the trades](/blog/flooring-for-builders-contractors-vancouver-wa/)
 - [Hardwood floor installation in Vancouver, WA: nail-down, glue-down or floating](/blog/hardwood-floor-installation-vancouver-wa/)
 - [Engineered hardwood flooring: wear layers, cores and where it belongs](/blog/engineered-hardwood-flooring-vancouver-wa/)
+- [Bamboo flooring in Vancouver, WA: strand-woven, engineered and our climate](/blog/bamboo-flooring-vancouver-wa/)

@@ -25,7 +25,7 @@ Here's an honest look at what vinyl flooring is, where it belongs, and how to co
 
 All vinyl shares the same basic advantage: a plastic-based core that doesn't absorb water. Where the products differ is form and quality.
 
-**Sheet vinyl** comes in wide rolls, so a typical room can be covered with few or no seams. That makes it the most water-resistant installation type available in this category, since there are barely any places for water to get through. It's also the most affordable option. The trade-off is that it reads less realistic underfoot and at close range than the plank and tile products, and damage is harder to repair because you can't just replace one piece.
+**Sheet vinyl** comes in wide rolls, so a typical room can be covered with few or no seams. That makes it the most water-resistant installation type available in this category, since there are barely any places for water to get through. It's also the most affordable option. The trade-off is that it reads less realistic underfoot and at close range than the plank and tile products, and damage is harder to repair because you can't just replace one piece. Our [sheet vinyl guide](/blog/sheet-vinyl-flooring-vancouver-wa/) covers where it beats LVP and what the prep involves.
 
 **Luxury vinyl plank (LVP)** is the category that has taken over. Long planks, wood-look textures, and click-lock installation. The best of it is convincing enough that people ask if it's real hardwood. It's the default recommendation for most of the homes we work in.
 
@@ -93,3 +93,4 @@ Visit our [vinyl flooring page](/vinyl-flooring/) for the full product range, or
 - [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
 - [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)
+- [Sheet vinyl flooring in Vancouver, WA: where it beats LVP](/blog/sheet-vinyl-flooring-vancouver-wa/)

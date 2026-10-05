@@ -114,3 +114,4 @@ See the range on our [carpet flooring page](/carpet-flooring/). We serve [Vancou
 - [Flooring deals in Vancouver, WA: how sales really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
 - [Flooring cost in Vancouver, WA](/blog/flooring-cost-vancouver-wa/)
 - [Tile stores in Vancouver, WA: how to shop for tile](/blog/tile-stores-vancouver-wa/)
+- [Wall-to-wall carpet in Vancouver, WA: is it still the right call?](/blog/wall-to-wall-carpet-vancouver-wa/)

@@ -57,7 +57,7 @@ The catches:
 - **It is imported**, almost always from Asia, so transport offsets some of the growing-speed advantage.
 - **It does not love moisture swings.** In a Vancouver home with humidity that moves between summer and winter, bamboo needs proper acclimation and a stable indoor climate. It is not a bathroom or mudroom floor.
 
-If you like the look, strand-woven bamboo with a low-VOC finish is a reasonable green choice for bedrooms and living spaces.
+If you like the look, strand-woven bamboo with a low-VOC finish is a reasonable green choice for bedrooms and living spaces. Our [bamboo flooring guide](/blog/bamboo-flooring-vancouver-wa/) covers the types, hardness and how bamboo handles our climate.
 
 ## Cork: comfortable and quiet, and worth an honest conversation
 
@@ -110,5 +110,6 @@ Laminate cores are made from wood fiber, much of it recycled sawmill byproduct, 
 - [Engineered vs. solid hardwood for Vancouver homes](/blog/engineered-vs-solid-hardwood-vancouver/)
 - [Refinish or replace? How to tell if your hardwood is worth saving](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/)
 - [Vinyl flooring in Vancouver, WA: a complete buyer's guide](/blog/vinyl-flooring-vancouver-wa/)
+- [Bamboo flooring in Vancouver, WA: strand-woven, engineered and our climate](/blog/bamboo-flooring-vancouver-wa/)
 
 We will bring certified samples to your home and tell you which ones are genuinely green and which are just marketed that way. [Book a free in-home estimate](/free-estimate/).
