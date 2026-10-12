@@ -85,5 +85,6 @@ If a room has ongoing moisture, carpet is the wrong material. [Luxury vinyl plan
 - [What to expect on installation day](/blog/what-to-expect-flooring-installation/)
 - [Carpet stores in Vancouver, WA: how to compare them before you buy](/blog/carpet-stores-vancouver-wa/)
 - [Wall-to-wall carpet in Vancouver, WA: is it still the right call?](/blog/wall-to-wall-carpet-vancouver-wa/)
+- [Hardwood stairs: new treads, carpet-to-hardwood and runners](/blog/hardwood-stairs-vancouver-wa/)
 
 Want a real number for your house? [Book a free in-home estimate](/free-estimate/), we'll measure, plan the seams, and bring samples you can put on the floor in your own light.

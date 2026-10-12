@@ -69,7 +69,7 @@ For most Vancouver homes, prefinished engineered hardwood is the practical choic
 
 ## Stairs, transitions and tying in
 
-**Stairs** are their own job. Each tread and riser is cut and fitted individually, with a matching stair nose, and it is priced per step.
+**Stairs** are their own job. Each tread and riser is cut and fitted individually, with a matching stair nose, and it is priced per step. Our [hardwood stairs guide](/blog/hardwood-stairs-vancouver-wa/) covers retrofit treads, carpet-to-hardwood conversions and riser heights.
 
 **Transitions** to tile, carpet or vinyl are planned before installation so the heights work, including dishwasher and range clearances in a kitchen.
 

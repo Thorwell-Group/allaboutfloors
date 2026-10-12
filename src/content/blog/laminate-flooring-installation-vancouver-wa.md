@@ -132,3 +132,4 @@ We install laminate across Clark County, including [Vancouver](/laminate-floorin
 - [Pet-friendly, scratch-resistant flooring in Vancouver, WA](/blog/pet-friendly-scratch-resistant-flooring-vancouver-wa/)
 - [What to expect during a flooring installation](/blog/what-to-expect-flooring-installation/)
 - [Flooring cost in Vancouver, WA](/blog/flooring-cost-vancouver-wa/)
+- [LVP and laminate installation in Portland, OR: what older homes need](/blog/lvp-laminate-installation-portland-or/)

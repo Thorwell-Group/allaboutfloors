@@ -67,7 +67,7 @@ Glue-down floors need less of this because they do not move as a unit, which is 
 
 ## Stairs
 
-LVP on stairs is a different job. Each tread needs a matching stair nosing, treads and risers are glued rather than floated, and the cutting is precise. It is done well all the time, but it is priced separately and takes longer per square foot than any floor area. If you are running LVP up a staircase, ask for it as a line item.
+LVP on stairs is a different job. Each tread needs a matching stair nosing, treads and risers are glued rather than floated, and the cutting is precise. It is done well all the time, but it is priced separately and takes longer per square foot than any floor area. If you are running LVP up a staircase, ask for it as a line item. Our [stairs guide](/blog/hardwood-stairs-vancouver-wa/) compares LVP stairs with hardwood treads.
 
 ## What a proper installation day looks like
 
@@ -111,3 +111,4 @@ The only way to price an LVP install accurately is to see the subfloor, the tran
 - [Tile installation in Vancouver, WA: prep, large-format tile and timeline](/blog/tile-installation-vancouver-wa/)
 - [Hiring a flooring contractor in Vancouver, WA: what to verify](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
 - [Laminate flooring installation: subfloor prep, underlayment and timeline](/blog/laminate-flooring-installation-vancouver-wa/)
+- [LVP and laminate installation in Portland, OR: what older homes need](/blog/lvp-laminate-installation-portland-or/)
