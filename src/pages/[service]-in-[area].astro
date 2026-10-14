@@ -33,10 +33,16 @@ const { area, localService } = Astro.props;
 // service pages (identical title/H1, e.g. "Laminate Flooring in Vancouver, WA").
 // Canonicalize them to the primary service page to stop them competing. Other
 // cities have distinct local content and remain self-canonical.
+//
+// 2026-10-13: LVP and hardwood removed from this map. Search Console URL
+// Inspection showed Google ignored the canonical on both (Google-selected
+// canonical = the Vancouver page itself, indexed), and the Vancouver pages
+// outrank the pages they pointed to by ~40 positions (e.g. "luxury vinyl plank
+// vancouver wa": this page 6.8, /luxury-vinyl-plank/ 46.6). They are now
+// self-canonical and listed in the sitemap, so the signals agree with what
+// Google already does. Keep astro.config.mjs and ServiceCityLinks.astro in sync.
 const vancouverCanonicalOverrides: Record<string, string> = {
   'laminate-flooring': '/laminate-flooring/',
-  'luxury-vinyl-flooring': '/luxury-vinyl-plank/',
-  'hardwood-flooring': '/hardwood-flooring/',
   // Carpet and tile were left out of this map, so their Vancouver pages stayed
   // self-canonical while carrying titles identical to the primary service
   // pages — the two URLs were competing for the same query.

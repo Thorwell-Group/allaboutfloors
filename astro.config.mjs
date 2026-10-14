@@ -17,12 +17,8 @@ export default defineConfig({
       filter: (page) => ![
         'https://www.allaboutfloorsnw.com/flooring-in-vancouver-wa/',
         'https://www.allaboutfloorsnw.com/laminate-flooring-in-vancouver-wa/',
-        'https://www.allaboutfloorsnw.com/hardwood-flooring-in-vancouver-wa/',
-        // Canonicalizes to /luxury-vinyl-plank/ (its mainSlug differs from its
-        // localSlug in services.ts, unlike the other local services), so it was
-        // missed when this list was written. Listing a URL that canonicalizes
-        // elsewhere is a contradictory signal to Google.
-        'https://www.allaboutfloorsnw.com/luxury-vinyl-flooring-in-vancouver-wa/',
+        // LVP and hardwood Vancouver pages are self-canonical since 2026-10-13
+        // (Google had picked them as canonical anyway), so they ARE listed.
         // Carpet and tile were later added to vancouverCanonicalOverrides in
         // src/pages/[service]-in-[area].astro but never added here, so both
         // pages canonicalised to their parent service page while the sitemap
