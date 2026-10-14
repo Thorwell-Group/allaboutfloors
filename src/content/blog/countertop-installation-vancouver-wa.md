@@ -61,7 +61,7 @@ If you are doing floors and counters together — and it is a good time to do bo
 
 The main question is whether the new flooring runs under the cabinets or stops at them. That decision affects the finished height of the counter, the clearance for a dishwasher or range, and how the toe-kick finishes. Getting it wrong is the kind of mistake that only shows up when an appliance will not slide into its slot.
 
-We would rather plan both together than have one trade discover the other's decision on install day. Our [flooring installation page](/flooring-installation/) covers the flooring side, and our guide on [what to expect during installation](/blog/what-to-expect-flooring-installation/) walks through how we schedule a combined project.
+We would rather plan both together than have one trade discover the other's decision on install day. Our [countertop installation page](/countertops/) covers the counter side, our [flooring installation page](/flooring-installation/) covers the flooring side, and our guide on [what to expect during installation](/blog/what-to-expect-flooring-installation/) walks through how we schedule a combined project.
 
 ## Seeing the material
 
