@@ -84,3 +84,4 @@ Want to see hardwood samples in your own home? [Request a free in-home estimate]
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
 - [Engineered hardwood flooring: wear layers, cores and where it belongs](/blog/engineered-hardwood-flooring-vancouver-wa/)
 - [Bamboo flooring in Vancouver, WA: strand-woven, engineered and our climate](/blog/bamboo-flooring-vancouver-wa/)
+- [Hardwood floors in Camas, Washougal and Clark County, WA](/blog/hardwood-flooring-camas-washougal-clark-county-wa/)

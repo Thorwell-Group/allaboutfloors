@@ -54,7 +54,7 @@ Felt pads under furniture legs are the other one. They cost almost nothing and t
 
 Our climate swings — wet winters, drier summers, and heated indoor air that is drier still. Wood responds to that by expanding and contracting slightly through the year.
 
-That is normal and not something to fight. What is worth doing is avoiding the extremes: keeping indoor humidity reasonably steady reduces how far the boards travel, which reduces seasonal gapping in winter. If you see thin gaps open between boards in the cold months and close again by summer, that is the floor behaving as it should, not a defect.
+That is normal and not something to fight. What is worth doing is avoiding the extremes: keeping indoor humidity reasonably steady reduces how far the boards travel, which reduces seasonal gapping in winter. If you see thin gaps open between boards in the cold months and close again by summer, that is the floor behaving as it should, not a defect. Homes in Camas and Washougal see the biggest swings, because winter east winds out of the Gorge dry the air even further; our guide to [hardwood floors in Camas, Washougal and Clark County](/blog/hardwood-flooring-camas-washougal-clark-county-wa/) covers how to manage it.
 
 ## Dealing with what gets spilled
 

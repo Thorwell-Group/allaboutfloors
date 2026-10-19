@@ -40,3 +40,4 @@ Explore options on our [hardwood flooring](/hardwood-flooring/) page, or [reques
 - [Hardwood floor installation in Vancouver, WA: nail-down, glue-down or floating](/blog/hardwood-floor-installation-vancouver-wa/)
 - [Engineered hardwood flooring: wear layers, cores and where it belongs](/blog/engineered-hardwood-flooring-vancouver-wa/)
 - [Bamboo flooring in Vancouver, WA: strand-woven, engineered and our climate](/blog/bamboo-flooring-vancouver-wa/)
+- [Hardwood floors in Camas, Washougal and Clark County: solid or engineered for each kind of home](/blog/hardwood-flooring-camas-washougal-clark-county-wa/)

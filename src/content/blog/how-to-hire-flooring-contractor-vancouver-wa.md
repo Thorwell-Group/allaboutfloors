@@ -118,3 +118,4 @@ Check us exactly the way you would check anyone else. Read our [customer reviews
 - [How much does flooring cost in Vancouver, WA?](/blog/flooring-cost-vancouver-wa/)
 - [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
 - [What to expect during a professional flooring installation](/blog/what-to-expect-flooring-installation/)
+- [Planning a flooring remodel in Clark County: order of work, budget and timeline](/blog/flooring-remodel-clark-county-wa/)

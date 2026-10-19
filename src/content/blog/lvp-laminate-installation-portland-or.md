@@ -121,7 +121,7 @@ We have installed floors across Clark County and Portland since 1999, and we sel
 - **Brands** including Mohawk, Shaw, Quick Step and Hallmark.
 - **A written workmanship warranty** on every installation.
 
-See [luxury vinyl flooring in Portland](/luxury-vinyl-flooring-in-portland-or/) and [laminate flooring in Portland](/laminate-flooring-in-portland-or/), or our overview of [flooring in Portland, OR](/flooring-in-portland-or/). East of the city, we also install throughout [Gresham](/luxury-vinyl-flooring-in-gresham-or/).
+See [luxury vinyl flooring in Portland](/luxury-vinyl-flooring-in-portland-or/) and [laminate flooring in Portland](/laminate-flooring-in-portland-or/), or our overview of [flooring in Portland, OR](/flooring-in-portland-or/). East of the city, we also install throughout [Gresham](/luxury-vinyl-flooring-in-gresham-or/); see our guide to [kitchen flooring in Gresham](/blog/kitchen-flooring-gresham-or/).
 
 [Book a free in-home estimate](/free-estimate/), or text (360) 525-2962 with the rooms you're planning and roughly when the house was built. We'll check the subfloor, see what's under the carpet, and give you an installed price.
 
@@ -132,3 +132,4 @@ See [luxury vinyl flooring in Portland](/luxury-vinyl-flooring-in-portland-or/) 
 - [LVP vs. laminate: which is better for a rainy climate?](/blog/lvp-vs-laminate-rainy-climate/)
 - [Hardwood floor restoration: bringing back old and neglected floors](/blog/hardwood-floor-restoration-vancouver-wa/)
 - [How to hire a flooring contractor: what to verify](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
+- [Kitchen flooring in Gresham, OR: LVP, hardwood or tile](/blog/kitchen-flooring-gresham-or/)

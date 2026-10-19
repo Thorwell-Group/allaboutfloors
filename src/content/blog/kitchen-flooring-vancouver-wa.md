@@ -72,5 +72,6 @@ Kitchens are small, which is good news. Even a premium material choice on 150 to
 - [Waterproof flooring options](/blog/waterproof-flooring-vancouver-wa/)
 - [What to expect on installation day](/blog/what-to-expect-flooring-installation/)
 - [Kitchen countertops in Vancouver, WA: porcelain slab, tile, quartz and stone](/blog/kitchen-countertops-vancouver-wa/)
+- [Kitchen flooring in Gresham, OR: LVP, hardwood or tile for a 1970s to 1990s kitchen](/blog/kitchen-flooring-gresham-or/)
 
 Bring us the room and we'll bring the samples. [Book a free in-home estimate](/free-estimate/) and we'll look at your appliances, your subfloor, and your cabinet layout before recommending anything.

@@ -87,3 +87,4 @@ Thinking about new floors? [Book a free in-home estimate](/free-estimate/) and w
 - [Tile installation: prep, large-format tile and timeline](/blog/tile-installation-vancouver-wa/)
 - [Hiring a flooring contractor in Vancouver, WA: what to verify](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
 - [Laminate flooring installation: subfloor prep, underlayment and timeline](/blog/laminate-flooring-installation-vancouver-wa/)
+- [Planning a flooring remodel in Clark County: order of work, budget and timeline](/blog/flooring-remodel-clark-county-wa/)
