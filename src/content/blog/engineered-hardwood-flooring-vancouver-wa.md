@@ -122,3 +122,4 @@ We install hardwood throughout Clark County, including [Vancouver](/hardwood-flo
 - [Wide plank and herringbone flooring in Vancouver, WA](/blog/wide-plank-herringbone-flooring-vancouver-wa/)
 - [Hardwood floor cleaning and maintenance](/blog/hardwood-floor-cleaning-maintenance-vancouver-wa/)
 - [Refinish or replace your hardwood floors?](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/)
+- [Wide plank flooring in Vancouver, WA: hardwood, engineered, LVP and laminate](/blog/wide-plank-flooring-vancouver-wa/)

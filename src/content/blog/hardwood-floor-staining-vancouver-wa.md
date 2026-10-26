@@ -151,3 +151,4 @@ Every staining job includes:
 - [Refinish or replace? How to tell if your hardwood is worth saving](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/)
 - [Matte, satin or semi-gloss: choosing a hardwood sheen](/blog/hardwood-floor-sheen-vancouver-wa/)
 - [Hardwood floor cleaning and maintenance](/blog/hardwood-floor-cleaning-maintenance-vancouver-wa/)
+- [Hardwood floors in 98682: installation, refinishing and staining in east Vancouver](/blog/hardwood-floors-98682-east-vancouver-wa/)

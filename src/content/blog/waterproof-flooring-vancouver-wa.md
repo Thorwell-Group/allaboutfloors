@@ -88,3 +88,4 @@ We serve [Vancouver](/flooring-in-vancouver-wa/), [Camas](/flooring-in-camas-wa/
 - [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
 - [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)
 - [Sheet vinyl flooring in Vancouver, WA: where it beats LVP](/blog/sheet-vinyl-flooring-vancouver-wa/)
+- [Waterproof laminate vs. LVP: which handles water better](/blog/waterproof-laminate-vs-lvp-vancouver-wa/)

@@ -18,7 +18,7 @@ Luxury vinyl plank (LVP) and laminate are two of the most popular wood-look floo
 For Pacific Northwest homes, this is the headline:
 
 - **LVP is the safer bet in moisture-prone rooms**, kitchens, laundry rooms, entryways, and basements. It's 100% waterproof at the surface.
-- **Laminate works best in drier spaces**, living rooms, bedrooms, hallways, especially if you choose a modern water-resistant line.
+- **Laminate works best in drier spaces**, living rooms, bedrooms, hallways, especially if you choose a modern water-resistant line. Newer waterproof laminates narrow the gap further; see [waterproof laminate vs. LVP](/blog/waterproof-laminate-vs-lvp-vancouver-wa/) for what their warranties actually cover.
 
 A note for either floor: "waterproof" refers to the plank surface. Standing water can still get *underneath* a floating floor at the edges, so wipe up spills promptly and use tile in true wet zones.
 
@@ -44,3 +44,4 @@ Compare both in person: explore [luxury vinyl plank](/luxury-vinyl-plank/) and [
 - [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
 - [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)
 - [Laminate flooring installation: subfloor prep, underlayment and timeline](/blog/laminate-flooring-installation-vancouver-wa/)
+- [Waterproof laminate vs. LVP: which handles water better](/blog/waterproof-laminate-vs-lvp-vancouver-wa/)

@@ -88,3 +88,4 @@ We serve [Vancouver](/laminate-flooring-in-vancouver-wa/), [Camas](/laminate-flo
 - [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)
 - [Eco-friendly flooring: low-VOC, recycled and renewable options](/blog/eco-friendly-sustainable-flooring-vancouver-wa/)
 - [Laminate flooring installation: subfloor prep, underlayment and timeline](/blog/laminate-flooring-installation-vancouver-wa/)
+- [Waterproof laminate vs. LVP: which handles water better](/blog/waterproof-laminate-vs-lvp-vancouver-wa/)

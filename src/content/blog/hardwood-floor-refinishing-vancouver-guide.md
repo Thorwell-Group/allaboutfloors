@@ -43,3 +43,4 @@ Ready to bring your floors back to life? Learn more about [hardwood refinishing]
 - [Hardwood stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
 - [Hardwood floor staining in Vancouver, WA: the process and timeline](/blog/hardwood-floor-staining-vancouver-wa/)
 - [Hardwood floor restoration: sanding old and neglected floors back to life](/blog/hardwood-floor-restoration-vancouver-wa/)
+- [Hardwood floors in 98682: installation, refinishing and staining in east Vancouver](/blog/hardwood-floors-98682-east-vancouver-wa/)

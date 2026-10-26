@@ -85,3 +85,5 @@ Want to see hardwood samples in your own home? [Request a free in-home estimate]
 - [Engineered hardwood flooring: wear layers, cores and where it belongs](/blog/engineered-hardwood-flooring-vancouver-wa/)
 - [Bamboo flooring in Vancouver, WA: strand-woven, engineered and our climate](/blog/bamboo-flooring-vancouver-wa/)
 - [Hardwood floors in Camas, Washougal and Clark County, WA](/blog/hardwood-flooring-camas-washougal-clark-county-wa/)
+- [Wide plank flooring in Vancouver, WA: hardwood, engineered, LVP and laminate](/blog/wide-plank-flooring-vancouver-wa/)
+- [Hardwood floors in 98682: installation, refinishing and staining in east Vancouver](/blog/hardwood-floors-98682-east-vancouver-wa/)

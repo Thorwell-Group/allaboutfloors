@@ -129,3 +129,4 @@ Start with our [hardwood flooring](/hardwood-flooring/) and [hardwood refinishin
 - [Hardwood floor restoration: bringing back old and neglected floors](/blog/hardwood-floor-restoration-vancouver-wa/)
 - [The best flooring for the Pacific Northwest climate](/blog/best-flooring-pacific-northwest-climate/)
 - [Planning a flooring remodel in Clark County](/blog/flooring-remodel-clark-county-wa/)
+- [Hardwood floors in 98682: installation, refinishing and staining in east Vancouver](/blog/hardwood-floors-98682-east-vancouver-wa/)

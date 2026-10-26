@@ -29,7 +29,7 @@ It also lets the wood grain show properly. A dramatic grain pattern on a narrow 
 
 **The trade-off.** Wood moves with humidity, and each board changes by a percentage of its width. A wider board therefore moves more in absolute terms, so seasonal gaps are more visible than they would be on narrow strip.
 
-This matters in the Pacific Northwest, where we swing from very damp outdoors to dry heated air indoors. It is the main reason we usually steer people toward **engineered** wide plank rather than solid: the cross-laminated core is dimensionally far more stable, which is exactly the property you want when the board is wide. Our [engineered versus solid comparison](/blog/engineered-vs-solid-hardwood-vancouver/) covers that difference in detail.
+This matters in the Pacific Northwest, where we swing from very damp outdoors to dry heated air indoors. It is the main reason we usually steer people toward **engineered** wide plank rather than solid: the cross-laminated core is dimensionally far more stable, which is exactly the property you want when the board is wide. Our [engineered versus solid comparison](/blog/engineered-vs-solid-hardwood-vancouver/) covers that difference in detail, and our [wide plank flooring buyer's guide](/blog/wide-plank-flooring-vancouver-wa/) compares wide plank hardwood, LVP and laminate side by side.
 
 **Subfloor matters more.** A wide board is stiffer and spans further, so it will not follow a dip in the subfloor — it will bridge it, and that becomes a hollow spot underfoot. Wide plank raises the standard for how flat the subfloor needs to be.
 
