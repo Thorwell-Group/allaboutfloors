@@ -17,7 +17,7 @@ faq:
 
 Homeowners spend weeks choosing a species and a stain color, then pick a sheen in about forty seconds at the end of the conversation. It's backwards. Species and color decide what the floor looks like in a photograph. Sheen decides what it looks like in your actual house, at 4pm in November, with the lamps on.
 
-Here's the honest version of that decision.
+Here's the honest version of that decision. (If you're comparing matte floors across materials, including LVP, laminate and tile, see our [matte finish flooring guide](/blog/matte-finish-flooring-vancouver-wa/).)
 
 ## What sheen actually is
 
@@ -68,6 +68,7 @@ Get samples into the room they're going in. Look at them at night with the lamps
 
 ## Related reading
 
+- [Matte finish flooring: hardwood, LVP, laminate and tile compared](/blog/matte-finish-flooring-vancouver-wa/)
 - [Hardwood species and finishes for Vancouver homes](/blog/hardwood-flooring-vancouver-wa-species-finishes/)
 - [Engineered vs. solid hardwood](/blog/engineered-vs-solid-hardwood-vancouver/)
 - [Should you refinish or replace your hardwood floors?](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/)

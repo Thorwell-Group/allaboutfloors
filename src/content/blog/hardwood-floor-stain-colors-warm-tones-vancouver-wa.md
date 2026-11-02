@@ -99,6 +99,8 @@ Either way, the goal is the same: no surprises on the day the furniture goes bac
 
 ## Related reading
 
+- [Matte finish flooring in Vancouver, WA](/blog/matte-finish-flooring-vancouver-wa/)
+- [Herringbone flooring in Vancouver, WA](/blog/herringbone-flooring-vancouver-wa/)
 - [Matte, satin or semi-gloss: choosing a hardwood sheen](/blog/hardwood-floor-sheen-vancouver-wa/)
 - [Hardwood species and finishes for Vancouver homes](/blog/hardwood-flooring-vancouver-wa-species-finishes/)
 - [Hardwood refinishing in Vancouver: process, cost and timeline](/blog/hardwood-floor-refinishing-vancouver-guide/)

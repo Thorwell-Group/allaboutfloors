@@ -133,3 +133,4 @@ We install laminate across Clark County, including [Vancouver](/laminate-floorin
 - [What to expect during a flooring installation](/blog/what-to-expect-flooring-installation/)
 - [Flooring cost in Vancouver, WA](/blog/flooring-cost-vancouver-wa/)
 - [LVP and laminate installation in Portland, OR: what older homes need](/blog/lvp-laminate-installation-portland-or/)
+- [Vinyl and laminate flooring installation in Gresham, OR](/blog/vinyl-laminate-flooring-installation-gresham-or/)

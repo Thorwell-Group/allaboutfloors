@@ -125,6 +125,7 @@ See [flooring in Gresham, OR](/flooring-in-gresham-or/) for everything we do in 
 
 ## Related reading
 
+- [Vinyl and laminate flooring installation in Gresham, OR](/blog/vinyl-laminate-flooring-installation-gresham-or/)
 - [Kitchen flooring: what actually holds up](/blog/kitchen-flooring-vancouver-wa/)
 - [Waterproof flooring: what the label covers and what it does not](/blog/waterproof-flooring-vancouver-wa/)
 - [LVP and laminate installation in Portland's older homes](/blog/lvp-laminate-installation-portland-or/)

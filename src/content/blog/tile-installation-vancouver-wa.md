@@ -100,7 +100,7 @@ Tile is the right answer for showers, bathrooms, mudrooms, entries that take the
 - Tile size and format: large-format and mosaic are slower to set than standard sizes
 - Substrate work: reinforcement, leveling compound, backer board or membranes
 - Waterproofing in wet areas
-- Layout: diagonal, herringbone and patterned layouts mean more cutting and more waste
+- Layout: diagonal, [herringbone](/blog/herringbone-flooring-vancouver-wa/) and patterned layouts mean more cutting and more waste
 - Radiant heat
 - Grout type: epoxy costs more than cement grout
 - Tear-out, especially removing old tile, which is heavy, slow work

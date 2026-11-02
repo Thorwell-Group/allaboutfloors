@@ -77,4 +77,5 @@ Or [book a free in-home estimate](/free-estimate/) and we will bring samples to 
 
 ## Related reading
 
+- [Matte finish flooring: why low sheen hides scratches](/blog/matte-finish-flooring-vancouver-wa/)
 - [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)

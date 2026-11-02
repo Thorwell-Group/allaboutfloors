@@ -41,7 +41,7 @@ These get used interchangeably and are not the same thing.
 
 **Chevron** boards are cut at an angle at each end so the pieces meet point to point, forming continuous unbroken Vs. It is a cleaner, more formal look and it costs more because the boards are specially cut.
 
-**Where they work.** Both draw the eye and create movement, so they suit spaces where the floor is meant to be a feature — an entryway, a formal dining room, a defined zone within a larger open plan. Using herringbone to mark out a section of a big room is one of the more effective things you can do with flooring.
+**Where they work.** Both draw the eye and create movement, so they suit spaces where the floor is meant to be a feature — an entryway, a formal dining room, a defined zone within a larger open plan. Using herringbone to mark out a section of a big room is one of the more effective things you can do with flooring. Our [herringbone flooring guide](/blog/herringbone-flooring-vancouver-wa/) compares herringbone in engineered hardwood, LVP, laminate and tile, and covers installation and borders in more detail.
 
 **What it costs you.** Two things, and both are real:
 

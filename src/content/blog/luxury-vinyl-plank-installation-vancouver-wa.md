@@ -103,6 +103,7 @@ The only way to price an LVP install accurately is to see the subfloor, the tran
 
 ## Related reading
 
+- [Vinyl and laminate flooring installation in Gresham, OR](/blog/vinyl-laminate-flooring-installation-gresham-or/)
 - [Vinyl flooring in Vancouver, WA: a complete buyer's guide](/blog/vinyl-flooring-vancouver-wa/)
 - [Waterproof flooring in Vancouver, WA: what the label really means](/blog/waterproof-flooring-vancouver-wa/)
 - [LVP vs. laminate: which is better for a rainy climate?](/blog/lvp-vs-laminate-rainy-climate/)

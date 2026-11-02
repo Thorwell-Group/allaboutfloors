@@ -108,7 +108,7 @@ Our [hardwood installation guide](/blog/hardwood-floor-installation-vancouver-wa
 - **Color.** Warm mid-tones and natural white oak are the most requested in Vancouver right now. See our guide to [warm hardwood stain colors](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/).
 - **Sheen.** Matte and satin finishes hide scratches and dust far better than gloss, which matters more on a wide, open floor. Our [sheen guide](/blog/hardwood-floor-sheen-vancouver-wa/) compares them.
 - **Edges.** Square edges look like a site-finished floor. Micro-bevels on prefinished boards define each plank and hide slight height differences.
-- **Pattern.** If you're also considering herringbone or chevron for an entry or dining room, see [wide plank and herringbone layouts](/blog/wide-plank-herringbone-flooring-vancouver-wa/).
+- **Pattern.** If you're also considering herringbone or chevron for an entry or dining room, see [wide plank and herringbone layouts](/blog/wide-plank-herringbone-flooring-vancouver-wa/) and our [herringbone flooring guide](/blog/herringbone-flooring-vancouver-wa/).
 
 ## What wide plank flooring costs in Vancouver
 
