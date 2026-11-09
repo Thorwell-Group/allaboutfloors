@@ -64,7 +64,7 @@ And look at edges and texture. Beveled or eased edges create a more convincing t
 
 ## Layout choices worth thinking about
 
-Because LVT comes in tile formats, you get pattern options that plank doesn't offer. Straight grid is clean and contemporary. Diagonal makes a small room feel larger and hides an out-of-square room, which older homes frequently are. Brick or offset patterns break up the grid and read more casual. Larger format tiles mean fewer seams and a more expansive look, which works well in smaller rooms despite the intuition that small rooms need small tiles.
+Because LVT comes in tile formats, you get pattern options that plank doesn't offer. Straight grid is clean and contemporary. Diagonal makes a small room feel larger and hides an out-of-square room, which older homes frequently are. Brick or offset patterns break up the grid and read more casual. Larger format tiles mean fewer seams and a more expansive look, which works well in smaller rooms despite the intuition that small rooms need small tiles. Two solid colors of LVT can also be set as a checkerboard; our [checkerboard floor guide](/blog/checkerboard-tile-flooring-vancouver-wa/) compares it with porcelain and marble.
 
 ## The install still depends on the subfloor
 

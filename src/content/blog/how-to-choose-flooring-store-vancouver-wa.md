@@ -21,7 +21,7 @@ Buying floors isn't like buying a rug you can return next week. You'll walk on t
 
 A strong flooring store carries real breadth: carpet, hardwood, luxury vinyl, laminate, and tile from recognized manufacturers, in enough colors and grades that you're choosing the right floor rather than settling for what's in stock. Selection tells you the store takes the category seriously.
 
-But a wall of samples under fluorescent lights only gets you so far. The floors that photograph beautifully in a showroom can read completely differently in your living room at 4 p.m. on a gray Vancouver afternoon. The best stores let you take samples home, or bring them to you, so you can judge color and sheen in your own light against your own cabinets and trim.
+But a wall of samples under fluorescent lights only gets you so far. The floors that photograph beautifully in a showroom can read completely differently in your living room at 4 p.m. on a gray Vancouver afternoon. The best stores let you take samples home, or bring them to you, so you can judge color and sheen in your own light against your own cabinets and trim. Our guide to [visiting a flooring showroom](/blog/flooring-showroom-vancouver-wa/) covers what to bring so the visit is worth the trip.
 
 ## Look for in-home expertise, not just a sales floor
 
@@ -33,7 +33,7 @@ Those questions matter here more than in a lot of the country. Clark County aver
 
 This is the question that separates a flooring store from a flooring partner. Some retailers sell you material and hand you a list of third-party installers. Others, like us, handle [installation](/flooring-installation/) with their own trained crews.
 
-Why it matters: when one company measures, sells, and installs, there's a single point of accountability. If your subfloor needs leveling or a seam needs attention, nobody's pointing fingers. Ask directly, "Do you install the floors you sell, and who stands behind the work?" The answer tells you a lot.
+Why it matters: when one company measures, sells, and installs, there's a single point of accountability. If your subfloor needs leveling or a seam needs attention, nobody's pointing fingers. Ask directly, "Do you install the floors you sell, and who stands behind the work?" The answer tells you a lot. Our guide to [finding a genuinely local flooring company](/blog/local-flooring-company-vancouver-wa/) covers how to spot big-box installer programs and lead sites that only look local.
 
 ## Get a written, itemized estimate
 
@@ -84,5 +84,7 @@ Ready to see the difference an experienced local store makes? [Book a free in-ho
 
 - [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
 - [Hiring a flooring contractor in Vancouver, WA: what to verify before you sign](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
+- [Local flooring companies near Vancouver, WA: how to tell who's actually local](/blog/local-flooring-company-vancouver-wa/)
+- [Visiting a flooring showroom in Vancouver, WA: what to bring and what to ask](/blog/flooring-showroom-vancouver-wa/)
 - [Carpet stores in Vancouver, WA: how to compare them before you buy](/blog/carpet-stores-vancouver-wa/)
 - [Tile stores in Vancouver, WA: how to shop for tile](/blog/tile-stores-vancouver-wa/)

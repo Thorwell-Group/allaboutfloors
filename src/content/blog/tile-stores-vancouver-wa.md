@@ -112,6 +112,8 @@ We install tile in [Vancouver](/tile-flooring/), [Camas](/tile-flooring-in-camas
 
 - [Tile flooring in Vancouver, WA: porcelain, ceramic and natural stone](/blog/tile-flooring-vancouver-wa/)
 - [Tile installation in Vancouver, WA: prep, large-format tile and timeline](/blog/tile-installation-vancouver-wa/)
+- [Checkerboard tile floors in Vancouver, WA](/blog/checkerboard-tile-flooring-vancouver-wa/)
 - [Bathroom flooring in Vancouver, WA](/blog/bathroom-flooring-vancouver-wa/)
 - [Kitchen flooring in Vancouver, WA: what actually holds up](/blog/kitchen-flooring-vancouver-wa/)
 - [How to choose a flooring store in Vancouver, WA](/blog/how-to-choose-flooring-store-vancouver-wa/)
+- [Visiting a flooring showroom in Vancouver, WA: what to bring and what to ask](/blog/flooring-showroom-vancouver-wa/)

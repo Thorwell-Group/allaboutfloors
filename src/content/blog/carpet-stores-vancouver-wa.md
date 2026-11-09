@@ -111,6 +111,7 @@ See the range on our [carpet flooring page](/carpet-flooring/). We serve [Vancou
 - [Carpet in Vancouver, WA: choosing fiber, pile and pad](/blog/carpet-vancouver-wa/)
 - [Carpet installation in Vancouver, WA: what happens on the day](/blog/carpet-installation-vancouver-wa/)
 - [How to choose a flooring store in Vancouver, WA](/blog/how-to-choose-flooring-store-vancouver-wa/)
+- [Visiting a flooring showroom in Vancouver, WA: what to bring and what to ask](/blog/flooring-showroom-vancouver-wa/)
 - [Flooring deals in Vancouver, WA: how sales really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
 - [Flooring cost in Vancouver, WA](/blog/flooring-cost-vancouver-wa/)
 - [Tile stores in Vancouver, WA: how to shop for tile](/blog/tile-stores-vancouver-wa/)

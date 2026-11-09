@@ -141,6 +141,7 @@ Or text (360) 525-2962 with a photo of the room and we'll tell you what herringb
 ## Related reading
 
 - [Wide plank flooring in Vancouver, WA](/blog/wide-plank-flooring-vancouver-wa/)
+- [Checkerboard tile floors in Vancouver, WA](/blog/checkerboard-tile-flooring-vancouver-wa/)
 - [Hardwood flooring species and finishes](/blog/hardwood-flooring-vancouver-wa-species-finishes/)
 - [Hardwood floor installation in Vancouver, WA](/blog/hardwood-floor-installation-vancouver-wa/)
 - [What to expect on installation day](/blog/what-to-expect-flooring-installation/)

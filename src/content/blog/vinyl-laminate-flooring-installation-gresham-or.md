@@ -135,6 +135,7 @@ Or text (360) 525-2962 with the rooms you're doing and a photo of the current fl
 ## Related reading
 
 - [LVP vs. laminate in a rainy climate](/blog/lvp-vs-laminate-rainy-climate/)
+- [Local flooring companies near Vancouver, WA and Portland: how to tell who's actually local](/blog/local-flooring-company-vancouver-wa/)
 - [Luxury vinyl plank installation guide](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
 - [Laminate flooring installation guide](/blog/laminate-flooring-installation-vancouver-wa/)
 - [Peel-and-stick vs. professionally installed vinyl](/blog/peel-and-stick-vs-professional-vinyl-vancouver-wa/)
