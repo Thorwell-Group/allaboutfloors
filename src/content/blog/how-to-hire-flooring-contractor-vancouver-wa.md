@@ -114,6 +114,7 @@ Check us exactly the way you would check anyone else. Read our [customer reviews
 
 ## Related reading
 
+- [Flooring installation in Vancouver, WA: what a complete quote includes, by floor type](/blog/flooring-installation-vancouver-wa/)
 - [How to choose a flooring store in Vancouver, WA](/blog/how-to-choose-flooring-store-vancouver-wa/)
 - [Local flooring companies near Vancouver, WA: how to tell who's actually local](/blog/local-flooring-company-vancouver-wa/)
 - [How much does flooring cost in Vancouver, WA?](/blog/flooring-cost-vancouver-wa/)

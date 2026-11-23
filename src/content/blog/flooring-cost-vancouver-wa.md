@@ -43,6 +43,7 @@ If the total is right but the timing isn't, [0% promotional financing](/blog/flo
 
 ## Related reading
 
+- [Flooring installation in Vancouver, WA: what a complete quote includes, by floor type](/blog/flooring-installation-vancouver-wa/)
 - [Flooring deals in Vancouver: how sales, closeouts and remnants really work](/blog/flooring-deals-vancouver-wa-how-sales-work/)
 - [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
 - [Hiring a flooring contractor in Vancouver, WA: how to compare quotes line by line](/blog/how-to-hire-flooring-contractor-vancouver-wa/)

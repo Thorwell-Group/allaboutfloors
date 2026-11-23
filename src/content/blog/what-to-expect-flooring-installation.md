@@ -81,6 +81,7 @@ Thinking about new floors? [Book a free in-home estimate](/free-estimate/) and w
 
 ## Related reading
 
+- [Flooring installation in Vancouver, WA: what a complete quote includes, by floor type](/blog/flooring-installation-vancouver-wa/)
 - [LVP installation: floating vs. glue-down, prep and timeline](/blog/luxury-vinyl-plank-installation-vancouver-wa/)
 - [Flooring for builders and remodelers: how we work with the trades](/blog/flooring-for-builders-contractors-vancouver-wa/)
 - [Hardwood floor installation: methods, prep and timeline](/blog/hardwood-floor-installation-vancouver-wa/)

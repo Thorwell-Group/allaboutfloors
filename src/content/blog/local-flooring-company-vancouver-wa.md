@@ -119,6 +119,7 @@ Browse [hardwood](/hardwood-flooring/), [luxury vinyl plank](/luxury-vinyl-plank
 
 ## Related reading
 
+- [Flooring installation in Vancouver, WA: what a complete quote includes, by floor type](/blog/flooring-installation-vancouver-wa/)
 - [How to choose a flooring store in Vancouver, WA](/blog/how-to-choose-flooring-store-vancouver-wa/)
 - [Hiring a flooring contractor in Vancouver, WA: what to verify before you sign](/blog/how-to-hire-flooring-contractor-vancouver-wa/)
 - [What to expect during a professional flooring installation](/blog/what-to-expect-flooring-installation/)
