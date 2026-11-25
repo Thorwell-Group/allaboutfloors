@@ -55,7 +55,7 @@ Both are good choices, and they solve different problems.
 
 **LVT** is a hard, water-resistant surface that cleans with a mop. It handles rolling chairs without chair mats wearing through and shrugs off tracked-in grit better than carpet. It is louder underfoot, which you can soften with an underlayment.
 
-A common answer for north county shops: LVT in the reception, hallway and break room, carpet tile in the private offices.
+A common answer for north county shops: LVT in the reception, hallway and break room, carpet tile in the private offices. Our [office flooring guide](/blog/office-flooring-vancouver-wa/) compares the two in more detail, including rolling chairs, noise and installed cost.
 
 ## Scheduling around your business
 
@@ -90,6 +90,7 @@ All About Floors NW is a locally owned flooring company based in east Vancouver,
 
 ## Related reading
 
+- [Office flooring in Vancouver, WA: carpet tile vs. LVT, costs and after-hours installs](/blog/office-flooring-vancouver-wa/)
 - [Commercial and office flooring options in Vancouver, WA](/blog/commercial-office-flooring-vancouver-wa/)
 - [Flooring for builders and contractors in Vancouver, WA](/blog/flooring-for-builders-contractors-vancouver-wa/)
 - [Luxury vinyl tile in Vancouver, WA](/blog/luxury-vinyl-tile-vancouver-wa/)

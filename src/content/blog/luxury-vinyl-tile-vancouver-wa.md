@@ -48,7 +48,7 @@ The good product is textured to match the visual, so a slate-look tile has a sli
 We'd rather tell you straight than sell you the wrong thing.
 
 - **Shower floors and surrounds.** This is genuine wet-area work with a waterproofing assembly behind it. Use real tile.
-- **Very high-traffic commercial spaces.** Porcelain is harder and takes abuse LVT eventually shows.
+- **Very high-traffic commercial spaces.** Porcelain is harder and takes abuse LVT eventually shows. (In offices, commercial glue-down LVT is still a strong choice; our [office flooring guide](/blog/office-flooring-vancouver-wa/) covers where it fits.)
 - **Radiant heat and heat exposure.** Tile handles heat better. LVT has temperature limits and can be affected by prolonged intense heat, including strong direct sunlight through large south-facing glass.
 - **When you want the real thing.** Natural stone has depth and variation that printing approximates but doesn't replicate. If that's what you care about, you'll know.
 

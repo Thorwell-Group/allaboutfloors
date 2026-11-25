@@ -36,7 +36,7 @@ The key detail is the wear layer. Commercial products carry thicker wear layers 
 
 ## Carpet tile: quiet, flexible, and repairable
 
-For office environments, modular carpet tile remains hard to beat. It softens noise in open floor plans, adds warmth, and, because it installs in squares, a coffee spill or a worn traffic lane means replacing a few tiles rather than the entire room. That repairability keeps long-term maintenance costs down, which is exactly what facilities managers care about.
+For office environments, modular carpet tile remains hard to beat. It softens noise in open floor plans, adds warmth, and, because it installs in squares, a coffee spill or a worn traffic lane means replacing a few tiles rather than the entire room. That repairability keeps long-term maintenance costs down, which is exactly what facilities managers care about. For a room-by-room office plan, carpet tile vs. LVT with rolling chairs, and installed costs, see our [office flooring guide for Vancouver, WA](/blog/office-flooring-vancouver-wa/).
 
 ## Plan around your operations, not just the product
 
@@ -70,5 +70,6 @@ Planning a commercial or office flooring project? [Request a free estimate](/fre
 
 ## Related reading
 
+- [Office flooring in Vancouver, WA: carpet tile vs. LVT, costs and after-hours installs](/blog/office-flooring-vancouver-wa/)
 - [Flooring for builders and remodelers: how we work with the trades](/blog/flooring-for-builders-contractors-vancouver-wa/)
 - [Flooring for rental properties: a landlord's guide](/blog/flooring-for-rental-properties-vancouver-wa/)
