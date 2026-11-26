@@ -73,6 +73,7 @@ const serviceIntros: Record<string, string> = {
   'tile-flooring': `Tile flooring is the gold standard for ${area.displayName} bathrooms, kitchens, and entryways. All About Floors NW offers thousands of tile options, porcelain, ceramic, glass, and natural stone, with expert installation throughout ${area.name}.`,
   'commercial-flooring': `All About Floors NW installs commercial-grade flooring for offices, retail stores, restaurants and other business spaces in ${area.displayName}. We work with business owners, property managers and general contractors, and can phase the installation around your operating hours.`,
   'stair-flooring': `Stairs are the one part of a ${area.displayName} home where flooring cannot just be rolled out or clicked together: every tread and riser is measured, cut and fitted on its own. All About Floors NW does hardwood treads, LVP and laminate stairs with matching nosing, and carpet and runners for ${area.name} homeowners.`,
+  'baseboards-trim': `Baseboards and trim are the last thing fitted on a floor job and the first place a rushed install shows. All About Floors NW installs new baseboards, quarter round and shoe molding with new floors in ${area.displayName}, or takes your existing baseboards off and refits them, so every wall edge in your ${area.name} home looks finished.`,
   'countertops': `All About Floors NW installs tile, porcelain slab, quartz and natural stone countertops for kitchens and bathrooms in ${area.displayName}. Because we also install tile flooring and backsplashes, the whole room can be handled as one project.`,
 };
 
@@ -87,6 +88,7 @@ const climateNotes: Record<string, string> = {
   'laminate-flooring': `Modern water-resistant laminate gives ${area.name} homeowners the look of wood with better moisture tolerance than older products. We'll help you choose a line rated for our damp conditions and pair it with the right underlayment.`,
   'tile-flooring': `Porcelain and ceramic tile are fully waterproof at the surface, making them the gold standard for Pacific Northwest bathrooms, showers, and mudrooms in ${area.name}, where they outlast every other flooring type.`,
   'stair-flooring': `Hardwood treads move with this region's swing between wet winters and dry summers like any wood floor, so in ${area.name} we plan tread material with the rest of the floor and keep the finish sheen low enough to grip in socks.`,
+  'baseboards-trim': `Wood and laminate floors expand and contract with this region's swing between wet winters and dry summers, which is why they need a gap at every wall. In ${area.name} that gap is covered by baseboard, quarter round or shoe molding fastened to the wall, never through the floor, so the floor can still move underneath it.`,
 };
 const climateNote = climateNotes[localService.slug];
 const localContext = areaLocalContext[area.slug];
@@ -109,10 +111,10 @@ const localFaqList = localFaqs(localService.mainSlug, localService.name, area.sl
 const v = pageVariant(localService.slug, area.slug);
 // Three of the four variants talk about floors and wet-season entries, which
 // reads wrong on a countertop page; the last one is material-neutral.
-// Stairs use only the two variants that are not about entries and wet seasons.
+// Stairs and trim use only the two variants that are not about entries and wet seasons.
 const introIndex = localService.slug === 'countertops'
   ? INTRO_VARIANTS.length - 1
-  : localService.slug === 'stair-flooring'
+  : (localService.slug === 'stair-flooring' || localService.slug === 'baseboards-trim')
   ? 2 + v.pick(2)
   : v.pick(INTRO_VARIANTS.length);
 const introLine = INTRO_VARIANTS[introIndex](localService.name.toLowerCase(), area.displayName);
@@ -135,6 +137,11 @@ const timelineFaq = localService.slug === 'hardwood-refinishing-flooring'
   ? {
       q: `How are stairs priced and scheduled in ${area.name}?`,
       a: `Stairs are priced per step rather than per square foot, because every tread and riser is measured and fitted on its own. When the stairs are part of a bigger floor project in ${area.displayName} they are scheduled with it, and the free estimate covers both.`,
+    }
+  : localService.slug === 'baseboards-trim'
+  ? {
+      q: `How are baseboards and trim priced in ${area.name}?`,
+      a: `Trim is listed as its own line on the written, itemized quote, alongside the product, prep, removal and any stairs, so you can see exactly what it adds. It goes on at the end of the floor installation in ${area.displayName}, and the free in-home estimate covers both.`,
     }
   : isCommercial
   ? {
@@ -173,6 +180,15 @@ const faq = [
 const pageTitle = localService.slug === 'hardwood-refinishing-flooring'
   ? `Hardwood Floor Refinishing in ${area.displayName}`
   : `${localService.name} in ${area.displayName}`;
+
+// "Baseboards & Trim in Battle Ground, WA | All About Floors NW" runs past 60
+// characters, so this service uses a comma form that fits every city.
+const titleTag = localService.slug === 'baseboards-trim'
+  ? `${localService.name}, ${area.displayName} | All About Floors NW`
+  : `${pageTitle} | All About Floors NW`;
+const metaDescription = localService.slug === 'baseboards-trim'
+  ? `Baseboards, quarter round and shoe molding installed with new floors in ${area.displayName} by All About Floors NW. Free in-home estimates.`
+  : `${localService.name} in ${area.displayName} by All About Floors NW. Expert install, free in-home estimates. Call (360) 525-2962.`;
 
 const schema = [
   {
@@ -213,8 +229,8 @@ const schema = [
 ---
 
 <BaseLayout
-  title={`${pageTitle} | All About Floors NW`}
-  description={`${localService.name} in ${area.displayName} by All About Floors NW. Expert install, free in-home estimates. Call (360) 525-2962.`}
+  title={titleTag}
+  description={metaDescription}
   canonicalURL={canonicalURL}
   schema={schema}
 >

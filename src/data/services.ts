@@ -361,6 +361,20 @@ export const installationServices = [
     heroImage: '/images/hardwood-stairs-vancouver-wa.webp',
     heroImageAlt: 'Wood stair treads with a black metal railing leading down to a hardwood floor',
   },
+  // Added 2026-11-26 (afternoon) on the owner's instruction that baseboards and
+  // trim go on every flooring client's site unless they say otherwise. AAF NW's
+  // only exclusion is repairs, so this is framed as trim installed with new
+  // floors. Site copy already says "Our crew handles prep, installation, stairs,
+  // trim and cleanup" and quotes list trim as its own line.
+  {
+    slug: 'baseboards-trim',
+    name: 'Baseboards & Trim',
+    urlPath: '/baseboards-trim/',
+    tagline: 'Baseboards, Quarter Round & Shoe Molding with New Floors',
+    description: 'New baseboards, quarter round and shoe molding installed with your new floors, or your existing baseboards taken off and refitted. Trim covers the expansion gap at every wall and is listed as its own line on the quote.',
+    heroImage: '/images/LVP_laminateLivingRoom.webp',
+    heroImageAlt: 'Wood floor running to stained wood baseboards along the walls of a living room',
+  },
 ];
 
 export const localServices = [
@@ -379,4 +393,6 @@ export const localServices = [
   // Added 2026-11-26 with the /stair-flooring/ page. Stairs are their own job
   // (priced per step, fitted tread by tread), not a duplicate of a material page.
   { slug: 'stair-flooring', name: 'Stair Flooring', mainSlug: 'stair-flooring' },
+  // Added 2026-11-26 (afternoon) with the /baseboards-trim/ page.
+  { slug: 'baseboards-trim', name: 'Baseboards & Trim', mainSlug: 'baseboards-trim' },
 ];

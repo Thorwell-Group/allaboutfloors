@@ -59,7 +59,7 @@ In Vancouver this matters most in winter. Planks delivered to a cold garage and 
 
 A floating floor moves with temperature. It needs room to do it.
 
-- A **perimeter gap** of about a quarter inch at every wall and fixed object, covered by baseboard or quarter round. Trim is fastened to the wall, never through the floor.
+- A **perimeter gap** of about a quarter inch at every wall and fixed object, covered by [baseboard or quarter round](/baseboards-trim/). Trim is fastened to the wall, never through the floor.
 - **Transition strips** where LVP meets another floor, at doorways, and, on very long runs, at intervals the manufacturer specifies, often around 40 to 50 feet. A large open plan may need a T-molding somewhere. Where it goes is a design decision worth making on purpose.
 - **Undercut door jambs** so the plank slides beneath the casing instead of being cut around it. It is a small detail that separates a professional install from a rushed one.
 

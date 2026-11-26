@@ -122,6 +122,18 @@ SERVICE_BY_ARCHETYPE['stair-flooring'] = {
   premium: wrapDry('Stairs specified to the house', 'In a design-led home the staircase is often the first thing you see from the front door, and the details carry it: tread thickness, the profile of the nose, painted or wood risers, and how the stairs meet the landing.', 'A runner on a good staircase is hand-work, cut and bound to those specific stairs, and stain on new treads has to be matched to the floor in the same light.', ['Tread, nose and riser details specified', 'Stain matched to the surrounding floor', 'Runners cut and bound to the staircase', 'Landing transitions planned']),
 };
 
+// Baseboards & trim (added 2026-11-26 afternoon). wrapDry: the wet-season
+// entry paragraph is about floors at the door, not trim. General finish-carpentry
+// practice plus what the site already says (trim covers the expansion gap, is
+// fastened to the wall, and is its own line on the quote). No prices, durations
+// or materials claims. No repair framing: this client does not do repairs.
+SERVICE_BY_ARCHETYPE['baseboards-trim'] = {
+  urban: wrapDry('Trim in an established urban home', 'Older homes often have taller baseboards with more profile than anything a builder fits today, and they are usually worth keeping. In an older house the floor is also rarely dead level along a wall, so a small gap can open under a straight baseboard once the new floor is down.', 'Taking the original baseboards off before the new floor goes in and refitting them after gives a cleaner line than leaving them in place, and shoe molding follows the small dips in the floor that a tall baseboard on its own cannot.', ['Existing baseboards looked at before tear-out', 'Original trim taken off and refitted where it is worth keeping', 'Shoe molding where the floor is not level', 'Trim listed as its own line on the quote']),
+  growth: wrapDry('Trim in a newer home', 'In a lot of newer homes the baseboards were set to sit on top of carpet. When the carpet comes out and LVP, laminate or hardwood goes in, the bottom of those baseboards can end up with a gap above the new floor.', 'That gap gets closed either by adding quarter round or shoe molding, or by fitting new baseboard down to the new floor. Many owners use the floor change to step up from a short builder-grade base at the same time.', ['Baseboard height checked against the new floor', 'Quarter round or shoe molding to close the gap', 'New baseboard where the old base is too short', 'Trim planned with the floor, not after it']),
+  rural: wrapDry('Trim on a rural property', 'On an acreage property the baseboards at the back door and in the mudroom take boots, wet mops and dogs every day, and that is where trim looks tired first.', 'We plan those rooms separately from the rest of the house, with a base that holds up to being wiped down and a molding fitted tight to the floor so grit and water have nowhere to collect.', ['Mudroom and back-door trim planned separately', 'Molding fitted tight to the floor', 'Profiles that are easy to wipe down', 'Trim matched through the rest of the house']),
+  premium: wrapDry('Trim specified to the house', 'In a design-led home the baseboard is part of the room, not an afterthought. Its height and profile should suit the ceiling height and the casings around the doors, and wood trim can be stained to sit with the new floor or painted to match the walls.', 'The details show at the corners: inside corners coped so they stay tight, outside corners mitred, and trim run in long lengths so joints are few and placed where they are least visible.', ['Height and profile chosen for the room', 'Stain-matched or painted to the scheme', 'Coped inside corners, mitred outside corners', 'Long runs with joints placed out of sight']),
+};
+
 const SERVICE_FAQ: Record<string, { q: string; a: () => string }[]> = {
   'hardwood-flooring': [
     { q: 'Does all this rain rule out hardwood?', a: () => 'No, but it does change how it should be installed. The issues we see in this climate come from water at entries and from seasonal humidity swings, not from the rain itself. Proper acclimation, correct expansion gaps and sensible entry detailing handle both. Where a room genuinely sits wet, we will recommend something else instead of selling you a floor that will fail.' },
@@ -160,6 +172,11 @@ const SERVICE_FAQ: Record<string, { q: string; a: () => string }[]> = {
 SERVICE_FAQ['stair-flooring'] = [
   { q: 'Can I pull up the stair carpet and refinish what is underneath?', a: () => 'Usually not. Carpeted stairs are often built with construction-grade treads that were meant to be covered. We check from the edge of a tread or from underneath before you plan on it, and if the wood is finish-grade, refinishing is an option.' },
   { q: 'Can LVP or laminate go on stairs?', a: () => 'Yes. On stairs each tread and riser is glued down rather than floated, and the matching stair nosing for that product finishes the edge, so the staircase ties in with the floor beside it.' },
+];
+
+SERVICE_FAQ['baseboards-trim'] = [
+  { q: 'What is the difference between quarter round and shoe molding?', a: () => 'Both are small moldings fitted along the bottom of the baseboard to cover the gap a floor needs at the wall. Quarter round is a quarter circle and sits a little further out from the wall. Shoe molding is taller and thinner, so it is less noticeable and follows small dips in the floor more neatly.' },
+  { q: 'Do I need new baseboards with new floors?', a: () => 'Not always. If your baseboards are in good shape they can come off before the new floor goes in and be refitted after. New baseboard makes sense when the old base is too short for the new floor, does not suit the room, or will not come off cleanly. We look at it during the free estimate.' },
 ];
 
 export function localFaqs(serviceKey: string, serviceName: string, areaSlug: string, areaName: string) {

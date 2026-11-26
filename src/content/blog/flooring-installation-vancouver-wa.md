@@ -34,7 +34,7 @@ The cheapest number you see is usually the material alone. A complete installati
 3. **Tear-out and disposal.** Pulling up carpet and pad, tack strip, old vinyl or laminate, and hauling it away. This is often a separate line, so look for it.
 4. **Subfloor prep.** Screwing down squeaks, replacing soft or water-damaged plywood, grinding high spots and filling low spots with patch or self-leveler. Prep is what decides whether a floor lasts. It is also the item most often left off a low bid.
 5. **The installation itself**, with the right underlayment, pad or moisture barrier for that floor.
-6. **Finish work.** Baseboard or quarter round, transitions to other floors, stair nosing, door undercuts if the new floor is taller, and cleanup.
+6. **Finish work.** [Baseboard or quarter round](/baseboards-trim/), transitions to other floors, stair nosing, door undercuts if the new floor is taller, and cleanup.
 
 If you get two quotes and one is a lot lower, check these six lines first. The difference is almost always prep, tear-out or trim that one company priced and the other left out. Our guide to [hiring a flooring contractor in Vancouver](/blog/how-to-hire-flooring-contractor-vancouver-wa/) walks through comparing quotes line by line.
 

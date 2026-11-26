@@ -1,0 +1,138 @@
+---
+// Baseboards & trim service page (added 2026-11-26 afternoon). Built on the same
+// pattern as /stair-flooring/. The owner asked for baseboards and trim on every
+// flooring client's site unless the client says otherwise; AAF NW's only
+// exclusion is repairs, so this page is about trim installed with new floors and
+// never offers repair work. Facts used are already on the site: the crew
+// "handles prep, installation, stairs, trim and cleanup", trim is its own line on
+// the itemized quote, and trim covers the expansion gap and is fastened to the
+// wall. No prices, durations, materials claims or warranties are stated.
+import BaseLayout from '@layouts/BaseLayout.astro';
+import RelatedGuides from '@components/RelatedGuides.astro';
+import Hero from '@components/Hero.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CTABanner from '@components/CTABanner.astro';
+import FAQ from '@components/FAQ.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ServiceCityLinks from '@components/ServiceCityLinks.astro';
+import { installationServices } from '@data/services';
+import { company } from '@data/company';
+import { faqSchema } from '@data/faq-schema';
+
+const svc = installationServices.find(s => s.slug === 'baseboards-trim')!;
+
+const faq = [
+  { q: 'Do I need new baseboards when I get new floors?', a: 'Not always. If your baseboards are in good shape, they can come off before the new floor goes in and be refitted after, which gives a cleaner line than leaving them on and covering the gap. New baseboard makes sense when the old base is too short for the new floor, does not suit the room, or will not come off cleanly. We look at it during the free estimate.' },
+  { q: 'What is the difference between quarter round and shoe molding?', a: 'Both are small moldings fitted along the bottom of the baseboard to cover the gap a floor needs at the wall. Quarter round is a quarter circle and sits a little further out from the wall. Shoe molding is taller and thinner, so it is less noticeable and follows small dips in the floor more neatly.' },
+  { q: 'Why is there a gap between the floor and the wall?', a: 'Floating floors like LVP and laminate, and wood floors, expand and contract with temperature and humidity, so they need room to move at every wall. That gap, usually around a quarter inch for a floating floor, is covered by baseboard or quarter round. The trim is fastened to the wall, never through the floor, so the floor can still move.' },
+  { q: 'Why is there a gap under my baseboards after the carpet came out?', a: 'In many homes the baseboards were set to sit on top of carpet. A hard floor is thinner than carpet and pad, so the bottom of the baseboard ends up above it. Quarter round or shoe molding closes that gap, or new baseboard can be fitted down to the new floor.' },
+  { q: 'How is trim priced?', a: 'Trim is listed as its own line on your written, itemized quote, alongside the product, prep, removal and any stairs, so you can see exactly what it adds. The free in-home estimate covers the floor and the trim together.' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Baseboard & Trim Installation in Vancouver, WA',
+  serviceType: 'Baseboard and trim installation',
+  description: svc.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  areaServed: company.areaServed,
+  url: 'https://www.allaboutfloorsnw.com/baseboards-trim/',
+};
+
+const options = [
+  { label: 'New Baseboards', icon: '📏', text: 'Fitted down to the new floor when the old base is too short or dated' },
+  { label: 'Refitting Your Baseboards', icon: '🔁', text: 'Taken off before the floor goes in and put back after' },
+  { label: 'Quarter Round & Shoe Molding', icon: '📐', text: 'Covers the expansion gap along the bottom of the baseboard' },
+  { label: 'Transitions & Stair Nosing', icon: '🪜', text: 'Where the new floor meets another floor or a staircase' },
+];
+---
+
+<BaseLayout
+  title="Baseboard & Trim Installation in Vancouver, WA"
+  description="Baseboards, quarter round and shoe molding installed with new floors in Vancouver, WA, or your existing baseboards refitted. Free in-home estimates."
+  schema={[schema, faqSchema(faq)]}
+>
+  <Hero
+    heading="Baseboard & Trim Installation in Vancouver, WA"
+    subheading={svc.description}
+    image={svc.heroImage}
+    imageAlt={svc.heroImageAlt}
+    badge="Free In-Home Estimates"
+  />
+
+  <Breadcrumb items={[{ label: 'Services', href: '/services/' }, { label: 'Baseboards & Trim' }]} />
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span class="badge-gold mb-3">Baseboards, Quarter Round & Shoe Molding</span>
+          <h2 class="section-heading mt-2 mb-5">
+            The Finish Work That Makes a Floor Look Done
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            A new floor is only as clean as its edges. Every wood, laminate and LVP floor needs a gap at the walls so it can move, and that gap has to be covered neatly in every room. All About Floors NW handles the trim as part of the floor job: new baseboards, quarter round and shoe molding, or your existing baseboards taken off and refitted.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Our crew handles prep, installation, stairs, trim and cleanup, so you are not left finding a carpenter after the flooring crew leaves. Trim is fastened to the wall, never through the floor, and it is listed as its own line on your written quote.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            The free in-home estimate is the best place to start: our rep measures the rooms, looks at your existing baseboards and tells you whether they can be refitted or should be replaced. You can also see flooring samples at our showroom at {company.address.full}.
+          </p>
+          <a href="/free-estimate/" class="btn-primary">Get a Free Estimate</a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          {options.map(item => (
+            <div class="bg-brand-light rounded-2xl p-6 text-center">
+              <div class="text-4xl mb-2" aria-hidden="true">{item.icon}</div>
+              <div class="font-semibold text-brand-navy">{item.label}</div>
+              <p class="text-gray-600 text-xs mt-1">{item.text}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="section-heading mb-5">What Goes Into Trim on a Floor Job</h2>
+      <h3 class="font-heading font-semibold text-brand-navy text-xl mt-6 mb-2">Keep the baseboards or replace them</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Pulling the baseboards before the new floor goes down and putting them back after gives a cleaner result than leaving them in place and adding shoe molding to cover the gap. Baseboards in good condition can go straight back on. When they are too short for the new floor, or the room needs a taller or simpler profile, new baseboard is fitted instead.
+      </p>
+      <h3 class="font-heading font-semibold text-brand-navy text-xl mt-6 mb-2">Quarter round and shoe molding</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Where the baseboards stay on, a small molding along the bottom covers the expansion gap. Quarter round is the common choice. Shoe molding is slimmer and follows small dips in an uneven floor more neatly, which matters in older homes where the floor is rarely dead level along a wall.
+      </p>
+      <h3 class="font-heading font-semibold text-brand-navy text-xl mt-6 mb-2">Carpet to hard floors</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Baseboards in many homes were set to sit on carpet. Once the carpet and pad come out and a thinner <a href="/luxury-vinyl-plank/" class="underline hover:text-brand-gold">LVP</a>, <a href="/laminate-flooring/" class="underline hover:text-brand-gold">laminate</a> or <a href="/hardwood-flooring/" class="underline hover:text-brand-gold">hardwood</a> floor goes in, there is a gap under the base. We plan for that at the estimate rather than finding it on install day.
+      </p>
+      <h3 class="font-heading font-semibold text-brand-navy text-xl mt-6 mb-2">Transitions and stairs</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Trim also covers where the new floor meets another floor, a doorway or a staircase. See our <a href="/stair-flooring/" class="underline hover:text-brand-gold">stair flooring</a> page for nosing and treads, and our <a href="/flooring-installation/" class="underline hover:text-brand-gold">flooring installation</a> page for how the whole job runs.
+      </p>
+    </div>
+  </section>
+
+  <FAQ items={faq} title="Baseboards & Trim FAQ" />
+  <ReviewsSection max={3} />
+  <ServiceCityLinks mainSlug="baseboards-trim" label="Baseboards & Trim" />
+  <CTABanner heading="Planning New Floors?" subtext="Book a free estimate and we'll measure the rooms, look at your baseboards and price the floor and trim together." />
+  <RelatedGuides path="/baseboards-trim/" />
+</BaseLayout>
