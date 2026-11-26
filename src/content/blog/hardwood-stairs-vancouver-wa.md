@@ -121,7 +121,7 @@ We install stairs alongside the floors they connect to, which is how they should
 - **Written, itemized pricing** with the staircase as its own line.
 - **A workmanship warranty** on every installation, and [financing](/financing/) for qualified buyers.
 
-Browse species on our [hardwood flooring](/hardwood-flooring/) page and see how we work on our [flooring installation](/flooring-installation/) page. We install in [Vancouver](/hardwood-flooring/), [Camas](/hardwood-flooring-in-camas-wa/), [Battle Ground](/hardwood-flooring-in-battle-ground-wa/), [Ridgefield](/hardwood-flooring-in-ridgefield-wa/), [Salmon Creek](/hardwood-flooring-in-salmon-creek-wa/), [Washougal](/hardwood-flooring-in-washougal-wa/), [Portland](/hardwood-flooring-in-portland-or/) and [Gresham](/hardwood-flooring-in-gresham-or/).
+See every stair option we offer on our [stair flooring](/stair-flooring/) page, browse species on our [hardwood flooring](/hardwood-flooring/) page and see how we work on our [flooring installation](/flooring-installation/) page. We install in [Vancouver](/hardwood-flooring/), [Camas](/hardwood-flooring-in-camas-wa/), [Battle Ground](/hardwood-flooring-in-battle-ground-wa/), [Ridgefield](/hardwood-flooring-in-ridgefield-wa/), [Salmon Creek](/hardwood-flooring-in-salmon-creek-wa/), [Washougal](/hardwood-flooring-in-washougal-wa/), [Portland](/hardwood-flooring-in-portland-or/) and [Gresham](/hardwood-flooring-in-gresham-or/).
 
 [Book a free in-home estimate](/free-estimate/), or text a photo of your staircase to (360) 525-2962. We'll check what is under the carpet, measure every step and give you a price for the stairs and the floor around them.
 

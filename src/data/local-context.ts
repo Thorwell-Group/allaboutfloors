@@ -111,6 +111,17 @@ export const SERVICE_BY_ARCHETYPE: Record<string, Record<Archetype, Block>> = {
   },
 };
 
+// Stairs (added 2026-11-26). wrapDry because the wet-season entry paragraph is
+// about floors at the door, not staircases. Everything here is general stair
+// practice or already stated elsewhere on the site (blog/hardwood-stairs,
+// carpet runners on the carpet pages); no prices or durations are asserted.
+SERVICE_BY_ARCHETYPE['stair-flooring'] = {
+  urban: wrapDry('Stairs in an established urban home', 'Carpeted stairs in older homes are often built with construction-grade treads that were never meant to be seen, so pulling the carpet rarely uncovers a staircase worth refinishing. We check from the edge of a tread or from underneath before anyone plans on it.', 'Where the treads are not finish-grade, the usual choices are new carpet or a runner, retrofit hardwood treads over the existing steps, or LVP with matching nosing so the stairs tie into a new floor.', ['Existing treads checked before pricing', 'Retrofit treads and carpet compared honestly', 'Stairs matched to the floor around them', 'Priced per step as its own line']),
+  growth: wrapDry('Stairs in a newer home', 'Newer homes usually come with builder-grade carpet on the stairs, and when the main floor changes to LVP or hardwood the staircase is the piece left looking out of place.', 'Matching the stairs to the new floor comes down to the nosing. LVP and laminate need the stair-nose profile made for that product, and hardwood treads can be stained to sit with the floor next to them.', ['Stairs planned with the main-floor change', 'Matching stair nosing for LVP and laminate', 'Treads and risers fitted one by one', 'Top and bottom step heights checked']),
+  rural: wrapDry('Stairs on a rural property', 'Stairs in an acreage home see boots, dogs and grit carried in from the back door, and the nose of each tread is where that wear shows first.', 'Here we steer toward harder-wearing treads or a durable runner, and a lower-sheen finish that grips better than gloss.', ['Durable treads or runner for grit and boots', 'Lower-sheen finish for footing', 'Nosing chosen to stand up to wear', 'Pets and footing considered']),
+  premium: wrapDry('Stairs specified to the house', 'In a design-led home the staircase is often the first thing you see from the front door, and the details carry it: tread thickness, the profile of the nose, painted or wood risers, and how the stairs meet the landing.', 'A runner on a good staircase is hand-work, cut and bound to those specific stairs, and stain on new treads has to be matched to the floor in the same light.', ['Tread, nose and riser details specified', 'Stain matched to the surrounding floor', 'Runners cut and bound to the staircase', 'Landing transitions planned']),
+};
+
 const SERVICE_FAQ: Record<string, { q: string; a: () => string }[]> = {
   'hardwood-flooring': [
     { q: 'Does all this rain rule out hardwood?', a: () => 'No, but it does change how it should be installed. The issues we see in this climate come from water at entries and from seasonal humidity swings, not from the rain itself. Proper acclimation, correct expansion gaps and sensible entry detailing handle both. Where a room genuinely sits wet, we will recommend something else instead of selling you a floor that will fail.' },
@@ -145,6 +156,11 @@ const SERVICE_FAQ: Record<string, { q: string; a: () => string }[]> = {
     { q: 'Can you carpet stairs with an open side or winders?', a: () => 'Yes, and it is where a carpet installer is genuinely judged. Winders, bullnose treads and open sides are hand-work — cut, wrapped and stitched on site rather than folded over.' },
   ],
 };
+
+SERVICE_FAQ['stair-flooring'] = [
+  { q: 'Can I pull up the stair carpet and refinish what is underneath?', a: () => 'Usually not. Carpeted stairs are often built with construction-grade treads that were meant to be covered. We check from the edge of a tread or from underneath before you plan on it, and if the wood is finish-grade, refinishing is an option.' },
+  { q: 'Can LVP or laminate go on stairs?', a: () => 'Yes. On stairs each tread and riser is glued down rather than floated, and the matching stair nosing for that product finishes the edge, so the staircase ties in with the floor beside it.' },
+];
 
 export function localFaqs(serviceKey: string, serviceName: string, areaSlug: string, areaName: string) {
   const p = AREA_PROFILE[areaSlug];

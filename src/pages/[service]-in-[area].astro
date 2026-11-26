@@ -72,6 +72,7 @@ const serviceIntros: Record<string, string> = {
   'laminate-flooring': `Laminate flooring is a smart, budget-friendly choice for ${area.displayName} homeowners who want the look of hardwood without the price tag. All About Floors NW carries a wide selection of durable, stylish laminate for every room in your ${area.name} home.`,
   'tile-flooring': `Tile flooring is the gold standard for ${area.displayName} bathrooms, kitchens, and entryways. All About Floors NW offers thousands of tile options, porcelain, ceramic, glass, and natural stone, with expert installation throughout ${area.name}.`,
   'commercial-flooring': `All About Floors NW installs commercial-grade flooring for offices, retail stores, restaurants and other business spaces in ${area.displayName}. We work with business owners, property managers and general contractors, and can phase the installation around your operating hours.`,
+  'stair-flooring': `Stairs are the one part of a ${area.displayName} home where flooring cannot just be rolled out or clicked together: every tread and riser is measured, cut and fitted on its own. All About Floors NW does hardwood treads, LVP and laminate stairs with matching nosing, and carpet and runners for ${area.name} homeowners.`,
   'countertops': `All About Floors NW installs tile, porcelain slab, quartz and natural stone countertops for kitchens and bathrooms in ${area.displayName}. Because we also install tile flooring and backsplashes, the whole room can be handled as one project.`,
 };
 
@@ -85,6 +86,7 @@ const climateNotes: Record<string, string> = {
   'luxury-vinyl-flooring': `LVP is one of the best flooring choices for our rainy climate, it's 100% waterproof at the surface and ideal for ${area.name} kitchens, laundry rooms, and busy entryways, though we still recommend porcelain tile for primary bathrooms and showers.`,
   'laminate-flooring': `Modern water-resistant laminate gives ${area.name} homeowners the look of wood with better moisture tolerance than older products. We'll help you choose a line rated for our damp conditions and pair it with the right underlayment.`,
   'tile-flooring': `Porcelain and ceramic tile are fully waterproof at the surface, making them the gold standard for Pacific Northwest bathrooms, showers, and mudrooms in ${area.name}, where they outlast every other flooring type.`,
+  'stair-flooring': `Hardwood treads move with this region's swing between wet winters and dry summers like any wood floor, so in ${area.name} we plan tread material with the rest of the floor and keep the finish sheen low enough to grip in socks.`,
 };
 const climateNote = climateNotes[localService.slug];
 const localContext = areaLocalContext[area.slug];
@@ -107,7 +109,13 @@ const localFaqList = localFaqs(localService.mainSlug, localService.name, area.sl
 const v = pageVariant(localService.slug, area.slug);
 // Three of the four variants talk about floors and wet-season entries, which
 // reads wrong on a countertop page; the last one is material-neutral.
-const introLine = INTRO_VARIANTS[localService.slug === 'countertops' ? INTRO_VARIANTS.length - 1 : v.pick(INTRO_VARIANTS.length)](localService.name.toLowerCase(), area.displayName);
+// Stairs use only the two variants that are not about entries and wet seasons.
+const introIndex = localService.slug === 'countertops'
+  ? INTRO_VARIANTS.length - 1
+  : localService.slug === 'stair-flooring'
+  ? 2 + v.pick(2)
+  : v.pick(INTRO_VARIANTS.length);
+const introLine = INTRO_VARIANTS[introIndex](localService.name.toLowerCase(), area.displayName);
 const localFirst = v.flip(0);
 
 // Timelines differ by trade. The figures for refinishing and countertops are the
@@ -122,6 +130,11 @@ const timelineFaq = localService.slug === 'hardwood-refinishing-flooring'
   ? {
       q: `How long does countertop installation take in ${area.name}?`,
       a: `Most countertop projects in ${area.displayName} are completed in 1–2 days. Tile and stone countertops need a further 24–48 hours of cure time for grout and sealant before full use.`,
+    }
+  : localService.slug === 'stair-flooring'
+  ? {
+      q: `How are stairs priced and scheduled in ${area.name}?`,
+      a: `Stairs are priced per step rather than per square foot, because every tread and riser is measured and fitted on its own. When the stairs are part of a bigger floor project in ${area.displayName} they are scheduled with it, and the free estimate covers both.`,
     }
   : isCommercial
   ? {

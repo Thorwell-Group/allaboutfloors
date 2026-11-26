@@ -1,0 +1,131 @@
+---
+// Stair flooring service page (added 2026-11-26). Built on the same pattern as
+// /hardwood-refinishing/. The client's booking bot knowledge base confirms stair
+// work ("We DO handle stair railings and stair work"); the copy below sticks to
+// the floor types the site already sells and general stair practice. No prices,
+// durations or warranties are stated.
+import BaseLayout from '@layouts/BaseLayout.astro';
+import RelatedGuides from '@components/RelatedGuides.astro';
+import Hero from '@components/Hero.astro';
+import ReviewsSection from '@components/ReviewsSection.astro';
+import CTABanner from '@components/CTABanner.astro';
+import FAQ from '@components/FAQ.astro';
+import Breadcrumb from '@components/Breadcrumb.astro';
+import ServiceCityLinks from '@components/ServiceCityLinks.astro';
+import { installationServices } from '@data/services';
+import { company } from '@data/company';
+import { faqSchema } from '@data/faq-schema';
+
+const svc = installationServices.find(s => s.slug === 'stair-flooring')!;
+
+const faq = [
+  { q: 'Can I pull the carpet off my stairs and refinish what is underneath?', a: 'Usually not. In most Clark County homes, carpeted stairs were built with construction-grade treads (particleboard, OSB or rough pine) that were always meant to be covered. We check from the edge of a tread or from underneath before you plan on it. If the wood is finish-grade, refinishing is an option.' },
+  { q: 'What are retrofit stair treads?', a: 'Retrofit treads are hardwood treads made to go over existing stairs. The overhanging nose of each old tread is cut flush with the riser, and a new tread with its own nose is fastened on top. It avoids tearing the staircase apart in a finished home with drywall, skirt boards and railings already in place.' },
+  { q: 'Can LVP or laminate go on stairs?', a: 'Yes. On stairs each tread and riser is glued down rather than floated, and the stair nosing made for that product finishes the edge. That is how LVP or laminate stairs tie in with the same floor on the landing and downstairs.' },
+  { q: 'Are hardwood stairs slippery?', a: 'They can be, especially in socks or with older pets. A matte or satin finish has more grip than gloss, and a carpet runner adds the most traction and quiet.' },
+  { q: 'How are stairs priced?', a: 'Per step rather than per square foot, because every tread and riser is measured, cut and fitted on its own. Tread material, painted or wood risers, open sides, landings and what has to come off first all affect it. We price the stairs as their own line on your free estimate.' },
+];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Stair Flooring in Vancouver, WA',
+  serviceType: 'Stair flooring installation',
+  description: svc.description,
+  provider: {
+    '@type': 'LocalBusiness',
+    name: company.name,
+    telephone: company.phoneDashes,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: company.address.street,
+      addressLocality: company.address.city,
+      addressRegion: company.address.state,
+      postalCode: company.address.zip,
+      addressCountry: 'US',
+    },
+  },
+  areaServed: company.areaServed,
+  url: 'https://www.allaboutfloorsnw.com/stair-flooring/',
+};
+
+const options = [
+  { label: 'Hardwood Treads', icon: '🪵', text: 'Solid or engineered treads, stained to sit with your floor', href: '/hardwood-flooring/' },
+  { label: 'LVP & Laminate Stairs', icon: '💧', text: 'Glued-down treads and risers with matching nosing', href: '/luxury-vinyl-plank/' },
+  { label: 'Carpet & Runners', icon: '🏠', text: 'Wall-to-wall stair carpet or a runner over wood', href: '/carpet-flooring/' },
+  { label: 'Stair Refinishing', icon: '✨', text: 'Sanding and refinishing existing hardwood stairs', href: '/hardwood-refinishing/' },
+];
+---
+
+<BaseLayout
+  title="Stair Flooring in Vancouver, WA: Hardwood, LVP & Carpet"
+  description="Hardwood stair treads, LVP and laminate stairs with matching nosing, stair carpet and runners, and stair refinishing in Vancouver, WA. Free estimates."
+  schema={[schema, faqSchema(faq)]}
+>
+  <Hero
+    heading="Stair Flooring in Vancouver, WA"
+    subheading={svc.description}
+    image={svc.heroImage}
+    imageAlt={svc.heroImageAlt}
+    badge="Free In-Home Estimates"
+  />
+
+  <Breadcrumb items={[{ label: 'Services', href: '/services/' }, { label: 'Stair Flooring' }]} />
+
+  <section class="py-20 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <span class="badge-gold mb-3">Stairs, Treads & Runners</span>
+          <h2 class="section-heading mt-2 mb-5">
+            Stairs That Match the Floors Around Them
+          </h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            The staircase is often the first thing you see from the front door, and in a lot of Vancouver homes it is still carpeted after the floor around it has gone to hardwood or LVP. All About Floors NW does the stairs as part of the floor project or on their own: hardwood treads, LVP and laminate stairs with matching nosing, stair carpet and runners, and refinishing for hardwood stairs.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Stairs are not measured like a room. Each tread and riser is cut and fitted on its own, the nose has to line up step after step, and the top and bottom steps have to come out at the right height once the new floor thickness is added. That is why we price stairs per step, as their own line on the estimate.
+          </p>
+          <p class="text-gray-700 leading-relaxed mb-6">
+            For hardwood stairs, the free in-home estimate is the best place to start: our rep looks at the staircase and brings samples. For LVP, laminate or carpet, stop by the showroom at {company.address.full} to see the full selection, and the rep then comes out to measure.
+          </p>
+          <a href="/free-estimate/" class="btn-primary">Get a Free Stair Estimate</a>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          {options.map(item => (
+            <a href={item.href} class="bg-brand-light rounded-2xl p-6 text-center hover:-translate-y-1 transition-transform duration-300">
+              <div class="text-4xl mb-2" aria-hidden="true">{item.icon}</div>
+              <div class="font-semibold text-brand-navy">{item.label}</div>
+              <p class="text-gray-600 text-xs mt-1">{item.text}</p>
+            </a>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="section-heading mb-5">What Goes Into a Staircase</h2>
+      <h3 class="font-heading font-semibold text-brand-navy text-xl mt-6 mb-2">What is under carpeted stairs</h3>
+      <p class="text-gray-700 leading-relaxed">
+        Most people expect to pull up the stair carpet and find hardwood. In most homes built from the 1970s on, they find construction-grade treads with a rounded nose made for carpet to wrap over. Those will not sand into a finished staircase, so the choice is between new carpet or a runner, retrofit hardwood treads, or LVP or laminate with matching nosing.
+      </p>
+      <h3 class="font-heading font-semibold text-brand-navy text-xl mt-6 mb-2">Matching the stairs to a new floor</h3>
+      <p class="text-gray-700 leading-relaxed">
+        When the main floor changes, the stairs should be planned at the same time. LVP and laminate each have their own stair-nose profile, and hardwood treads can be stained to sit with an engineered or solid floor. Risers can be wood to match or painted, which is a common look with both.
+      </p>
+      <h3 class="font-heading font-semibold text-brand-navy text-xl mt-6 mb-2">Grip, wear and runners</h3>
+      <p class="text-gray-700 leading-relaxed">
+        The nose of each tread takes the most wear, and gloss finishes are slippery in socks. A matte or satin finish grips better, and a carpet runner over wood treads adds traction and quiet. Our <a href="/blog/hardwood-stairs-vancouver-wa/" class="underline hover:text-brand-gold">hardwood stairs guide</a> goes through each option in more detail.
+      </p>
+    </div>
+  </section>
+
+  <FAQ items={faq} title="Stair Flooring FAQ" />
+  <ReviewsSection max={3} />
+  <ServiceCityLinks mainSlug="stair-flooring" label="Stair Flooring" />
+  <CTABanner heading="Ready to Update Your Stairs?" subtext="Book a free estimate and we'll look at the staircase, go over tread, nosing and runner options, and price the stairs step by step." />
+  <RelatedGuides path="/stair-flooring/" />
+</BaseLayout>

@@ -348,6 +348,19 @@ export const installationServices = [
     heroImage: '/images/countertop-installation-vancouver-wa.webp',
     heroImageAlt: 'Beautiful countertop installation in a Vancouver WA kitchen',
   },
+  // Added 2026-11-26. Evidence the client does this work: the booking bot's
+  // knowledge base (hub bot_config, KNOWLEDGE CORRECTIONS) says "We DO handle
+  // stair railings and stair work", and GSC shows "hardwood stair installation /
+  // refinishing vancouver wa" landing on pages that are not about stairs.
+  {
+    slug: 'stair-flooring',
+    name: 'Stair Flooring',
+    urlPath: '/stair-flooring/',
+    tagline: 'Hardwood, LVP and Carpet Stairs, Fitted Step by Step',
+    description: 'New hardwood treads, LVP and laminate stairs with matching nosing, carpet and runners, and refinishing for hardwood stairs. Each step is measured and fitted on its own, so the staircase matches the floors around it.',
+    heroImage: '/images/hardwood-stairs-vancouver-wa.webp',
+    heroImageAlt: 'Wood stair treads with a black metal railing leading down to a hardwood floor',
+  },
 ];
 
 export const localServices = [
@@ -363,4 +376,7 @@ export const localServices = [
   // (overlaps luxury-vinyl-plank) — those would be duplicates by construction.
   { slug: 'commercial-flooring', name: 'Commercial Flooring', mainSlug: 'commercial-flooring' },
   { slug: 'countertops', name: 'Countertops', mainSlug: 'countertops' },
+  // Added 2026-11-26 with the /stair-flooring/ page. Stairs are their own job
+  // (priced per step, fitted tread by tread), not a duplicate of a material page.
+  { slug: 'stair-flooring', name: 'Stair Flooring', mainSlug: 'stair-flooring' },
 ];
