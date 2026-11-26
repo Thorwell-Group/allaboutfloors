@@ -1,0 +1,9 @@
+# Keep the Cloudflare preview hosts out of search results. They serve the same
+# pages as www.allaboutfloorsnw.com, and Google had indexed allaboutfloors.pages.dev
+# as a duplicate (seen 2026-11-09). Only the *.pages.dev hosts get this header;
+# the real domain is untouched. Same rule as mcintosh-painting (live since 10-13).
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:version.:project.pages.dev/*
+  X-Robots-Tag: noindex
