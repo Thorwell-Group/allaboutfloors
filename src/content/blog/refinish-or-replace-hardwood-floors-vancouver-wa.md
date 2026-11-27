@@ -70,6 +70,7 @@ If the kitchen took a dishwasher leak but the living room and hallway are health
 
 ## Related reading
 
+- [Hardwood stair refinishing in Vancouver, WA](/blog/hardwood-stair-refinishing-vancouver-wa/)
 - [Hardwood refinishing: the full process](/blog/hardwood-floor-refinishing-vancouver-guide/)
 - [Hardwood cleaning and maintenance](/blog/hardwood-floor-cleaning-maintenance-vancouver-wa/)
 - [Hardwood species and finishes](/blog/hardwood-flooring-vancouver-wa-species-finishes/)

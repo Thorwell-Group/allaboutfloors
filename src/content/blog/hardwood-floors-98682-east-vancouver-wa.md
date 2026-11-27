@@ -74,7 +74,7 @@ Refinishing means sanding the floor down to bare wood, which removes the old fin
 
 **Engineered hardwood** can be refinished when the top layer of wood is thick enough, generally around 3 mm or more. Thin-veneer products from the 2000s often can't be sanded at all. We measure before quoting.
 
-**When the floor only looks dull,** not scratched through, a screen and recoat may be enough. That means lightly abrading the existing finish and adding a fresh coat, without sanding to bare wood. It costs much less and takes a day. Our post on [refinishing vs. replacing hardwood](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/) helps you decide which one your floor needs, and [hardwood floor restoration](/blog/hardwood-floor-restoration-vancouver-wa/) covers floors that need more than a refinish.
+**When the floor only looks dull,** not scratched through, a screen and recoat may be enough. That means lightly abrading the existing finish and adding a fresh coat, without sanding to bare wood. It costs much less and takes a day. Our post on [refinishing vs. replacing hardwood](/blog/refinish-or-replace-hardwood-floors-vancouver-wa/) helps you decide which one your floor needs, and [hardwood floor restoration](/blog/hardwood-floor-restoration-vancouver-wa/) covers floors that need more than a refinish. If the oak stairs have worn through at the noses, our [hardwood stair refinishing guide](/blog/hardwood-stair-refinishing-vancouver-wa/) covers doing them with the floor.
 
 ## Staining: getting away from honey oak
 

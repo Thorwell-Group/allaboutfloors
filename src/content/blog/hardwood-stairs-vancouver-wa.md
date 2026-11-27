@@ -33,7 +33,7 @@ So, before you plan on refinishing what is there:
 - **Check from below** if the underside of the stairs is open in a closet or garage.
 - **Look for staple holes, tack strip and glue.** Even real wood under carpet is usually full of them.
 
-If you find particleboard or OSB, the answer is new treads. If you find solid oak in good condition, which does happen in some older or custom homes, refinishing those treads may be possible. Each one has to be sanded by hand, and you'll need to weigh that work against the cost of new treads.
+If you find particleboard or OSB, the answer is new treads. If you find solid oak in good condition, which does happen in some older or custom homes, refinishing those treads may be possible. Each one has to be sanded by hand, and you'll need to weigh that work against the cost of new treads. If your stairs are already hardwood and just worn, our [hardwood stair refinishing guide](/blog/hardwood-stair-refinishing-vancouver-wa/) covers sanding, matching stain to the floor and using the stairs during the job.
 
 ## Option 1: Retrofit treads over the existing stairs
 
@@ -127,6 +127,7 @@ See every stair option we offer on our [stair flooring](/stair-flooring/) page, 
 
 ## Related reading
 
+- [Hardwood stair refinishing in Vancouver, WA](/blog/hardwood-stair-refinishing-vancouver-wa/)
 - [Hardwood floor installation in Vancouver, WA](/blog/hardwood-floor-installation-vancouver-wa/)
 - [Hardwood flooring in Vancouver, WA: species and finishes](/blog/hardwood-flooring-vancouver-wa-species-finishes/)
 - [Hardwood floor stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)

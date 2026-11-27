@@ -30,6 +30,8 @@ Most refinishing projects take **3–5 days** depending on square footage, wheth
 
 Solid hardwood can usually be refinished several times. Engineered hardwood can sometimes be refinished once or lightly, depending on its wear layer. If your floors have deep water damage or have already been sanded very thin, replacement may make more sense, we'll tell you honestly which path fits.
 
+Hardwood stairs can be refinished with the floor so the treads match. They are sanded mostly by hand and planned so you can still get upstairs; see our [hardwood stair refinishing guide](/blog/hardwood-stair-refinishing-vancouver-wa/).
+
 ## Dust and disruption
 
 Modern refinishing is far cleaner than it used to be thanks to dust-containment sanding equipment. It's not 100% dust-free, but it's a world away from the old days.
@@ -40,6 +42,7 @@ Ready to bring your floors back to life? Learn more about [hardwood refinishing]
 
 ## Related reading
 
+- [Hardwood stair refinishing in Vancouver, WA](/blog/hardwood-stair-refinishing-vancouver-wa/)
 - [Hardwood stain colors: choosing warm wood tones](/blog/hardwood-floor-stain-colors-warm-tones-vancouver-wa/)
 - [Hardwood floor staining in Vancouver, WA: the process and timeline](/blog/hardwood-floor-staining-vancouver-wa/)
 - [Hardwood floor restoration: sanding old and neglected floors back to life](/blog/hardwood-floor-restoration-vancouver-wa/)
